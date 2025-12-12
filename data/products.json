@@ -1,0 +1,1002 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Bluetooth Headphones",
+    "description": "Premium noise-cancelling wireless headphones with 30-hour battery life. Features advanced audio technology for crystal-clear sound quality.",
+    "price": 299.99,
+    "category": "Electronics",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=500&h=500&fit=crop",
+    "stock": 45
+  },
+  {
+    "id": 2,
+    "name": "Smart Fitness Watch",
+    "description": "Track your health and fitness goals with GPS, heart rate monitoring, and sleep tracking. Water-resistant up to 50m.",
+    "price": 249.99,
+    "category": "Electronics",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=500&fit=crop",
+    "stock": 32
+  },
+  {
+    "id": 3,
+    "name": "Organic Cotton T-Shirt",
+    "description": "Comfortable 100% organic cotton t-shirt. Available in multiple colors. Sustainable and eco-friendly fashion.",
+    "price": 29.99,
+    "category": "Clothing",
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&h=500&fit=crop",
+    "stock": 120
+  },
+  {
+    "id": 4,
+    "name": "Leather Crossbody Bag",
+    "description": "Handcrafted genuine leather crossbody bag with adjustable strap. Perfect for everyday use with multiple compartments.",
+    "price": 89.99,
+    "category": "Accessories",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1548036328-c9fa89d128fa?w=500&h=500&fit=crop",
+    "stock": 28
+  },
+  {
+    "id": 5,
+    "name": "Stainless Steel Water Bottle",
+    "description": "Insulated stainless steel water bottle keeps drinks cold for 24 hours or hot for 12 hours. BPA-free and eco-friendly.",
+    "price": 34.99,
+    "category": "Home & Kitchen",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=500&h=500&fit=crop",
+    "stock": 95
+  },
+  {
+    "id": 6,
+    "name": "Yoga Mat with Carrying Strap",
+    "description": "Non-slip premium yoga mat made from eco-friendly materials. Extra thick for comfort and joint protection.",
+    "price": 49.99,
+    "category": "Sports",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=500&h=500&fit=crop",
+    "stock": 67
+  },
+  {
+    "id": 7,
+    "name": "Portable Bluetooth Speaker",
+    "description": "Waterproof portable speaker with 360-degree sound. 20-hour battery life and built-in microphone for calls.",
+    "price": 79.99,
+    "category": "Electronics",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=500&h=500&fit=crop",
+    "stock": 53
+  },
+  {
+    "id": 8,
+    "name": "Ceramic Coffee Mug Set",
+    "description": "Set of 4 handmade ceramic coffee mugs. Microwave and dishwasher safe. Beautiful artisan design.",
+    "price": 44.99,
+    "category": "Home & Kitchen",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1514228742587-6b1558fcca3d?w=500&h=500&fit=crop",
+    "stock": 41
+  },
+  {
+    "id": 9,
+    "name": "Running Shoes",
+    "description": "Lightweight running shoes with responsive cushioning. Breathable mesh upper for maximum comfort during workouts.",
+    "price": 119.99,
+    "category": "Sports",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&h=500&fit=crop",
+    "stock": 78
+  },
+  {
+    "id": 10,
+    "name": "Desk Organizer Set",
+    "description": "Modern desk organizer with multiple compartments for pens, papers, and office supplies. Made from sustainable bamboo.",
+    "price": 39.99,
+    "category": "Office",
+    "rating": 4.2,
+    "image": "https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?w=500&h=500&fit=crop",
+    "stock": 89
+  },
+  {
+    "id": 11,
+    "name": "Wireless Gaming Mouse",
+    "description": "High-precision wireless gaming mouse with customizable RGB lighting. 16000 DPI and programmable buttons.",
+    "price": 69.99,
+    "category": "Electronics",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=500&h=500&fit=crop",
+    "stock": 62
+  },
+  {
+    "id": 12,
+    "name": "Plant-Based Protein Powder",
+    "description": "Organic plant-based protein powder with 25g protein per serving. Vegan, gluten-free, and delicious vanilla flavor.",
+    "price": 39.99,
+    "category": "Health",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1579722821273-0f6c7d44362f?w=500&h=500&fit=crop",
+    "stock": 105
+  },
+  {
+    "id": 13,
+    "name": "Denim Jacket",
+    "description": "Classic denim jacket with vintage wash. Perfect layering piece for any season. Available in multiple sizes.",
+    "price": 79.99,
+    "category": "Clothing",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1551537482-f2075a1d41f2?w=500&h=500&fit=crop",
+    "stock": 44
+  },
+  {
+    "id": 14,
+    "name": "Essential Oil Diffuser",
+    "description": "Ultrasonic aromatherapy diffuser with LED lights. Quiet operation and automatic shut-off for safety.",
+    "price": 34.99,
+    "category": "Home & Kitchen",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=500&h=500&fit=crop",
+    "stock": 71
+  },
+  {
+    "id": 15,
+    "name": "Polarized Sunglasses",
+    "description": "UV400 protection polarized sunglasses with metal frame. Reduces glare and protects your eyes in style.",
+    "price": 54.99,
+    "category": "Accessories",
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=500&h=500&fit=crop",
+    "stock": 93
+  },
+  {
+    "id": 16,
+    "name": "Mechanical Keyboard",
+    "description": "RGB backlit mechanical keyboard with blue switches. Perfect for gaming and typing with tactile feedback.",
+    "price": 129.99,
+    "category": "Electronics",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=500&h=500&fit=crop",
+    "stock": 37
+  },
+  {
+    "id": 17,
+    "name": "Resistance Bands Set",
+    "description": "Set of 5 resistance bands with different tension levels. Includes door anchor and carrying bag.",
+    "price": 24.99,
+    "category": "Sports",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1598289431512-b97b0917affc?w=500&h=500&fit=crop",
+    "stock": 156
+  },
+  {
+    "id": 18,
+    "name": "Scented Candle Collection",
+    "description": "Set of 3 luxury scented candles made from natural soy wax. Long-lasting burn time with calming fragrances.",
+    "price": 44.99,
+    "category": "Home & Kitchen",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1602874801006-95926fc8f48f?w=500&h=500&fit=crop",
+    "stock": 82
+  },
+  {
+    "id": 19,
+    "name": "Backpack with Laptop Compartment",
+    "description": "Water-resistant backpack with padded laptop compartment up to 15.6 inches. Multiple pockets and USB charging port.",
+    "price": 59.99,
+    "category": "Accessories",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&h=500&fit=crop",
+    "stock": 68
+  },
+  {
+    "id": 20,
+    "name": "Stainless Steel Cookware Set",
+    "description": "10-piece stainless steel cookware set with non-stick coating. Oven-safe and compatible with all cooktops.",
+    "price": 199.99,
+    "category": "Home & Kitchen",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1584990347449-31f3e4a0f962?w=500&h=500&fit=crop",
+    "stock": 23
+  },
+  {
+    "id": 21,
+    "name": "Smart LED Light Bulbs (4-Pack)",
+    "description": "WiFi-enabled smart LED bulbs with color changing capabilities. Control with voice or app. Energy efficient.",
+    "price": 49.99,
+    "category": "Electronics",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=500&h=500&fit=crop",
+    "stock": 114
+  },
+  {
+    "id": 22,
+    "name": "Cotton Bed Sheet Set",
+    "description": "Luxury 400-thread count cotton bed sheet set. Includes fitted sheet, flat sheet, and 2 pillowcases. Queen size.",
+    "price": 79.99,
+    "category": "Home & Kitchen",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&h=500&fit=crop",
+    "stock": 56
+  },
+  {
+    "id": 23,
+    "name": "Digital Camera",
+    "description": "24MP digital camera with 4K video recording. 3-inch LCD screen and image stabilization for clear photos.",
+    "price": 449.99,
+    "category": "Electronics",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=500&h=500&fit=crop",
+    "stock": 19
+  },
+  {
+    "id": 24,
+    "name": "Hoodie Sweatshirt",
+    "description": "Comfortable fleece-lined hoodie with kangaroo pocket. Perfect for casual wear and layering.",
+    "price": 49.99,
+    "category": "Clothing",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1556821840-3a63f95609a7?w=500&h=500&fit=crop",
+    "stock": 97
+  },
+  {
+    "id": 25,
+    "name": "Travel Toiletry Bag",
+    "description": "Hanging travel toiletry bag with multiple compartments. Water-resistant and perfect for organizing travel essentials.",
+    "price": 29.99,
+    "category": "Accessories",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&h=500&fit=crop",
+    "stock": 134
+  },
+  {
+    "id": 26,
+    "name": "Electric Kettle",
+    "description": "Rapid-boil electric kettle with temperature control. 1.7L capacity with automatic shut-off and boil-dry protection.",
+    "price": 44.99,
+    "category": "Home & Kitchen",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1622543567003-c1e53c6b4e4d?w=500&h=500&fit=crop",
+    "stock": 76
+  },
+  {
+    "id": 27,
+    "name": "Tennis Racket",
+    "description": "Professional-grade tennis racket with carbon fiber construction. Lightweight and powerful for all skill levels.",
+    "price": 149.99,
+    "category": "Sports",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1622163642998-1ea32b0bbc67?w=500&h=500&fit=crop",
+    "stock": 34
+  },
+  {
+    "id": 28,
+    "name": "Wireless Earbuds",
+    "description": "True wireless earbuds with active noise cancellation. Touch controls and 24-hour battery with charging case.",
+    "price": 129.99,
+    "category": "Electronics",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=500&h=500&fit=crop",
+    "stock": 88
+  },
+  {
+    "id": 29,
+    "name": "Wall Art Canvas Print",
+    "description": "Modern abstract canvas wall art. High-quality print on premium canvas with wooden frame. Ready to hang.",
+    "price": 79.99,
+    "category": "Home & Kitchen",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1513519245088-0e12902e5a38?w=500&h=500&fit=crop",
+    "stock": 45
+  },
+  {
+    "id": 30,
+    "name": "Notebook Set",
+    "description": "Set of 3 premium hardcover notebooks. Dotted pages perfect for journaling, planning, or note-taking.",
+    "price": 24.99,
+    "category": "Office",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1531346878377-a5be20888e57?w=500&h=500&fit=crop",
+    "stock": 167
+  },
+  {
+    "id": 31,
+    "name": "4K Smart TV 55 inch",
+    "description": "Ultra HD 4K Smart TV with HDR support. Built-in streaming apps and voice control. Stunning picture quality.",
+    "price": 699.99,
+    "category": "Electronics",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1593359677879-a4bb92f829d1?w=500&h=500&fit=crop",
+    "stock": 15
+  },
+  {
+    "id": 32,
+    "name": "Gaming Laptop",
+    "description": "High-performance gaming laptop with RTX graphics. 16GB RAM, 512GB SSD, and 144Hz display for smooth gameplay.",
+    "price": 1299.99,
+    "category": "Electronics",
+    "rating": 4.9,
+    "image": "https://images.unsplash.com/photo-1603302576837-37561b2e2302?w=500&h=500&fit=crop",
+    "stock": 8
+  },
+  {
+    "id": 33,
+    "name": "Tablet 10-inch",
+    "description": "Android tablet with 10-inch display and 64GB storage. Perfect for reading, browsing, and entertainment.",
+    "price": 249.99,
+    "category": "Electronics",
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1561154464-82e9adf32764?w=500&h=500&fit=crop",
+    "stock": 42
+  },
+  {
+    "id": 34,
+    "name": "Wireless Charger Pad",
+    "description": "Fast wireless charging pad compatible with all Qi-enabled devices. Sleek design with LED indicator.",
+    "price": 24.99,
+    "category": "Electronics",
+    "rating": 4.2,
+    "image": "https://images.unsplash.com/photo-1591290619762-c588ca57e4f5?w=500&h=500&fit=crop",
+    "stock": 186
+  },
+  {
+    "id": 35,
+    "name": "USB-C Hub Adapter",
+    "description": "7-in-1 USB-C hub with HDMI, USB 3.0 ports, SD card reader, and power delivery. Essential for laptops.",
+    "price": 39.99,
+    "category": "Electronics",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1625948515291-69613efd103f?w=500&h=500&fit=crop",
+    "stock": 93
+  },
+  {
+    "id": 36,
+    "name": "External Hard Drive 2TB",
+    "description": "Portable external hard drive with 2TB storage. USB 3.0 for fast data transfer. Compatible with all devices.",
+    "price": 79.99,
+    "category": "Electronics",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1624536590764-027f8ca00e01?w=500&h=500&fit=crop",
+    "stock": 67
+  },
+  {
+    "id": 37,
+    "name": "Webcam 1080p HD",
+    "description": "Full HD webcam with auto-focus and built-in microphone. Perfect for video calls and streaming.",
+    "price": 59.99,
+    "category": "Electronics",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1584438784894-089d6a62b8fa?w=500&h=500&fit=crop",
+    "stock": 54
+  },
+  {
+    "id": 38,
+    "name": "Power Bank 20000mAh",
+    "description": "High-capacity power bank with dual USB ports and fast charging. Charges phones up to 6 times.",
+    "price": 44.99,
+    "category": "Electronics",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=500&h=500&fit=crop",
+    "stock": 112
+  },
+  {
+    "id": 39,
+    "name": "Smart Doorbell Camera",
+    "description": "WiFi-enabled video doorbell with motion detection and two-way audio. Night vision and cloud storage.",
+    "price": 149.99,
+    "category": "Electronics",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1558002038-1055907df827?w=500&h=500&fit=crop",
+    "stock": 31
+  },
+  {
+    "id": 40,
+    "name": "Drone with Camera",
+    "description": "4K camera drone with GPS and 30-minute flight time. Gesture control and intelligent flight modes.",
+    "price": 399.99,
+    "category": "Electronics",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=500&h=500&fit=crop",
+    "stock": 18
+  },
+  {
+    "id": 41,
+    "name": "Slim Fit Dress Shirt",
+    "description": "Premium cotton dress shirt with modern slim fit. Wrinkle-resistant fabric perfect for office or formal occasions.",
+    "price": 49.99,
+    "category": "Clothing",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=500&h=500&fit=crop",
+    "stock": 78
+  },
+  {
+    "id": 42,
+    "name": "Women's Yoga Pants",
+    "description": "High-waisted yoga pants with moisture-wicking fabric. Squat-proof and perfect for any workout.",
+    "price": 39.99,
+    "category": "Clothing",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1506629082955-511b1aa562c8?w=500&h=500&fit=crop",
+    "stock": 145
+  },
+  {
+    "id": 43,
+    "name": "Men's Chino Pants",
+    "description": "Classic chino pants with comfortable stretch fabric. Versatile style for casual or business casual wear.",
+    "price": 59.99,
+    "category": "Clothing",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=500&h=500&fit=crop",
+    "stock": 92
+  },
+  {
+    "id": 44,
+    "name": "Summer Dress",
+    "description": "Flowy summer dress with floral print. Lightweight and breathable fabric perfect for warm weather.",
+    "price": 54.99,
+    "category": "Clothing",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1595777457583-95e059d581b8?w=500&h=500&fit=crop",
+    "stock": 64
+  },
+  {
+    "id": 45,
+    "name": "Leather Belt",
+    "description": "Genuine leather belt with reversible buckle. Classic black and brown design that matches any outfit.",
+    "price": 34.99,
+    "category": "Accessories",
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&h=500&fit=crop",
+    "stock": 134
+  },
+  {
+    "id": 46,
+    "name": "Wool Scarf",
+    "description": "Soft wool scarf with plaid pattern. Warm and stylish accessory for cold weather.",
+    "price": 29.99,
+    "category": "Accessories",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?w=500&h=500&fit=crop",
+    "stock": 87
+  },
+  {
+    "id": 47,
+    "name": "Stainless Steel Watch",
+    "description": "Elegant stainless steel watch with automatic movement. Water-resistant and scratch-resistant sapphire crystal.",
+    "price": 199.99,
+    "category": "Accessories",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=500&h=500&fit=crop",
+    "stock": 23
+  },
+  {
+    "id": 48,
+    "name": "Silk Tie",
+    "description": "100% silk tie with modern pattern. Hand-stitched and perfect for business or formal events.",
+    "price": 44.99,
+    "category": "Accessories",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1589756823695-278bc8394f0c?w=500&h=500&fit=crop",
+    "stock": 112
+  },
+  {
+    "id": 49,
+    "name": "Wallet with RFID Protection",
+    "description": "Slim leather wallet with RFID blocking technology. Multiple card slots and bill compartment.",
+    "price": 39.99,
+    "category": "Accessories",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1627123424574-724758594e93?w=500&h=500&fit=crop",
+    "stock": 156
+  },
+  {
+    "id": 50,
+    "name": "Baseball Cap",
+    "description": "Adjustable baseball cap with embroidered logo. Breathable cotton fabric and curved brim.",
+    "price": 19.99,
+    "category": "Accessories",
+    "rating": 4.2,
+    "image": "https://images.unsplash.com/photo-1588850561407-ed78c282e89b?w=500&h=500&fit=crop",
+    "stock": 203
+  },
+  {
+    "id": 51,
+    "name": "Air Fryer",
+    "description": "Large capacity air fryer with digital controls. Cook healthier meals with little to no oil. 8 preset functions.",
+    "price": 99.99,
+    "category": "Home & Kitchen",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1585515320310-259814833e62?w=500&h=500&fit=crop",
+    "stock": 45
+  },
+  {
+    "id": 52,
+    "name": "Coffee Maker",
+    "description": "Programmable drip coffee maker with 12-cup capacity. Auto shut-off and brew-pause feature.",
+    "price": 69.99,
+    "category": "Home & Kitchen",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1517668808822-9ebb02f2a0e6?w=500&h=500&fit=crop",
+    "stock": 63
+  },
+  {
+    "id": 53,
+    "name": "Blender",
+    "description": "High-speed blender with 1000W motor. Perfect for smoothies, soups, and crushing ice.",
+    "price": 79.99,
+    "category": "Home & Kitchen",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1570222094114-d054a817e56b?w=500&h=500&fit=crop",
+    "stock": 52
+  },
+  {
+    "id": 54,
+    "name": "Vacuum Cleaner",
+    "description": "Bagless vacuum cleaner with HEPA filter. Powerful suction for carpets and hard floors.",
+    "price": 149.99,
+    "category": "Home & Kitchen",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1558317374-067fb5f30001?w=500&h=500&fit=crop",
+    "stock": 28
+  },
+  {
+    "id": 55,
+    "name": "Throw Pillow Set",
+    "description": "Set of 4 decorative throw pillows with soft covers. Machine washable and includes inserts.",
+    "price": 39.99,
+    "category": "Home & Kitchen",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=500&h=500&fit=crop",
+    "stock": 97
+  },
+  {
+    "id": 56,
+    "name": "Area Rug 5x7",
+    "description": "Modern geometric area rug in neutral colors. Soft and durable for living room or bedroom.",
+    "price": 129.99,
+    "category": "Home & Kitchen",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1600166898405-da9535204843?w=500&h=500&fit=crop",
+    "stock": 34
+  },
+  {
+    "id": 57,
+    "name": "Table Lamp",
+    "description": "Contemporary table lamp with fabric shade. Includes LED bulb and has on/off switch on cord.",
+    "price": 44.99,
+    "category": "Home & Kitchen",
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=500&h=500&fit=crop",
+    "stock": 76
+  },
+  {
+    "id": 58,
+    "name": "Dinnerware Set 16-Piece",
+    "description": "Complete dinnerware set for 4. Includes plates, bowls, and mugs. Dishwasher and microwave safe.",
+    "price": 89.99,
+    "category": "Home & Kitchen",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1584622781867-f1b64eb9e682?w=500&h=500&fit=crop",
+    "stock": 41
+  },
+  {
+    "id": 59,
+    "name": "Knife Set with Block",
+    "description": "Professional 14-piece knife set with wooden block. High-carbon stainless steel blades.",
+    "price": 119.99,
+    "category": "Home & Kitchen",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1593618998160-e34014e67546?w=500&h=500&fit=crop",
+    "stock": 38
+  },
+  {
+    "id": 60,
+    "name": "Towel Set",
+    "description": "6-piece bath towel set made from 100% cotton. Soft, absorbent, and available in multiple colors.",
+    "price": 49.99,
+    "category": "Home & Kitchen",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1622122201714-77da0ca8e5d2?w=500&h=500&fit=crop",
+    "stock": 124
+  },
+  {
+    "id": 61,
+    "name": "Basketball",
+    "description": "Official size basketball with superior grip. Indoor/outdoor composite leather construction.",
+    "price": 29.99,
+    "category": "Sports",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1519861531473-9200262188bf?w=500&h=500&fit=crop",
+    "stock": 87
+  },
+  {
+    "id": 62,
+    "name": "Dumbbell Set",
+    "description": "Adjustable dumbbell set with weight range 5-52.5 lbs. Space-saving design for home gym.",
+    "price": 299.99,
+    "category": "Sports",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1517836357463-d25dfeac3438?w=500&h=500&fit=crop",
+    "stock": 23
+  },
+  {
+    "id": 63,
+    "name": "Bicycle Helmet",
+    "description": "Lightweight cycling helmet with adjustable fit. Meets safety standards and has ventilation channels.",
+    "price": 49.99,
+    "category": "Sports",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1614620048550-7f52e49c6f49?w=500&h=500&fit=crop",
+    "stock": 64
+  },
+  {
+    "id": 64,
+    "name": "Soccer Ball",
+    "description": "Professional quality soccer ball with thermally bonded panels. FIFA-approved size and weight.",
+    "price": 34.99,
+    "category": "Sports",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1614632537423-1e6c2e7e0aae?w=500&h=500&fit=crop",
+    "stock": 112
+  },
+  {
+    "id": 65,
+    "name": "Foam Roller",
+    "description": "High-density foam roller for muscle recovery. Textured surface for deep tissue massage.",
+    "price": 24.99,
+    "category": "Sports",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1598289431512-b97b0917affc?w=500&h=500&fit=crop",
+    "stock": 143
+  },
+  {
+    "id": 66,
+    "name": "Jump Rope",
+    "description": "Adjustable speed jump rope with comfortable handles. Ball bearing system for smooth rotation.",
+    "price": 14.99,
+    "category": "Sports",
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1623874228601-f4193c7b1818?w=500&h=500&fit=crop",
+    "stock": 198
+  },
+  {
+    "id": 67,
+    "name": "Camping Tent 4-Person",
+    "description": "Waterproof camping tent with easy setup. Includes rainfly and stakes. Sleeps up to 4 people.",
+    "price": 149.99,
+    "category": "Sports",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=500&h=500&fit=crop",
+    "stock": 27
+  },
+  {
+    "id": 68,
+    "name": "Swimming Goggles",
+    "description": "Anti-fog swimming goggles with UV protection. Comfortable silicone gaskets and adjustable strap.",
+    "price": 19.99,
+    "category": "Sports",
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1530549387789-4c1017266635?w=500&h=500&fit=crop",
+    "stock": 167
+  },
+  {
+    "id": 69,
+    "name": "Golf Club Set",
+    "description": "Complete golf club set with driver, irons, putter, and bag. Perfect for beginners.",
+    "price": 399.99,
+    "category": "Sports",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1535131749006-b7f58c99034b?w=500&h=500&fit=crop",
+    "stock": 12
+  },
+  {
+    "id": 70,
+    "name": "Yoga Block Set",
+    "description": "Set of 2 high-density foam yoga blocks. Lightweight and supportive for all yoga poses.",
+    "price": 19.99,
+    "category": "Sports",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=500&h=500&fit=crop",
+    "stock": 189
+  },
+  {
+    "id": 71,
+    "name": "Wireless Printer",
+    "description": "All-in-one wireless printer with scanner and copier. Fast printing and mobile app support.",
+    "price": 179.99,
+    "category": "Office",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=500&h=500&fit=crop",
+    "stock": 34
+  },
+  {
+    "id": 72,
+    "name": "Ergonomic Office Chair",
+    "description": "Mesh office chair with lumbar support and adjustable armrests. 360-degree swivel and smooth-rolling casters.",
+    "price": 249.99,
+    "category": "Office",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1580480055273-228ff5388ef8?w=500&h=500&fit=crop",
+    "stock": 19
+  },
+  {
+    "id": 73,
+    "name": "Standing Desk Converter",
+    "description": "Adjustable standing desk converter with keyboard tray. Easy height adjustment for ergonomic working.",
+    "price": 159.99,
+    "category": "Office",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1595515106969-1ce29566ff1c?w=500&h=500&fit=crop",
+    "stock": 28
+  },
+  {
+    "id": 74,
+    "name": "Monitor Stand",
+    "description": "Metal monitor stand with storage drawer. Elevates screen to eye level for better posture.",
+    "price": 34.99,
+    "category": "Office",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1616362793831-c0e1e2c7e2e0?w=500&h=500&fit=crop",
+    "stock": 92
+  },
+  {
+    "id": 75,
+    "name": "File Cabinet",
+    "description": "2-drawer file cabinet with lock. Fits letter and legal size documents. Smooth gliding drawers.",
+    "price": 119.99,
+    "category": "Office",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1595814433015-e3e8c6e1d6d7?w=500&h=500&fit=crop",
+    "stock": 23
+  },
+  {
+    "id": 76,
+    "name": "Pen Set",
+    "description": "Premium ballpoint pen set with executive gift box. Smooth writing with refillable ink cartridges.",
+    "price": 29.99,
+    "category": "Office",
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1586943759639-c93151feb8ac?w=500&h=500&fit=crop",
+    "stock": 156
+  },
+  {
+    "id": 77,
+    "name": "Whiteboard",
+    "description": "Magnetic dry erase whiteboard with aluminum frame. Includes marker tray and mounting hardware.",
+    "price": 44.99,
+    "category": "Office",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1606326608606-aa0b62935f2b?w=500&h=500&fit=crop",
+    "stock": 67
+  },
+  {
+    "id": 78,
+    "name": "Paper Shredder",
+    "description": "Cross-cut paper shredder for secure document disposal. 8-sheet capacity with 5-gallon bin.",
+    "price": 79.99,
+    "category": "Office",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1582139329536-db1cf3b2dee4?w=500&h=500&fit=crop",
+    "stock": 45
+  },
+  {
+    "id": 79,
+    "name": "Calendar Planner",
+    "description": "Monthly/weekly planner with goal-setting pages. Premium paper and leather cover.",
+    "price": 24.99,
+    "category": "Office",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?w=500&h=500&fit=crop",
+    "stock": 178
+  },
+  {
+    "id": 80,
+    "name": "Label Maker",
+    "description": "Portable label maker with LCD screen. Multiple font styles and sizes. Battery powered.",
+    "price": 39.99,
+    "category": "Office",
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1600091168146-0e4629d5de75?w=500&h=500&fit=crop",
+    "stock": 83
+  },
+  {
+    "id": 81,
+    "name": "Vitamin D3 Supplement",
+    "description": "High-potency vitamin D3 supplements. 5000 IU per softgel. Supports bone and immune health.",
+    "price": 19.99,
+    "category": "Health",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1579722821273-0f6c7d44362f?w=500&h=500&fit=crop",
+    "stock": 234
+  },
+  {
+    "id": 82,
+    "name": "Multivitamin Gummies",
+    "description": "Delicious multivitamin gummies for adults. Complete daily nutrition with natural fruit flavors.",
+    "price": 24.99,
+    "category": "Health",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=500&h=500&fit=crop",
+    "stock": 198
+  },
+  {
+    "id": 83,
+    "name": "Fish Oil Omega-3",
+    "description": "Premium fish oil capsules with EPA and DHA. Supports heart, brain, and joint health.",
+    "price": 29.99,
+    "category": "Health",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=500&h=500&fit=crop",
+    "stock": 176
+  },
+  {
+    "id": 84,
+    "name": "Collagen Powder",
+    "description": "Hydrolyzed collagen peptides powder. Supports skin, hair, nails, and joints. Unflavored and mixes easily.",
+    "price": 34.99,
+    "category": "Health",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?w=500&h=500&fit=crop",
+    "stock": 142
+  },
+  {
+    "id": 85,
+    "name": "Digital Thermometer",
+    "description": "Fast-reading digital thermometer with fever alarm. Accurate readings in 10 seconds.",
+    "price": 12.99,
+    "category": "Health",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=500&h=500&fit=crop",
+    "stock": 267
+  },
+  {
+    "id": 86,
+    "name": "Blood Pressure Monitor",
+    "description": "Automatic blood pressure monitor with large LCD display. Stores 120 readings for 2 users.",
+    "price": 49.99,
+    "category": "Health",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1581594549595-35f6edc7b762?w=500&h=500&fit=crop",
+    "stock": 87
+  },
+  {
+    "id": 87,
+    "name": "Massage Gun",
+    "description": "Percussive therapy massage gun with 6 speed levels. Includes 6 massage heads for different muscle groups.",
+    "price": 99.99,
+    "category": "Health",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1556911220-bff31c812dba?w=500&h=500&fit=crop",
+    "stock": 56
+  },
+  {
+    "id": 88,
+    "name": "Heating Pad",
+    "description": "Electric heating pad with auto shut-off. 6 heat settings and machine-washable cover.",
+    "price": 29.99,
+    "category": "Health",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1584464491033-06628f3a6b7b?w=500&h=500&fit=crop",
+    "stock": 134
+  },
+  {
+    "id": 89,
+    "name": "First Aid Kit",
+    "description": "Comprehensive first aid kit with 200 pieces. Includes bandages, antiseptics, and emergency tools.",
+    "price": 34.99,
+    "category": "Health",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1603398938378-e54eab446dde?w=500&h=500&fit=crop",
+    "stock": 112
+  },
+  {
+    "id": 90,
+    "name": "Humidifier",
+    "description": "Cool mist humidifier with 2-liter capacity. Whisper-quiet operation and auto shut-off when empty.",
+    "price": 44.99,
+    "category": "Health",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1611849362561-1242416324d6?w=500&h=500&fit=crop",
+    "stock": 98
+  },
+  {
+    "id": 91,
+    "name": "Winter Coat",
+    "description": "Water-resistant winter coat with faux fur hood. Insulated for maximum warmth in cold weather.",
+    "price": 129.99,
+    "category": "Clothing",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1539533018447-63fcce2678e3?w=500&h=500&fit=crop",
+    "stock": 42
+  },
+  {
+    "id": 92,
+    "name": "Sneakers",
+    "description": "Casual sneakers with cushioned sole. Breathable canvas upper in classic white design.",
+    "price": 69.99,
+    "category": "Clothing",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1525966222134-fcfa99b8ae77?w=500&h=500&fit=crop",
+    "stock": 156
+  },
+  {
+    "id": 93,
+    "name": "Graphic T-Shirt",
+    "description": "Cotton graphic t-shirt with vintage print. Soft fabric and relaxed fit for everyday comfort.",
+    "price": 24.99,
+    "category": "Clothing",
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=500&h=500&fit=crop",
+    "stock": 234
+  },
+  {
+    "id": 94,
+    "name": "Blazer",
+    "description": "Tailored blazer with notch lapel. Professional style perfect for business or formal occasions.",
+    "price": 149.99,
+    "category": "Clothing",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=500&h=500&fit=crop",
+    "stock": 37
+  },
+  {
+    "id": 95,
+    "name": "Cardigan Sweater",
+    "description": "Cozy knit cardigan with button closure. Perfect layering piece for transitional weather.",
+    "price": 54.99,
+    "category": "Clothing",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1434389677669-e08b4cac3105?w=500&h=500&fit=crop",
+    "stock": 89
+  },
+  {
+    "id": 96,
+    "name": "Smart Home Hub",
+    "description": "Voice-activated smart home hub with built-in speaker. Control all your smart devices from one place.",
+    "price": 89.99,
+    "category": "Electronics",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1558089687-e5dae8e4c0b1?w=500&h=500&fit=crop",
+    "stock": 73
+  },
+  {
+    "id": 97,
+    "name": "Action Camera",
+    "description": "Waterproof action camera with 4K video. Includes mounting accessories for sports and adventure.",
+    "price": 199.99,
+    "category": "Electronics",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=500&h=500&fit=crop",
+    "stock": 34
+  },
+  {
+    "id": 98,
+    "name": "E-Reader",
+    "description": "6-inch e-reader with glare-free display. Holds thousands of books with weeks of battery life.",
+    "price": 129.99,
+    "category": "Electronics",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=500&h=500&fit=crop",
+    "stock": 67
+  },
+  {
+    "id": 99,
+    "name": "Security Camera System",
+    "description": "4-camera wireless security system with night vision. Motion detection and mobile app access.",
+    "price": 299.99,
+    "category": "Electronics",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1558002038-1055907df827?w=500&h=500&fit=crop",
+    "stock": 21
+  },
+  {
+    "id": 100,
+    "name": "Robot Vacuum",
+    "description": "Smart robot vacuum with app control and auto-charging. Cleans carpets and hard floors automatically.",
+    "price": 249.99,
+    "category": "Home & Kitchen",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1558317374-067fb5f30001?w=500&h=500&fit=crop",
+    "stock": 44
+  }
+]
