@@ -1,8 +1,9 @@
-
+"use client";
 
 import Link from 'next/link';
 import { useState, useEffect} from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useRouter } from 'next/navigation';
+import { useSelector } from 'react-redux';
 
 const Logo = () => (<Link href="/">ShopCRM</Link>);
 
@@ -22,7 +23,7 @@ const CartButton = () => {
 }
 
 export default function Header() {
-    const dispatch = useDispatch();
+    // const dispatch = useDispatch();
     const router = useRouter();
     const [scrolled, setScrolled] = useState(false);
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
