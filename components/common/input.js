@@ -1,6 +1,4 @@
-import { onChange } from "react-toastify/dist/core/store";
-
-export default function input({
+export default function Input({
     label,
     name,
     type='text',
