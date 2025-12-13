@@ -1,7 +1,7 @@
 "use client";
 
-import CheckoutWizard from '@/components/checkout/CheckoutWizard';
+import Checkout from '@/components/checkout';
 
 export default function CheckoutPage() {
-  return <CheckoutWizard />;
+  return <Checkout />;
 }
