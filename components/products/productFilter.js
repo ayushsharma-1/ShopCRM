@@ -1,96 +1,131 @@
-import {useSelector, useDispatch} from 'react-redux';
-import {setFilter,applyFilter, resetFilters} from '@/lib/redux/slices/productSlice';
-import Button from '@/common/button';
+'use client';
 
-export default function ProductFilter() {
-    const dispatch = useDispatch();
-    const {products ,filters} = useSelector((state) => state.products);
+import { useSelector, useDispatch } from 'react-redux';
+import { setFilters, applyFilters, resetFilters } from '@/lib/redux/slices/productsSlice';
+import { FaSearch } from 'react-icons/fa';
 
-    const categories = ['all', ...new Set(products.map(product => product.category))];
+export default function ProductFilters() {
+  const dispatch = useDispatch();
+  const { filters, products } = useSelector((state) => state.products);
+  const categories = ['all', ...new Set(products.map((p) => p.category))];
 
-    const handleSearchChange = (e) => {
-        dispatch(setFilter({search: e.target.value}));
-        applyFilter();
-    }
+  const handleSearchChange = (e) => {
+    dispatch(setFilters({ search: e.target.value }));
+    dispatch(applyFilters());
+  };
 
-    const handleCategoryChange = (e) => {
-        dispatch(setFilter({category: e.target.value}));
-        applyFilter();
-    }
+  const handlePriceChange = (type, value) => {
+    dispatch(setFilters({ [type]: parseFloat(value) }));
+    dispatch(applyFilters());
+  };
 
-    const handlePriceChange = (e) => {
-        const [minPrice, maxPrice] = e.target.value.split('-').map(Number);
-        dispatch(setFilter({minPrice, maxPrice}));
-        applyFilter();
-    }
+  const handleRatingChange = (e) => {
+    dispatch(setFilters({ minRating: parseFloat(e.target.value) }));
+    dispatch(applyFilters());
+  };
 
-    const handleRatingChange = (e) => {
-        dispatch(setFilter({minRating: Number(e.target.value)}));
-        applyFilter();
-    }
+  const handleCategoryChange = (e) => {
+    dispatch(setFilters({ category: e.target.value }));
+    dispatch(applyFilters());
+  };
 
-    const handleReset = () => {
-        dispatch(resetFilters());
-        applyFilter();
-    }
+  const handleReset = () => {
+    dispatch(resetFilters());
+    dispatch(applyFilters());
+  };
 
-    return (
-        <div className="p-4 border rounded-lg mb-6">
-            <h3 className="text-lg font-semibold mb-4">Filter Products</h3>
-            <div className="mb-4">
-                <input
-                    type="text"
-                    placeholder="Search..."
-                    value={filters.search}
-                    onChange={handleSearchChange}
-                    className="w-full px-3 py-2 border rounded"
-                />  
-            </div>
-            <div className="mb-4">
-                <label className="block mb-1 font-medium">Category</label>
-                <select
-                    value={filters.category}
-                    onChange={handleCategoryChange}
-                    className="w-full px-3 py-2 border rounded"
-                >
-                    {categories.map((category) => (
-                        <option key={category} value={category}>
-                            {category.charAt(0).toUpperCase() + category.slice(1)}
-                        </option>
-                    ))}
-                </select>
-            </div>
-            <div className="mb-4">
-                <label className="block mb-1 font-medium">Price Range</label>   
-                <select
-                    value={filters.minPrice && filters.maxPrice ? `${filters.minPrice}-${filters.maxPrice}` : ''}
-                    onChange={handlePriceChange}
-                    className="w-full px-3 py-2 border rounded"
-                >
-                    <option value="">All</option>
-                    <option value="0-50">$0 - $50</option>
-                    <option value="51-100">$51 - $100</option>
-                    <option value="101-200">$101 - $200</option>
-                    <option value="201-500">$201 - $500</option>
-                    <option value="501-1000">$501 - $1000</option>
-                </select>
-            </div>
-            <div className="mb-4">
-                <label className="block mb-1 font-medium">Minimum Rating</label>
-                <select
-                    value={filters.minRating}
-                    onChange={handleRatingChange}
-                    className="w-full px-3 py-2 border rounded"
-                    >
-                    <option value={0}>All Ratings</option>
-                    <option value={1}>1 Star & Up</option>
-                    <option value={2}>2 Stars & Up</option>
-                    <option value={3}>3 Stars & Up</option>
-                    <option value={4}>4 Stars & Up</option>
-                    <option value={5}>5 Stars</option>
-                    </select>
-            </div>
-            <Button variant="outline" onClick={handleReset}>Reset Filters</Button>
+  return (
+    <div className="bg-white rounded-xl shadow-md p-6 space-y-6">
+      <h2 className="text-xl font-bold text-gray-800">Filters</h2>
+      <div>
+        <label className="block text-sm font-medium text-gray-700 mb-2">Search</label>
+        <div className="relative">
+          <input
+            type="text"
+            placeholder="Search products..."
+            value={filters.search}
+            onChange={handleSearchChange}
+            className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+          />
+          <FaSearch className="absolute left-3 top-3 text-gray-400" />
         </div>
-    );
+      </div>
+      <div>
+        <label className="block text-sm font-medium text-gray-700 mb-2">Category</label>
+        <select
+          value={filters.category}
+          onChange={handleCategoryChange}
+          className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none"
+        >
+          {categories.map((category) => (
+            <option key={category} value={category}>
+              {category === 'all' ? 'All Categories' : category}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <div>
+        <label className="block text-sm font-medium text-gray-700 mb-2">
+          Price Range: ${filters.minPrice} - ${filters.maxPrice}
+        </label>
+        <div className="space-y-3">
+          <div>
+            <input
+              type="range"
+              min="0"
+              max="10000"
+              step="50"
+              value={filters.minPrice}
+              onChange={(e) => handlePriceChange('minPrice', e.target.value)}
+              className="w-full"
+            />
+            <div className="flex justify-between text-xs text-gray-500">
+              <span>Min: ${filters.minPrice}</span>
+            </div>
+          </div>
+          <div>
+            <input
+              type="range"
+              min="0"
+              max="10000"
+              step="50"
+              value={filters.maxPrice}
+              onChange={(e) => handlePriceChange('maxPrice', e.target.value)}
+              className="w-full"
+            />
+            <div className="flex justify-between text-xs text-gray-500">
+              <span>Max: ${filters.maxPrice}</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <label className="block text-sm font-medium text-gray-700 mb-2">
+          Minimum Rating: {filters.minRating} ⭐
+        </label>
+        <input
+          type="range"
+          min="0"
+          max="5"
+          step="0.5"
+          value={filters.minRating}
+          onChange={handleRatingChange}
+          className="w-full"
+        />
+        <div className="flex justify-between text-xs text-gray-500 mt-1">
+          <span>Any</span>
+          <span>5 ⭐</span>
+        </div>
+      </div>
+      <div className="flex items-center gap-3 pt-4 border-t border-gray-200">
+        <button
+          onClick={handleReset}
+          className="px-6 py-3 bg-gray-100 text-gray-700 font-semibold rounded-lg hover:bg-gray-200 transition-all border border-gray-300"
+        >
+          Reset
+        </button>
+      </div>
+    </div>
+  );
 }

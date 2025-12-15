@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { addToCart } from '@/lib/redux/slices/cartSlice';
 import Button from '@/common/button';
 
