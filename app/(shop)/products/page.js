@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState, Suspense } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useSearchParams } from 'next/navigation';
 import { setProducts, applyFilters, setFilters } from '@/lib/redux/slices/productsSlice';
@@ -11,7 +11,7 @@ import LoadMoreButton from '@/components/products/LoadMoreButton';
 import productsData from '@/data/products.json';
 import { motion, AnimatePresence } from 'framer-motion';
 
-export default function ProductsPage() {
+function ProductsContent() {
   const dispatch = useDispatch();
   const searchParams = useSearchParams();
   const { filteredProducts, currentPage, itemsPerPage } = useSelector((state) => state.products);
@@ -138,5 +138,20 @@ export default function ProductsPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function ProductsPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-neutral-50/50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="inline-block h-12 w-12 animate-spin rounded-full border-4 border-solid border-blue-600 border-r-transparent"></div>
+          <p className="mt-4 text-neutral-600">Loading products...</p>
+        </div>
+      </div>
+    }>
+      <ProductsContent />
+    </Suspense>
   );
 }
