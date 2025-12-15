@@ -1,130 +1,161 @@
-"use client";
+'use client';
 
-import { useDispatch, useSelector } from "react-redux";
-import { useRouter } from "next/navigation";
-import { useState } from "react";
-import { prevStep, setProcessing, resetCheckout } from "@/lib/redux/slices/checkoutSlice";
-import { clearCart } from "@/lib/redux/slices/cartSlice";
-import Button from "../common/button";
-import { FaCheckCircle } from 'react-icons/fa';
+import { useDispatch, useSelector } from 'react-redux';
+import { useRouter } from 'next/navigation';
+import { prevStep, setProcessing, resetCheckout } from '@/lib/redux/slices/checkoutSlice';
+import { clearCart } from '@/lib/redux/slices/cartSlice';
+import { toast } from 'react-toastify';
+import { useState } from 'react';
+import OrderConfirmation from './OrderConfirmation';
+import CheckoutSection from './CheckoutSection';
+import { motion } from 'framer-motion';
+import { FaLock } from 'react-icons/fa';
 
 export default function OrderSummary() {
   const dispatch = useDispatch();
   const router = useRouter();
-  const [orderPlaced, setOrderPlaced] = useState(false);
   const { address, payment, isProcessing } = useSelector((state) => state.checkout);
   const { items, totalAmount } = useSelector((state) => state.cart);
-  
+  const [orderPlaced, setOrderPlaced] = useState(false);
+
   const shippingCost = totalAmount > 100 ? 0 : 10;
   const tax = totalAmount * 0.1;
-  const finalAmount = totalAmount + shippingCost + tax;
+  const finalTotal = totalAmount + shippingCost + tax;
 
   const handlePlaceOrder = () => {
     dispatch(setProcessing(true));
+    
     setTimeout(() => {
       setOrderPlaced(true);
+      toast.success('🎉 Order placed successfully!');
+      
       setTimeout(() => {
         dispatch(clearCart());
         dispatch(resetCheckout());
-        router.push('/products');
-      }, 2000);
-    }, 1000);
+        dispatch(setProcessing(false));
+        router.replace('/products');
+      }, 3000);
+    }, 2000);
   };
 
-  if (orderPlaced) {
+  if (orderPlaced || isProcessing) {
     return (
-      <div className="max-w-md mx-auto text-center p-8">
-        <div className="bg-green-100 rounded-full w-20 h-20 flex items-center justify-center mx-auto mb-4">
-          <FaCheckCircle className="w-12 h-12 text-green-600" />
-        </div>
-        <h2 className="text-2xl font-bold text-gray-800 mb-2">Order Placed Successfully!</h2>
-        <p className="text-gray-600 mb-1">Thank you for your purchase.</p>
-        <p className="text-sm text-gray-500">Redirecting to Products Page...</p>
+      <div className="bg-white border border-neutral-200/60 rounded-2xl p-6 md:p-8">
+        <OrderConfirmation isProcessing={isProcessing} />
       </div>
     );
   }
 
   return (
-    <div className="max-w-3xl mx-auto">
-      <h2 className="text-2xl font-bold mb-6">Order Summary</h2>
-
+    <div className="space-y-5">
       {/* Shipping Address */}
-      <div className="bg-white p-6 rounded-lg shadow mb-6">
-        <h3 className="text-lg font-semibold mb-3">Shipping Address</h3>
-        <div className="text-gray-700">
-          <p className="font-medium">{address.fullName}</p>
+      <CheckoutSection title="Shipping Address">
+        <div className="text-sm text-neutral-600 space-y-1">
+          <p className="font-semibold text-neutral-900">{address.fullName}</p>
           <p>{address.street}</p>
           <p>{address.city}, {address.state} {address.zipCode}</p>
           <p>{address.country}</p>
-          <p className="mt-2">Email: {address.email}</p>
-          <p>Phone: {address.phone}</p>
+          <p className="break-all pt-2 border-t border-neutral-100 mt-2">
+            {address.email}
+          </p>
+          <p>{address.phone}</p>
         </div>
-      </div>
+      </CheckoutSection>
 
       {/* Payment Method */}
-      <div className="bg-white p-6 rounded-lg shadow mb-6">
-        <h3 className="text-lg font-semibold mb-3">Payment Method</h3>
-        <div className="text-gray-700">
-          <p>Card ending in {payment.cardNumber.slice(-4)}</p>
-          <p>Cardholder: {payment.cardName}</p>
+      <CheckoutSection title="Payment Method" delay={0.1}>
+        <div className="text-sm text-neutral-600 space-y-1">
+          <p className="font-semibold text-neutral-900">{payment.cardName}</p>
+          <p>•••• •••• •••• {payment.cardNumber.slice(-4)}</p>
+          <p>Expires {payment.expiryDate}</p>
         </div>
-      </div>
+      </CheckoutSection>
 
       {/* Order Items */}
-      <div className="bg-white p-6 rounded-lg shadow mb-6">
-        <h3 className="text-lg font-semibold mb-3">Order Items ({items.length})</h3>
-        <div className="divide-y">
+      <CheckoutSection title={`Order Items (${items.length})`} delay={0.2}>
+        <div className="space-y-3">
           {items.map((item) => (
-            <div key={item.id} className="py-3 flex justify-between">
-              <div>
-                <p className="font-medium">{item.title}</p>
-                <p className="text-sm text-gray-600">Qty: {item.quantity}</p>
+            <div key={item.id} className="flex items-center gap-3">
+              <div className="w-14 h-14 rounded-lg overflow-hidden bg-neutral-50 shrink-0">
+                <img
+                  src={item.image}
+                  alt={item.name}
+                  className="w-full h-full object-cover"
+                />
               </div>
-              <p className="font-semibold">${(item.price * item.quantity).toFixed(2)}</p>
+              <div className="flex-1 min-w-0">
+                <p className="font-medium text-sm text-neutral-900 truncate">
+                  {item.name}
+                </p>
+                <p className="text-xs text-neutral-500">
+                  Qty: {item.quantity} × ${item.price}
+                </p>
+              </div>
+              <p className="font-semibold text-sm text-neutral-900">
+                ${(item.price * item.quantity).toFixed(2)}
+              </p>
             </div>
           ))}
         </div>
-      </div>
+      </CheckoutSection>
 
       {/* Price Summary */}
-      <div className="bg-white p-6 rounded-lg shadow mb-6">
-        <h3 className="text-lg font-semibold mb-3">Price Details</h3>
-        <div className="space-y-2">
-          <div className="flex justify-between">
+      <CheckoutSection delay={0.3}>
+        <div className="space-y-3">
+          <div className="flex justify-between text-sm text-neutral-600">
             <span>Subtotal</span>
-            <span>${totalAmount.toFixed(2)}</span>
+            <span className="font-medium text-neutral-900">${totalAmount.toFixed(2)}</span>
           </div>
-          <div className="flex justify-between">
+          <div className="flex justify-between text-sm text-neutral-600">
             <span>Shipping</span>
-            <span>{shippingCost === 0 ? 'FREE' : `$${shippingCost.toFixed(2)}`}</span>
+            <span className="font-medium text-neutral-900">
+              {shippingCost === 0 ? (
+                <span className="text-green-600">FREE</span>
+              ) : (
+                `$${shippingCost.toFixed(2)}`
+              )}
+            </span>
           </div>
-          <div className="flex justify-between">
-            <span>Tax (10%)</span>
-            <span>${tax.toFixed(2)}</span>
+          <div className="flex justify-between text-sm text-neutral-600">
+            <span>Tax</span>
+            <span className="font-medium text-neutral-900">${tax.toFixed(2)}</span>
           </div>
-          <div className="border-t pt-2 flex justify-between font-bold text-lg">
-            <span>Total</span>
-            <span>${finalAmount.toFixed(2)}</span>
+          <div className="border-t border-neutral-200 pt-3">
+            <div className="flex justify-between items-baseline">
+              <span className="text-base font-semibold text-neutral-900">Total</span>
+              <span className="text-2xl font-bold text-neutral-900">
+                ${finalTotal.toFixed(2)}
+              </span>
+            </div>
           </div>
         </div>
-      </div>
+      </CheckoutSection>
 
       {/* Action Buttons */}
-      <div className="flex justify-between gap-4">
-        <Button
-          variant="outline"
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.4 }}
+        className="flex gap-3 pt-2"
+      >
+        <button
+          type="button"
           onClick={() => dispatch(prevStep())}
           disabled={isProcessing}
+          className="flex-1 py-3.5 bg-neutral-100 text-neutral-900 rounded-xl hover:bg-neutral-200 transition-all duration-200 font-medium disabled:opacity-50 disabled:cursor-not-allowed"
         >
           Back
-        </Button>
-        <Button
+        </button>
+        <motion.button
+          whileTap={{ scale: 0.98 }}
           onClick={handlePlaceOrder}
           disabled={isProcessing}
+          className="flex-1 py-3.5 bg-neutral-900 text-white rounded-xl hover:bg-neutral-800 transition-all duration-200 font-medium disabled:bg-neutral-400 disabled:cursor-not-allowed flex items-center justify-center gap-2"
         >
-          {isProcessing ? 'Processing...' : 'Confirm Order'}
-        </Button>
-      </div>
+          <FaLock className="text-xs" />
+          <span>Place Order</span>
+        </motion.button>
+      </motion.div>
     </div>
   );
 }

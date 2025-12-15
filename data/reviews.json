@@ -1,0 +1,552 @@
+[
+  {
+    "reviewId": "rev_001",
+    "userId": "user_001",
+    "productId": 1,
+    "rating": 5,
+    "category": "Quality",
+    "reviewText": "Absolutely loved it! The build quality is exceptional and exceeded all my expectations. Worth every penny.",
+    "timestamp": "2024-11-20T10:30:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_002",
+    "userId": "user_002",
+    "productId": 1,
+    "rating": 4,
+    "category": "Performance",
+    "reviewText": "Great performance overall. Fast and reliable. Would definitely recommend to friends and family.",
+    "timestamp": "2024-11-18T14:20:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_003",
+    "userId": "user_003",
+    "productId": 1,
+    "rating": 5,
+    "category": "Features",
+    "reviewText": "Feature-rich and intuitive. Everything I needed in one place. Super impressed with the attention to detail.",
+    "timestamp": "2024-11-15T09:45:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_004",
+    "userId": "user_004",
+    "productId": 1,
+    "rating": 4,
+    "category": "UI",
+    "reviewText": "Clean and modern interface. Easy to navigate and aesthetically pleasing. Minor improvements could be made.",
+    "timestamp": "2024-11-12T16:10:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_005",
+    "userId": "user_005",
+    "productId": 1,
+    "rating": 5,
+    "category": "Support",
+    "reviewText": "Customer service was outstanding! Quick responses and very helpful. Resolved my issue in minutes.",
+    "timestamp": "2024-11-10T11:30:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_006",
+    "userId": "user_006",
+    "productId": 1,
+    "rating": 4,
+    "category": "Quality",
+    "reviewText": "Good quality product. Durable and well-made. Packaging could be better but product itself is great.",
+    "timestamp": "2024-11-08T13:50:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_007",
+    "userId": "user_007",
+    "productId": 1,
+    "rating": 5,
+    "category": "Performance",
+    "reviewText": "Lightning fast! No lag whatsoever. Handles everything I throw at it with ease.",
+    "timestamp": "2024-11-05T10:20:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_008",
+    "userId": "user_008",
+    "productId": 1,
+    "rating": 3,
+    "category": "Accessibility",
+    "reviewText": "Decent but accessibility features need work. Would love to see better keyboard navigation and screen reader support.",
+    "timestamp": "2024-11-03T15:40:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_009",
+    "userId": "user_009",
+    "productId": 1,
+    "rating": 5,
+    "category": "UI",
+    "reviewText": "Stunning design! The UI is gorgeous and makes using it a pleasure. Best I've seen in this category.",
+    "timestamp": "2024-11-01T12:15:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_010",
+    "userId": "user_010",
+    "productId": 1,
+    "rating": 4,
+    "category": "Features",
+    "reviewText": "Packed with features. Does everything advertised and more. A few advanced features take time to learn.",
+    "timestamp": "2024-10-29T09:30:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_011",
+    "userId": "user_011",
+    "productId": 2,
+    "rating": 5,
+    "category": "Quality",
+    "reviewText": "Premium quality all around. You can tell they didn't cut corners. Highly satisfied with this purchase.",
+    "timestamp": "2024-11-19T11:45:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_012",
+    "userId": "user_012",
+    "productId": 2,
+    "rating": 4,
+    "category": "Performance",
+    "reviewText": "Solid performance. No complaints so far. Does exactly what it's supposed to do efficiently.",
+    "timestamp": "2024-11-17T14:30:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_013",
+    "userId": "user_013",
+    "productId": 2,
+    "rating": 5,
+    "category": "Support",
+    "reviewText": "Best customer support experience ever! They went above and beyond to help me. Really impressed.",
+    "timestamp": "2024-11-14T10:00:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_014",
+    "userId": "user_014",
+    "productId": 2,
+    "rating": 3,
+    "category": "UI",
+    "reviewText": "Interface is okay but could use some modernization. Feels a bit dated compared to competitors.",
+    "timestamp": "2024-11-11T16:20:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_015",
+    "userId": "user_015",
+    "productId": 2,
+    "rating": 4,
+    "category": "Features",
+    "reviewText": "Good feature set for the price. Missing a few things I'd like to see but overall very functional.",
+    "timestamp": "2024-11-09T13:10:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_016",
+    "userId": "user_016",
+    "productId": 3,
+    "rating": 5,
+    "category": "Quality",
+    "reviewText": "Outstanding craftsmanship! Attention to detail is remarkable. This is what quality looks like.",
+    "timestamp": "2024-11-21T09:15:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_017",
+    "userId": "user_017",
+    "productId": 3,
+    "rating": 5,
+    "category": "Performance",
+    "reviewText": "Blazing fast performance! No hiccups at all. Handles heavy workloads like a champ.",
+    "timestamp": "2024-11-18T11:40:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_018",
+    "userId": "user_018",
+    "productId": 3,
+    "rating": 4,
+    "category": "Accessibility",
+    "reviewText": "Good accessibility features included. Could be better but it's a solid start. Appreciate the effort.",
+    "timestamp": "2024-11-15T15:25:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_019",
+    "userId": "user_019",
+    "productId": 3,
+    "rating": 5,
+    "category": "UI",
+    "reviewText": "Beautifully designed interface! Everything is where you'd expect it to be. Intuitive and elegant.",
+    "timestamp": "2024-11-12T10:50:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_020",
+    "userId": "user_020",
+    "productId": 3,
+    "rating": 4,
+    "category": "Features",
+    "reviewText": "Comprehensive feature list. Covers all the basics and then some. A few advanced options missing.",
+    "timestamp": "2024-11-09T14:35:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_021",
+    "userId": "user_021",
+    "productId": 4,
+    "rating": 5,
+    "category": "Support",
+    "reviewText": "Customer support team is incredible! Fast, friendly, and knowledgeable. They truly care about customers.",
+    "timestamp": "2024-11-20T13:20:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_022",
+    "userId": "user_022",
+    "productId": 4,
+    "rating": 4,
+    "category": "Quality",
+    "reviewText": "Solid build quality. Feels premium in hand. Minor cosmetic issues but nothing that affects functionality.",
+    "timestamp": "2024-11-17T09:55:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_023",
+    "userId": "user_023",
+    "productId": 4,
+    "rating": 5,
+    "category": "Performance",
+    "reviewText": "Exceptional performance! Smooth as butter. Can't believe how well it runs even under load.",
+    "timestamp": "2024-11-14T16:10:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_024",
+    "userId": "user_024",
+    "productId": 4,
+    "rating": 3,
+    "category": "UI",
+    "reviewText": "UI needs work. Not very intuitive at first. Takes some time to get used to the layout.",
+    "timestamp": "2024-11-11T12:45:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_025",
+    "userId": "user_025",
+    "productId": 4,
+    "rating": 4,
+    "category": "Features",
+    "reviewText": "Great features for everyday use. Does what I need it to do without being overwhelming.",
+    "timestamp": "2024-11-08T10:30:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_026",
+    "userId": "user_026",
+    "productId": 5,
+    "rating": 5,
+    "category": "Quality",
+    "reviewText": "Top-tier quality! Material feels premium and durable. Best purchase I've made this year.",
+    "timestamp": "2024-11-19T14:50:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_027",
+    "userId": "user_027",
+    "productId": 5,
+    "rating": 4,
+    "category": "Performance",
+    "reviewText": "Reliable performance day after day. No issues encountered so far. Does its job well.",
+    "timestamp": "2024-11-16T11:20:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_028",
+    "userId": "user_028",
+    "productId": 5,
+    "rating": 5,
+    "category": "Accessibility",
+    "reviewText": "Excellent accessibility support! As someone who needs these features, I'm thrilled with the implementation.",
+    "timestamp": "2024-11-13T09:40:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_029",
+    "userId": "user_029",
+    "productId": 5,
+    "rating": 5,
+    "category": "UI",
+    "reviewText": "Perfect UI design! Clean, modern, and functional. Every element serves a purpose.",
+    "timestamp": "2024-11-10T15:15:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_030",
+    "userId": "user_030",
+    "productId": 5,
+    "rating": 4,
+    "category": "Features",
+    "reviewText": "Feature-packed without being bloated. Strikes a good balance between power and simplicity.",
+    "timestamp": "2024-11-07T13:05:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_031",
+    "userId": "user_031",
+    "productId": 6,
+    "rating": 5,
+    "category": "Support",
+    "reviewText": "Amazing support team! They answered all my questions promptly and professionally. 10/10 service.",
+    "timestamp": "2024-11-21T10:25:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_032",
+    "userId": "user_032",
+    "productId": 6,
+    "rating": 4,
+    "category": "Quality",
+    "reviewText": "Great quality for the price point. Sturdy construction and well thought out design.",
+    "timestamp": "2024-11-18T12:40:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_033",
+    "userId": "user_033",
+    "productId": 6,
+    "rating": 5,
+    "category": "Performance",
+    "reviewText": "Outstanding performance! Runs smoothly without any lag or stuttering. Highly efficient.",
+    "timestamp": "2024-11-15T14:55:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_034",
+    "userId": "user_034",
+    "productId": 6,
+    "rating": 4,
+    "category": "UI",
+    "reviewText": "Nice interface overall. Could use some polish in certain areas but generally well-designed.",
+    "timestamp": "2024-11-12T09:30:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_035",
+    "userId": "user_035",
+    "productId": 6,
+    "rating": 5,
+    "category": "Features",
+    "reviewText": "Love all the features! Everything I wanted and more. Nothing feels like an afterthought.",
+    "timestamp": "2024-11-09T16:20:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_036",
+    "userId": "user_036",
+    "productId": 7,
+    "rating": 4,
+    "category": "Quality",
+    "reviewText": "Quality meets expectations. Solid construction and materials used. No complaints here.",
+    "timestamp": "2024-11-20T11:10:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_037",
+    "userId": "user_037",
+    "productId": 7,
+    "rating": 5,
+    "category": "Performance",
+    "reviewText": "Incredible performance! Fast, responsive, and efficient. Couldn't ask for more.",
+    "timestamp": "2024-11-17T13:45:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_038",
+    "userId": "user_038",
+    "productId": 7,
+    "rating": 3,
+    "category": "Accessibility",
+    "reviewText": "Basic accessibility features present but room for improvement. Hope to see updates in the future.",
+    "timestamp": "2024-11-14T10:25:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_039",
+    "userId": "user_039",
+    "productId": 7,
+    "rating": 5,
+    "category": "UI",
+    "reviewText": "Gorgeous UI! Love the color scheme and layout. Makes using it a joy.",
+    "timestamp": "2024-11-11T15:50:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_040",
+    "userId": "user_040",
+    "productId": 7,
+    "rating": 4,
+    "category": "Features",
+    "reviewText": "Solid feature set. Covers most use cases well. A few niche features missing but not dealbreakers.",
+    "timestamp": "2024-11-08T12:35:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_041",
+    "userId": "user_041",
+    "productId": 8,
+    "rating": 5,
+    "category": "Support",
+    "reviewText": "Phenomenal customer support! Quick to respond and genuinely helpful. Makes a huge difference.",
+    "timestamp": "2024-11-19T09:50:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_042",
+    "userId": "user_042",
+    "productId": 8,
+    "rating": 4,
+    "category": "Quality",
+    "reviewText": "Good quality product. Well-made and reliable. Gets the job done without issues.",
+    "timestamp": "2024-11-16T14:15:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_043",
+    "userId": "user_043",
+    "productId": 8,
+    "rating": 5,
+    "category": "Performance",
+    "reviewText": "Amazing performance! No lag, no freezing. Just smooth sailing all the way.",
+    "timestamp": "2024-11-13T11:40:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_044",
+    "userId": "user_044",
+    "productId": 8,
+    "rating": 4,
+    "category": "UI",
+    "reviewText": "Clean and functional UI. Easy to learn and use. Minor tweaks would make it perfect.",
+    "timestamp": "2024-11-10T16:25:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_045",
+    "userId": "user_045",
+    "productId": 8,
+    "rating": 5,
+    "category": "Features",
+    "reviewText": "Excellent feature selection! Has everything I need and nothing I don't. Well balanced.",
+    "timestamp": "2024-11-07T10:05:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_046",
+    "userId": "user_046",
+    "productId": 9,
+    "rating": 5,
+    "category": "Quality",
+    "reviewText": "Superior quality! Craftsmanship is evident in every detail. Worth the investment.",
+    "timestamp": "2024-11-21T14:30:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_047",
+    "userId": "user_047",
+    "productId": 9,
+    "rating": 4,
+    "category": "Performance",
+    "reviewText": "Great performance overall. Handles tasks efficiently and reliably. Very satisfied.",
+    "timestamp": "2024-11-18T09:20:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_048",
+    "userId": "user_048",
+    "productId": 9,
+    "rating": 4,
+    "category": "Accessibility",
+    "reviewText": "Good accessibility options. Not perfect but better than most. Shows they care.",
+    "timestamp": "2024-11-15T13:45:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_049",
+    "userId": "user_049",
+    "productId": 9,
+    "rating": 5,
+    "category": "UI",
+    "reviewText": "Beautiful design! UI is modern, clean, and pleasant to use. Everything flows naturally.",
+    "timestamp": "2024-11-12T11:15:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_050",
+    "userId": "user_050",
+    "productId": 9,
+    "rating": 4,
+    "category": "Features",
+    "reviewText": "Well-rounded feature set. Does what it promises and does it well. No major complaints.",
+    "timestamp": "2024-11-09T15:30:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_051",
+    "userId": "user_051",
+    "productId": 10,
+    "rating": 5,
+    "category": "Support",
+    "reviewText": "World-class support! They resolved my issue quickly and professionally. Can't recommend enough.",
+    "timestamp": "2024-11-20T10:45:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_052",
+    "userId": "user_052",
+    "productId": 10,
+    "rating": 4,
+    "category": "Quality",
+    "reviewText": "Quality construction. Durable and well-designed. Feels like it will last for years.",
+    "timestamp": "2024-11-17T12:20:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_053",
+    "userId": "user_053",
+    "productId": 10,
+    "rating": 5,
+    "category": "Performance",
+    "reviewText": "Top-notch performance! Fast, reliable, and consistent. Exceeds expectations.",
+    "timestamp": "2024-11-14T14:55:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_054",
+    "userId": "user_054",
+    "productId": 10,
+    "rating": 3,
+    "category": "UI",
+    "reviewText": "UI is functional but not very modern. Could benefit from a redesign to match current trends.",
+    "timestamp": "2024-11-11T09:40:00Z",
+    "verified": true
+  },
+  {
+    "reviewId": "rev_055",
+    "userId": "user_055",
+    "productId": 10,
+    "rating": 4,
+    "category": "Features",
+    "reviewText": "Good range of features. Covers the essentials and adds some nice extras. Well thought out.",
+    "timestamp": "2024-11-08T16:10:00Z",
+    "verified": true
+  }
+]

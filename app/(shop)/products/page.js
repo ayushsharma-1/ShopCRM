@@ -1,110 +1,140 @@
-"use client";
-import { useEffect, useState } from "react";
-import {useSelector, useDispatch} from 'react-redux';
-import { useSearchParams } from "next/navigation";
-import { setProducts, applyFilters, setFilters, setCurrentPage } from "@/lib/redux/slices/productsSlice";
-import ProductCard from "@/components/products/productCard";
-import ProductFilters from "@/components/products/productFilter";
-import LoadingSpinner from "@/components/common/loadingSpinner";
+'use client';
+
+import { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useSearchParams } from 'next/navigation';
+import { setProducts, applyFilters, setFilters } from '@/lib/redux/slices/productsSlice';
+import ProductsHeader from '@/components/products/ProductsHeader';
+import ProductFilters from '@/components/products/ProductFilters';
+import ProductGrid from '@/components/products/ProductGrid';
+import LoadMoreButton from '@/components/products/LoadMoreButton';
 import productsData from '@/data/products.json';
-import { FaFilter, FaSadTear, FaChevronDown } from 'react-icons/fa';
+import { motion, AnimatePresence } from 'framer-motion';
+
 export default function ProductsPage() {
   const dispatch = useDispatch();
-  // const router = useRouter();
   const searchParams = useSearchParams();
-  const {filteredProducts, currentPage, itemsPerPage} = useSelector((state) => state.products);
+  const { filteredProducts, currentPage, itemsPerPage } = useSelector((state) => state.products);
   const [isLoading, setIsLoading] = useState(true);
   const [displayedProducts, setDisplayedProducts] = useState([]);
   const [showFilters, setShowFilters] = useState(false);
+  const [isLoadingMore, setIsLoadingMore] = useState(false);
+
   useEffect(() => {
-    setTimeout(() => {
+    // Get URL parameters
+    const category = searchParams.get('category');
+    const minPrice = searchParams.get('minPrice');
+    const maxPrice = searchParams.get('maxPrice');
+
+    // Simulate loading
+    const loadTimer = setTimeout(() => {
       dispatch(setProducts(productsData));
+      
+      // Apply filters from URL parameters
+      if (category || minPrice || maxPrice) {
+        dispatch(setFilters({
+          category: category || 'all',
+          minPrice: minPrice ? parseFloat(minPrice) : 0,
+          maxPrice: maxPrice ? parseFloat(maxPrice) : 10000,
+        }));
+      }
+      
       dispatch(applyFilters());
       setIsLoading(false);
-    }, 1000);
-  }, [dispatch]);
+    }, 600);
+
+    return () => clearTimeout(loadTimer);
+  }, [dispatch, searchParams]);
 
   useEffect(() => {
-    const category = searchParams.get('category') || '';
-    const minPrice = searchParams.get('minPrice') || '';
-    const maxPrice = searchParams.get('maxPrice') || '';
-    const rating = searchParams.get('rating') || '';
-    dispatch(setFilters({ category, minPrice, maxPrice, rating }));
-    dispatch(applyFilters());
-  }, [searchParams, dispatch]);
-  useEffect(() => {
-    dispatch(setCurrentPage(1));
-  }, [filteredProducts.length, dispatch]);
-
-  useEffect(() => {
+    // Initial pagination
     const startIndex = 0;
-    const endIndex = currentPage * itemsPerPage;
+    const endIndex = itemsPerPage;
     setDisplayedProducts(filteredProducts.slice(startIndex, endIndex));
-  }, [filteredProducts, currentPage, itemsPerPage]);
+  }, [filteredProducts, itemsPerPage]);
 
-  if (isLoading) {
-    return <LoadingSpinner fullScreen />;
-  } 
+  const handleLoadMore = () => {
+    setIsLoadingMore(true);
+    
+    setTimeout(() => {
+      setDisplayedProducts([
+        ...displayedProducts,
+        ...filteredProducts.slice(
+          displayedProducts.length,
+          displayedProducts.length + itemsPerPage
+        ),
+      ]);
+      setIsLoadingMore(false);
+    }, 400);
+  };
+
+  const hasMore = displayedProducts.length < filteredProducts.length;
+
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold text-gray-800 mb-8">Products</h1>
-      
-      <div className="flex flex-col lg:flex-row gap-8">
-        <aside className={`lg:block ${showFilters ? 'block' : 'hidden'} lg:w-80 flex-shrink-0`}>
-          <div className="sticky top-20">
+    <div className="min-h-screen bg-neutral-50/50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+        {/* Header */}
+        <ProductsHeader 
+          productsCount={filteredProducts.length}
+          showFilters={showFilters}
+          onToggleFilters={() => setShowFilters(!showFilters)}
+        />
+
+        {/* Main Layout */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8">
+          {/* Filters Sidebar - Desktop */}
+          <div className="hidden lg:block lg:col-span-3">
             <ProductFilters />
           </div>
-        </aside>
 
-        <div className="flex-1">
-          <button 
-            onClick={() => setShowFilters(!showFilters)}
-            className="lg:hidden mb-6 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg transition-colors shadow-md flex items-center gap-2 w-full justify-center"
-          >
-            <FaFilter className="w-5 h-5" />
-            {showFilters ? 'Hide Filters' : 'Show Filters'}
-          </button>
-
-          <div className="mb-6 flex justify-between items-center">
-            <p className="text-gray-600">
-              Showing <span className="font-semibold">{displayedProducts.length}</span> of{' '}
-              <span className="font-semibold">{filteredProducts.length}</span> products
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-6">
-            {displayedProducts.length === 0 ? (
-              <div className="col-span-full text-center py-16">
-                <FaSadTear className="w-24 h-24 mx-auto mb-4 text-gray-300" />
-                <p className="text-xl text-gray-500">No products found.</p>
-                <p className="text-gray-400 mt-2">Try adjusting your filters</p>
-              </div>
-            ) : ( 
-              displayedProducts.map((product) => (
-                <ProductCard key={product.id} product={product} />
-              ))
-            )}
-          </div>
-          {filteredProducts.length > displayedProducts.length && (
-            <div className="mt-12 text-center">
-              <button
-                onClick={() => {
-                  const nextPage = currentPage + 1;
-                  const startIndex = 0;
-                  const endIndex = nextPage * itemsPerPage;
-                  setDisplayedProducts(filteredProducts.slice(startIndex, endIndex));
-                  dispatch({ type: 'products/setCurrentPage', payload: nextPage });
-                }}
-                className="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-8 py-3 rounded-lg transition-colors shadow-md inline-flex items-center gap-2"
+          {/* Filters Sidebar - Mobile */}
+          <AnimatePresence>
+            {showFilters && (
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                exit={{ opacity: 0 }}
+                className="lg:hidden fixed inset-0 bg-black/40 backdrop-blur-sm z-40"
+                onClick={() => setShowFilters(false)}
               >
-                Load More Products
-                <FaChevronDown className="w-5 h-5" />
-              </button>
-              <p className="text-sm text-gray-500 mt-3">
-                {filteredProducts.length - displayedProducts.length} more products available
-              </p>
-            </div>
-          )}
+                <motion.div
+                  initial={{ x: '-100%' }}
+                  animate={{ x: 0 }}
+                  exit={{ x: '-100%' }}
+                  transition={{ type: 'spring', damping: 30, stiffness: 300 }}
+                  className="absolute left-0 top-0 bottom-0 w-full max-w-sm bg-neutral-50 overflow-y-auto"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <div className="p-4">
+                    <div className="flex items-center justify-between mb-4">
+                      <h2 className="text-lg font-semibold text-neutral-900">Filters</h2>
+                      <button
+                        onClick={() => setShowFilters(false)}
+                        className="w-8 h-8 flex items-center justify-center rounded-lg bg-neutral-200 hover:bg-neutral-300 transition-colors"
+                      >
+                        ✕
+                      </button>
+                    </div>
+                    <ProductFilters />
+                  </div>
+                </motion.div>
+              </motion.div>
+            )}
+          </AnimatePresence>
+
+          {/* Products Grid */}
+          <div className="lg:col-span-9">
+            <ProductGrid 
+              products={displayedProducts} 
+              isLoading={isLoading}
+            />
+            
+            <LoadMoreButton 
+              onClick={handleLoadMore}
+              isLoading={isLoadingMore}
+              hasMore={hasMore}
+            />
+          </div>
         </div>
       </div>
     </div>
