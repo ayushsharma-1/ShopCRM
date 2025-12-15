@@ -3,8 +3,8 @@
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateAddress, nextStep } from '@/lib/redux/slices/checkoutSlice';
-import Input from '@/common/Input';
-import Button from '@/common/button';
+import Input from '../common/Input';
+import Button from '../common/button';
 
 export default function AddressForm() {
   const dispatch = useDispatch();

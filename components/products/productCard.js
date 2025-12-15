@@ -1,13 +1,13 @@
 import Link from 'next/link';
 import { useDispatch } from 'react-redux';
 import { addToCart } from '@/lib/redux/slices/cartSlice';
-import Button from '@/common/button';
+import Button from '../common/button';
 
 export default function ProductCard({ product }) {
     const dispatch = useDispatch();
     const { id, name, description, price, image } = product;
     const handleAddToCart = () => {
-        dispatch(addToCart({ id, name, price, image, quantity: 1 }));
+        dispatch(addToCart({ id, title: name, name, price, image, quantity: 1 }));
     }
     return (
         <div className="border p-4 rounded-lg shadow-md">

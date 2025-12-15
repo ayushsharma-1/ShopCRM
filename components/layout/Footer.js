@@ -7,7 +7,7 @@ export default function Footer() {
                 <p>&copy; {new Date().getFullYear()} ShopCRM. All rights reserved.</p>
                 <nav>
                     <Link href="/">Home</Link>
-                    <Link href="/product">Products</Link>
+                    <Link href="/products">Products</Link>
                     <Link href="/cart">Cart</Link>
                 </nav>
             </div>
