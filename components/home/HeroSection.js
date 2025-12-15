@@ -7,6 +7,8 @@ import { FaArrowRight } from 'react-icons/fa';
 export default function HeroSection() {
   return (
     <section className="relative min-h-[600px] md:min-h-[700px] bg-neutral-900 overflow-hidden">
+      <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=1920')] bg-cover bg-center opacity-20"></div>
+      
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
           backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
