@@ -4,6 +4,7 @@ import Link from 'next/link';
 import { useState, useEffect} from 'react';
 import { useRouter } from 'next/navigation';
 import { useSelector } from 'react-redux';
+import { FaShoppingCart, FaBars, FaTimes } from 'react-icons/fa';
 
 const Logo = () => (
     <Link href="/" className="text-2xl font-bold text-blue-600 hover:text-blue-700 transition-colors">
@@ -30,9 +31,7 @@ const CartButton = () => {
             onClick={() => router.push('/cart')}
             className="relative p-2 text-gray-700 hover:text-blue-600 transition-colors"
         >
-            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-            </svg>
+            <FaShoppingCart className="w-6 h-6" />
             {totalItems > 0 && (
                 <span className="absolute -top-1 -right-1 bg-red-500 text-white text-xs font-bold rounded-full w-5 h-5 flex items-center justify-center">
                     {totalItems}
@@ -74,13 +73,11 @@ export default function Header() {
                             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                             className="md:hidden p-2 text-gray-700 hover:text-blue-600 transition-colors"
                         >
-                            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                {mobileMenuOpen ? (
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
-                                ) : (
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
-                                )}
-                            </svg>
+                            {mobileMenuOpen ? (
+                                <FaTimes className="w-6 h-6" />
+                            ) : (
+                                <FaBars className="w-6 h-6" />
+                            )}
                         </button>
                     </div>
                 </div>

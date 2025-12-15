@@ -7,6 +7,7 @@ import { addToCart } from '@/lib/redux/slices/cartSlice';
 import Button from '@/components/common/button';
 import LoadingSpinner from '@/components/common/loadingSpinner';
 import productsData from '@/data/products.json';
+import { FaStar, FaCheckCircle, FaShoppingCart } from 'react-icons/fa';
 
 export default function ProductDetailPage() {
   const params = useParams();
@@ -79,15 +80,10 @@ export default function ProductDetailPage() {
           <div className="flex items-center space-x-2">
             <div className="flex items-center space-x-1">
               {[...Array(5)].map((_, i) => (
-                <svg
+                <FaStar
                   key={i}
-                  className={`w-5 h-5 ${i < Math.floor(product.rating) ? 'text-yellow-400' : 'text-gray-300'}`} 
-                  fill="currentColor"
-                  viewBox="0 0 20 20"
-                >
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.286 3.974a1 1 0 00.95.69h4.18c.969 0 1.371 1.24.588 1.81l-3.39 2.462a1 1 0 00-.364 1.118l1.287 3.974c.3.921-.755 1.688-1.54 1.118l-3.39-2.462a1 1 0 00-1.176 0l-3.39 2.462c-.784.57-1.838-.197-1.539-1.118l1.286-3.974a1 1 0 00-.364-1.118L2.
-                  9.401c-.783-.57-.38-1.81.588-1.81h4.18a1 1 0 00.95-.69l1.286-3.974z" />
-                </svg>
+                  className={`w-5 h-5 ${i < Math.floor(product.rating) ? 'text-yellow-400' : 'text-gray-300'}`}
+                />
               ))}
             </div>
             <span className="text-lg font-semibold text-gray-700">{product.rating}</span>
@@ -105,27 +101,19 @@ export default function ProductDetailPage() {
             <h3 className="text-xl font-semibold text-gray-800 mb-3">Features</h3>
             <ul className="space-y-2">
               <li className="flex items-center space-x-2 text-gray-600">
-                <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M16.707 5.293a1 1 0 00-1.414 0L9 11.586 6.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l7-7a1 1 0 000-1.414z" />
-                </svg>
+                <FaCheckCircle className="w-5 h-5 text-green-500" />
                 <span>High Quality Product</span>
               </li>
               <li className="flex items-center space-x-2 text-gray-600">
-                <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M16.707 5.293a1 1 0 00-1.414 0L9 11.586 6.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l7-7a1 1 0 000-1.414z" />
-                </svg>
+                <FaCheckCircle className="w-5 h-5 text-green-500" />
                 <span>Fast & Free Shipping</span>
               </li>
               <li className="flex items-center space-x-2 text-gray-600">
-                <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M16.707 5.293a1 1 0 00-1.414 0L9 11.586 6.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l7-7a1 1 0 000-1.414z" />
-                </svg>
+                <FaCheckCircle className="w-5 h-5 text-green-500" />
                 <span>30-Day Return Policy</span>
               </li>
               <li className="flex items-center space-x-2 text-gray-600">
-                <svg className="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M16.707 5.293a1 1 0 00-1.414 0L9 11.586 6.707 9.293a1 1 0 00-1.414 1.414l3 3a1 1 0 001.414 0l7-7a1 1 0 000-1.414z" />
-                </svg>
+                <FaCheckCircle className="w-5 h-5 text-green-500" />
                 <span>Secure Payment</span>
               </li>
             </ul>
@@ -159,11 +147,7 @@ export default function ProductDetailPage() {
               size="lg"
               className="w-full flex items-center justify-center space-x-2"
             >
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-5 h-5">
-                <circle cx="9" cy="21" r="1" />
-                <circle cx="20" cy="21" r="1" />
-                <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6" />
-              </svg>
+              <FaShoppingCart className="w-5 h-5" />
               <span>Add to Cart</span>
             </Button>
           </div>
