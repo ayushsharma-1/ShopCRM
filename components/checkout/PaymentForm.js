@@ -14,6 +14,18 @@ export default function PaymentForm() {
   const [formData, setFormData] = useState(payment);
   const [errors, setErrors] = useState({});
 
+  const handleUseDemoData = () => {
+    const demoData = {
+      cardNumber: '4532 1234 5678 9010',
+      cardName: 'Rajesh Kumar',
+      expiryDate: '12/28',
+      cvv: '123'
+    };
+    setFormData(demoData);
+    setErrors({});
+    toast.info('Demo payment details filled');
+  };
+
   const handleChange = (e) => {
     let { name, value } = e.target;
     
@@ -120,14 +132,24 @@ export default function PaymentForm() {
       <h2 className="text-xl font-semibold text-neutral-900 mb-6">Payment Details</h2>
       
       <form onSubmit={handleSubmit} className="space-y-5">
-        <div className="flex items-start gap-3 p-4 bg-neutral-50 border border-neutral-200 rounded-xl">
-          <FaCreditCard className="text-neutral-600 mt-0.5 shrink-0" />
-          <div className="text-sm">
-            <p className="font-medium text-neutral-900">Demo Payment Mode</p>
-            <p className="text-neutral-600 text-xs mt-1">
-              Use any valid format • Example: 4532 1234 5678 9010, John Doe, 12/25, 123
-            </p>
+        <div className="flex items-start justify-between gap-3 p-4 bg-neutral-50 border border-neutral-200 rounded-xl">
+          <div className="flex items-start gap-3 flex-1">
+            <FaCreditCard className="text-neutral-600 mt-0.5 shrink-0" />
+            <div className="text-sm">
+              <p className="font-medium text-neutral-900">Demo Payment Mode</p>
+              <p className="text-neutral-600 text-xs mt-1">
+                Click "Use Demo" to auto-fill • Example: 4532 1234 5678 9010, Rajesh Kumar, 12/28, 123
+              </p>
+            </div>
           </div>
+          <Button
+            type="button"
+            variant="outline"
+            onClick={handleUseDemoData}
+            className="whitespace-nowrap text-sm"
+          >
+            Use Demo
+          </Button>
         </div>
 
         <Input
@@ -145,7 +167,7 @@ export default function PaymentForm() {
           name="cardName"
           value={formData.cardName}
           onChange={handleChange}
-          placeholder="John Doe"
+          placeholder="Rajesh Kumar"
           error={errors.cardName}
           required
         />

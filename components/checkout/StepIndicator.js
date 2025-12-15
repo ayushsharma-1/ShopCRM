@@ -12,10 +12,11 @@ export default function StepIndicator({ currentStep }) {
 
   return (
     <div className="mb-8 md:mb-12">
-      <div className="flex items-center justify-between max-w-2xl mx-auto">
+      <div className="flex items-start justify-center max-w-3xl mx-auto px-4">
         {steps.map((step, index) => (
-          <div key={step.number} className="flex items-center flex-1">
-            <div className="flex flex-col items-center flex-1">
+          <div key={step.number} className="flex items-center">
+            {/* Step Circle and Label */}
+            <div className="flex flex-col items-center min-w-[100px]">
               <motion.div
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
@@ -46,17 +47,19 @@ export default function StepIndicator({ currentStep }) {
               </motion.div>
               <div className="mt-3 text-center hidden sm:block">
                 <p
-                  className={`text-sm font-medium transition-colors ${
+                  className={`text-sm font-medium transition-colors whitespace-nowrap ${
                     currentStep >= step.number ? 'text-neutral-900' : 'text-neutral-400'
                   }`}
                 >
                   {step.title}
                 </p>
-                <p className="text-xs text-neutral-500 mt-0.5">{step.description}</p>
+                <p className="text-xs text-neutral-500 mt-0.5 whitespace-nowrap">{step.description}</p>
               </div>
             </div>
+
+            {/* Connector Line */}
             {index < steps.length - 1 && (
-              <div className="flex-1 h-0.5 bg-neutral-100 mx-3 relative overflow-hidden">
+              <div className="w-24 md:w-32 lg:w-40 h-0.5 bg-neutral-100 mx-4 mt-6 relative overflow-hidden flex-shrink-0">
                 <motion.div
                   initial={{ width: '0%' }}
                   animate={{ width: currentStep > step.number ? '100%' : '0%' }}

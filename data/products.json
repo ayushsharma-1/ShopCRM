@@ -998,5 +998,1105 @@
     "rating": 4.6,
     "image": "https://images.unsplash.com/photo-1558317374-067fb5f30001?w=500&h=500&fit=crop",
     "stock": 44
+  },
+  {
+    "id": 101,
+    "name": "Collagen Peptides Powder",
+    "description": "Grass-fed collagen powder for skin, hair, and joint health. Unflavored and easily dissolves in beverages.",
+    "price": 34.99,
+    "category": "Health",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=500&h=500&fit=crop",
+    "stock": 120
+  },
+  {
+    "id": 102,
+    "name": "Air Fryer XL",
+    "description": "7-quart air fryer with digital controls and 8 cooking presets. Cook healthier meals with less oil.",
+    "price": 89.99,
+    "category": "Home & Kitchen",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1585515320310-259814833e62?w=500&h=500&fit=crop",
+    "stock": 67
+  },
+  {
+    "id": 103,
+    "name": "Standing Desk Converter",
+    "description": "Height-adjustable desk converter with dual monitor support. Transform any desk into a standing workspace.",
+    "price": 159.99,
+    "category": "Office",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=500&h=500&fit=crop",
+    "stock": 45
+  },
+  {
+    "id": 104,
+    "name": "Turmeric Curcumin Supplement",
+    "description": "High-potency turmeric with BioPerine for enhanced absorption. Supports joint health and immunity.",
+    "price": 24.99,
+    "category": "Health",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=500&h=500&fit=crop",
+    "stock": 200
+  },
+  {
+    "id": 105,
+    "name": "Mechanical Pencil Set",
+    "description": "Professional drafting pencil set with multiple lead sizes. Perfect for artists, architects, and students.",
+    "price": 18.99,
+    "category": "Office",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1587459171671-6f8b9d26daf3?w=500&h=500&fit=crop",
+    "stock": 150
+  },
+  {
+    "id": 106,
+    "name": "Silk Pillowcase Set",
+    "description": "100% mulberry silk pillowcases for hair and skin health. Hypoallergenic and temperature regulating.",
+    "price": 49.99,
+    "category": "Home & Kitchen",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1584100936595-c0654b55a2e2?w=500&h=500&fit=crop",
+    "stock": 88
+  },
+  {
+    "id": 107,
+    "name": "Trail Running Shoes",
+    "description": "All-terrain trail shoes with aggressive tread and waterproof membrane. Built for rugged outdoor adventures.",
+    "price": 119.99,
+    "category": "Sports",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&h=500&fit=crop",
+    "stock": 75
+  },
+  {
+    "id": 108,
+    "name": "Apple Cider Vinegar Gummies",
+    "description": "Delicious ACV gummies with vitamin B12. Supports metabolism and digestive health.",
+    "price": 19.99,
+    "category": "Health",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=500&h=500&fit=crop",
+    "stock": 180
+  },
+  {
+    "id": 109,
+    "name": "Ceramic Cookware Set",
+    "description": "Non-toxic ceramic cookware set with wooden handles. PFOA-free and easy to clean.",
+    "price": 129.99,
+    "category": "Home & Kitchen",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1584990347449-39b31460e5b5?w=500&h=500&fit=crop",
+    "stock": 52
+  },
+  {
+    "id": 110,
+    "name": "Vitamin D3+K2 Supplement",
+    "description": "Bone and cardiovascular health support. Optimal ratio of D3 and K2 for calcium absorption.",
+    "price": 22.99,
+    "category": "Health",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1550572017-4bfe41efe99c?w=500&h=500&fit=crop",
+    "stock": 165
+  },
+  {
+    "id": 111,
+    "name": "Weighted Blanket",
+    "description": "15-lb weighted blanket for better sleep and anxiety relief. Breathable cotton with glass beads.",
+    "price": 69.99,
+    "category": "Home & Kitchen",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1615486511260-c8eafe744f7a?w=500&h=500&fit=crop",
+    "stock": 93
+  },
+  {
+    "id": 112,
+    "name": "LED Light Strips",
+    "description": "Smart RGB light strips with app and voice control. 32ft with music sync and customizable colors.",
+    "price": 29.99,
+    "category": "Electronics",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1563089145-599997674d42?w=500&h=500&fit=crop",
+    "stock": 210
+  },
+  {
+    "id": 113,
+    "name": "Ashwagandha Supplement",
+    "description": "Organic ashwagandha root extract for stress relief and energy. Supports mental clarity and relaxation.",
+    "price": 21.99,
+    "category": "Health",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=500&h=500&fit=crop",
+    "stock": 140
+  },
+  {
+    "id": 114,
+    "name": "Ergonomic Mouse Pad",
+    "description": "Memory foam wrist rest mouse pad. Reduces wrist strain during long work sessions.",
+    "price": 14.99,
+    "category": "Office",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1527864550417-7fd91fc51a46?w=500&h=500&fit=crop",
+    "stock": 280
+  },
+  {
+    "id": 115,
+    "name": "Foam Roller Set",
+    "description": "High-density foam roller with massage stick and bands. Perfect for muscle recovery and flexibility.",
+    "price": 34.99,
+    "category": "Sports",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1571902943202-507ec2618e8f?w=500&h=500&fit=crop",
+    "stock": 115
+  },
+  {
+    "id": 116,
+    "name": "Electric Kettle",
+    "description": "Fast-boiling electric kettle with temperature control. Boils water in 5 minutes for tea, coffee, or cooking.",
+    "price": 39.99,
+    "category": "Home & Kitchen",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1564890369478-c89ca6d9cde9?w=500&h=500&fit=crop",
+    "stock": 125
+  },
+  {
+    "id": 117,
+    "name": "Elderberry Immune Support",
+    "description": "Elderberry gummies with vitamin C and zinc. Boosts immune system naturally.",
+    "price": 18.99,
+    "category": "Health",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=500&h=500&fit=crop",
+    "stock": 195
+  },
+  {
+    "id": 118,
+    "name": "Minimalist Wallet",
+    "description": "Slim carbon fiber wallet with RFID blocking. Holds up to 12 cards and cash.",
+    "price": 24.99,
+    "category": "Accessories",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1627123424574-724758594e93?w=500&h=500&fit=crop",
+    "stock": 160
+  },
+  {
+    "id": 119,
+    "name": "Resistance Training Tubes",
+    "description": "Stackable resistance tubes with handles, door anchor, and carrying bag. Up to 150 lbs resistance.",
+    "price": 29.99,
+    "category": "Sports",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1598289431512-b97b0917affc?w=500&h=500&fit=crop",
+    "stock": 135
+  },
+  {
+    "id": 120,
+    "name": "Magnesium Glycinate Supplement",
+    "description": "Highly absorbable magnesium for sleep, muscle relaxation, and nerve function support.",
+    "price": 23.99,
+    "category": "Health",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=500&h=500&fit=crop",
+    "stock": 175
+  },
+  {
+    "id": 121,
+    "name": "Laptop Cooling Pad",
+    "description": "Laptop cooler with 5 quiet fans and adjustable height. Prevents overheating during heavy use.",
+    "price": 34.99,
+    "category": "Electronics",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1593640408182-31c70c8268f5?w=500&h=500&fit=crop",
+    "stock": 98
+  },
+  {
+    "id": 122,
+    "name": "Bamboo Cutting Board Set",
+    "description": "3-piece bamboo cutting board set with juice grooves. Eco-friendly and durable.",
+    "price": 32.99,
+    "category": "Home & Kitchen",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1604335399105-a0c585fd81a1?w=500&h=500&fit=crop",
+    "stock": 145
+  },
+  {
+    "id": 123,
+    "name": "Biotin Hair Growth Supplement",
+    "description": "Biotin 10000mcg with coconut oil for hair, skin, and nail health. Promotes stronger, thicker hair.",
+    "price": 16.99,
+    "category": "Health",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=500&h=500&fit=crop",
+    "stock": 220
+  },
+  {
+    "id": 124,
+    "name": "Smart Door Lock",
+    "description": "Keyless entry smart lock with fingerprint and app control. Battery-powered with backup keys.",
+    "price": 149.99,
+    "category": "Electronics",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1558002038-1055907df827?w=500&h=500&fit=crop",
+    "stock": 62
+  },
+  {
+    "id": 125,
+    "name": "Adjustable Dumbbells",
+    "description": "Space-saving adjustable dumbbells from 5-52.5 lbs. Quick weight selection dial system.",
+    "price": 349.99,
+    "category": "Sports",
+    "rating": 4.9,
+    "image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=500&h=500&fit=crop",
+    "stock": 38
+  },
+  {
+    "id": 126,
+    "name": "Green Tea Extract Supplement",
+    "description": "EGCG green tea extract for metabolism and antioxidant support. High potency formula.",
+    "price": 19.99,
+    "category": "Health",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?w=500&h=500&fit=crop",
+    "stock": 185
+  },
+  {
+    "id": 127,
+    "name": "USB-C Hub Adapter",
+    "description": "7-in-1 USB-C hub with HDMI, USB 3.0, SD card reader, and power delivery. Compatible with MacBook and laptops.",
+    "price": 44.99,
+    "category": "Electronics",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1625948515291-69613efd103f?w=500&h=500&fit=crop",
+    "stock": 155
+  },
+  {
+    "id": 128,
+    "name": "Meal Prep Containers",
+    "description": "Glass meal prep containers with snap lids. Microwave, dishwasher, and freezer safe. BPA-free.",
+    "price": 34.99,
+    "category": "Home & Kitchen",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=500&h=500&fit=crop",
+    "stock": 170
+  },
+  {
+    "id": 129,
+    "name": "Zinc Supplement",
+    "description": "Zinc 50mg for immune system support and skin health. Chelated for optimal absorption.",
+    "price": 12.99,
+    "category": "Health",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=500&h=500&fit=crop",
+    "stock": 240
+  },
+  {
+    "id": 130,
+    "name": "Portable Blender",
+    "description": "Rechargeable mini blender for smoothies on-the-go. 16oz capacity with USB charging.",
+    "price": 29.99,
+    "category": "Home & Kitchen",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1585515320310-259814833e62?w=500&h=500&fit=crop",
+    "stock": 130
+  },
+  {
+    "id": 131,
+    "name": "Blue Light Blocking Glasses",
+    "description": "Computer glasses with blue light filter. Reduce eye strain and improve sleep quality.",
+    "price": 24.99,
+    "category": "Accessories",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?w=500&h=500&fit=crop",
+    "stock": 190
+  },
+  {
+    "id": 132,
+    "name": "Coenzyme Q10 Supplement",
+    "description": "CoQ10 200mg for heart health and energy production. Powerful antioxidant support.",
+    "price": 27.99,
+    "category": "Health",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=500&h=500&fit=crop",
+    "stock": 155
+  },
+  {
+    "id": 133,
+    "name": "Camping Tent 4-Person",
+    "description": "Waterproof family tent with easy setup. Includes rainfly and ventilation windows.",
+    "price": 139.99,
+    "category": "Sports",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=500&h=500&fit=crop",
+    "stock": 48
+  },
+  {
+    "id": 134,
+    "name": "Ring Light with Stand",
+    "description": "18-inch LED ring light with tripod stand. Perfect for photography, videos, and makeup.",
+    "price": 59.99,
+    "category": "Electronics",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1551808525-51a94da548ce?w=500&h=500&fit=crop",
+    "stock": 105
+  },
+  {
+    "id": 135,
+    "name": "Melatonin Sleep Aid",
+    "description": "Melatonin 10mg gummies with L-Theanine. Natural sleep support with calming botanicals.",
+    "price": 14.99,
+    "category": "Health",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=500&h=500&fit=crop",
+    "stock": 210
+  },
+  {
+    "id": 136,
+    "name": "Spice Rack Organizer",
+    "description": "3-tier bamboo spice rack with 30 glass jars. Includes labels for kitchen organization.",
+    "price": 44.99,
+    "category": "Home & Kitchen",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1556909114-44e3e70034e2?w=500&h=500&fit=crop",
+    "stock": 85
+  },
+  {
+    "id": 137,
+    "name": "Rowing Machine",
+    "description": "Magnetic resistance rowing machine with LCD monitor. Foldable design for home gym.",
+    "price": 399.99,
+    "category": "Sports",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=500&h=500&fit=crop",
+    "stock": 32
+  },
+  {
+    "id": 138,
+    "name": "Retinol Night Cream",
+    "description": "Anti-aging retinol cream with hyaluronic acid. Reduces fine lines and improves skin texture.",
+    "price": 32.99,
+    "category": "Beauty",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=500&h=500&fit=crop",
+    "stock": 140
+  },
+  {
+    "id": 139,
+    "name": "Iron Supplement",
+    "description": "Gentle iron 65mg with vitamin C for enhanced absorption. Supports energy and blood health.",
+    "price": 15.99,
+    "category": "Health",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=500&h=500&fit=crop",
+    "stock": 180
+  },
+  {
+    "id": 140,
+    "name": "Knife Sharpener",
+    "description": "3-stage electric knife sharpener for all blade types. Diamond, tungsten, and ceramic stages.",
+    "price": 49.99,
+    "category": "Home & Kitchen",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1593618998160-e34014e67546?w=500&h=500&fit=crop",
+    "stock": 95
+  },
+  {
+    "id": 141,
+    "name": "Glucosamine Chondroitin",
+    "description": "Joint support supplement with MSM. Promotes cartilage health and mobility.",
+    "price": 29.99,
+    "category": "Health",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=500&h=500&fit=crop",
+    "stock": 165
+  },
+  {
+    "id": 142,
+    "name": "Desk Organizer Set",
+    "description": "Mesh desk organizer with drawer, pen holder, and file tray. Keeps workspace tidy.",
+    "price": 27.99,
+    "category": "Office",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1611532736573-7a4b2b5a5580?w=500&h=500&fit=crop",
+    "stock": 175
+  },
+  {
+    "id": 143,
+    "name": "Jump Rope Speed Cable",
+    "description": "Adjustable steel cable jump rope for cardio and CrossFit. Lightweight handles with ball bearings.",
+    "price": 12.99,
+    "category": "Sports",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1518644730709-0835105d9daa?w=500&h=500&fit=crop",
+    "stock": 230
+  },
+  {
+    "id": 144,
+    "name": "Shower Filter",
+    "description": "15-stage shower water filter removes chlorine and heavy metals. Improves skin and hair health.",
+    "price": 34.99,
+    "category": "Home & Kitchen",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1584622650111-993a426fbf0a?w=500&h=500&fit=crop",
+    "stock": 120
+  },
+  {
+    "id": 145,
+    "name": "B Complex Vitamins",
+    "description": "B-Complex with all 8 B vitamins for energy metabolism and nervous system support.",
+    "price": 17.99,
+    "category": "Health",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1550572017-4bfe41efe99c?w=500&h=500&fit=crop",
+    "stock": 200
+  },
+  {
+    "id": 146,
+    "name": "Portable SSD 1TB",
+    "description": "Ultra-fast external SSD with USB 3.2 Gen 2. Compact, durable, and shock-resistant.",
+    "price": 109.99,
+    "category": "Electronics",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1597872200969-2b65d56bd16b?w=500&h=500&fit=crop",
+    "stock": 78
+  },
+  {
+    "id": 147,
+    "name": "Cast Iron Skillet Set",
+    "description": "Pre-seasoned cast iron skillet set (8, 10, 12 inch). Oven-safe and naturally non-stick.",
+    "price": 64.99,
+    "category": "Home & Kitchen",
+    "rating": 4.9,
+    "image": "https://images.unsplash.com/photo-1565123409695-7b5ef63a2efb?w=500&h=500&fit=crop",
+    "stock": 110
+  },
+  {
+    "id": 148,
+    "name": "Milk Thistle Supplement",
+    "description": "Milk thistle extract for liver health and detox support. Silymarin-rich formula.",
+    "price": 21.99,
+    "category": "Health",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=500&h=500&fit=crop",
+    "stock": 145
+  },
+  {
+    "id": 149,
+    "name": "Noise Cancelling Earbuds",
+    "description": "True wireless earbuds with ANC and transparency mode. 30-hour battery life with charging case.",
+    "price": 79.99,
+    "category": "Electronics",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=500&h=500&fit=crop",
+    "stock": 142
+  },
+  {
+    "id": 150,
+    "name": "Yoga Block Set",
+    "description": "2-pack high-density foam yoga blocks with strap. Improve flexibility and balance in poses.",
+    "price": 19.99,
+    "category": "Sports",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=500&h=500&fit=crop",
+    "stock": 195
+  },
+  {
+    "id": 151,
+    "name": "Digestive Enzymes Supplement",
+    "description": "Full-spectrum digestive enzymes for better nutrient absorption. Supports digestive comfort.",
+    "price": 24.99,
+    "category": "Health",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=500&h=500&fit=crop",
+    "stock": 160
+  },
+  {
+    "id": 152,
+    "name": "Standing Floor Mirror",
+    "description": "Full-length standing mirror with adjustable angle. Modern metal frame in gold finish.",
+    "price": 89.99,
+    "category": "Home & Kitchen",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1618220179428-22790b461013?w=500&h=500&fit=crop",
+    "stock": 65
+  },
+  {
+    "id": 153,
+    "name": "Car Phone Mount",
+    "description": "Magnetic car phone holder with 360° rotation. Strong grip works with dashboard or windshield.",
+    "price": 19.99,
+    "category": "Automotive",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1587993274384-0ca0cafe8078?w=500&h=500&fit=crop",
+    "stock": 250
+  },
+  {
+    "id": 154,
+    "name": "Creatine Monohydrate",
+    "description": "Pure creatine monohydrate powder for strength and muscle building. Micronized for better absorption.",
+    "price": 29.99,
+    "category": "Health",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1579758629938-03607ccdbaba?w=500&h=500&fit=crop",
+    "stock": 190
+  },
+  {
+    "id": 155,
+    "name": "Whiteboard Calendar",
+    "description": "Monthly dry erase calendar board with marker and magnets. Perfect for home or office planning.",
+    "price": 32.99,
+    "category": "Office",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1611532736573-7a4b2b5a5580?w=500&h=500&fit=crop",
+    "stock": 135
+  },
+  {
+    "id": 156,
+    "name": "Electric Toothbrush Heads",
+    "description": "8-pack replacement toothbrush heads compatible with major brands. Soft bristles with indicator.",
+    "price": 21.99,
+    "category": "Health",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=500&h=500&fit=crop",
+    "stock": 220
+  },
+  {
+    "id": 157,
+    "name": "Sous Vide Cooker",
+    "description": "Precision sous vide immersion circulator with WiFi control. Restaurant-quality cooking at home.",
+    "price": 129.99,
+    "category": "Home & Kitchen",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=500&h=500&fit=crop",
+    "stock": 58
+  },
+  {
+    "id": 158,
+    "name": "Ginger Root Supplement",
+    "description": "Organic ginger root extract for digestive support and nausea relief. Anti-inflammatory properties.",
+    "price": 18.99,
+    "category": "Health",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1550572017-4bfe41efe99c?w=500&h=500&fit=crop",
+    "stock": 175
+  },
+  {
+    "id": 159,
+    "name": "Bike Repair Tool Kit",
+    "description": "Complete bicycle tool kit with multi-tool, tire levers, and patch kit. Compact carrying case.",
+    "price": 34.99,
+    "category": "Sports",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=500&h=500&fit=crop",
+    "stock": 125
+  },
+  {
+    "id": 160,
+    "name": "Smart Plug 4-Pack",
+    "description": "WiFi smart plugs with app and voice control. Schedule devices and monitor energy usage.",
+    "price": 34.99,
+    "category": "Electronics",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1558089687-51e9f8bd4f08?w=500&h=500&fit=crop",
+    "stock": 185
+  },
+  {
+    "id": 161,
+    "name": "Spirulina Powder",
+    "description": "Organic spirulina superfood powder. Rich in protein, vitamins, and antioxidants.",
+    "price": 26.99,
+    "category": "Health",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=500&h=500&fit=crop",
+    "stock": 155
+  },
+  {
+    "id": 162,
+    "name": "Leather Laptop Bag",
+    "description": "Professional leather briefcase for 15-inch laptops. Multiple compartments for organization.",
+    "price": 79.99,
+    "category": "Accessories",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&h=500&fit=crop",
+    "stock": 82
+  },
+  {
+    "id": 163,
+    "name": "Hiking Backpack 40L",
+    "description": "Durable hiking pack with rain cover and hydration bladder compatibility. Adjustable straps.",
+    "price": 69.99,
+    "category": "Sports",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&h=500&fit=crop",
+    "stock": 95
+  },
+  {
+    "id": 164,
+    "name": "L-Arginine Supplement",
+    "description": "L-Arginine 1000mg for cardiovascular health and blood flow support. Pre-workout energy boost.",
+    "price": 22.99,
+    "category": "Health",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=500&h=500&fit=crop",
+    "stock": 170
+  },
+  {
+    "id": 165,
+    "name": "Food Dehydrator",
+    "description": "8-tray electric food dehydrator for fruits, jerky, and herbs. Adjustable temperature control.",
+    "price": 89.99,
+    "category": "Home & Kitchen",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1585515320310-259814833e62?w=500&h=500&fit=crop",
+    "stock": 54
+  },
+  {
+    "id": 166,
+    "name": "Acrylic Paint Set",
+    "description": "Professional 48-color acrylic paint set with brushes. Non-toxic and vibrant colors for all surfaces.",
+    "price": 42.99,
+    "category": "Office",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1513364776144-60967b0f800f?w=500&h=500&fit=crop",
+    "stock": 115
+  },
+  {
+    "id": 167,
+    "name": "Raspberry Ketones",
+    "description": "Raspberry ketones supplement for metabolism and weight management support.",
+    "price": 19.99,
+    "category": "Health",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=500&h=500&fit=crop",
+    "stock": 195
+  },
+  {
+    "id": 168,
+    "name": "Smart Watch Bands",
+    "description": "Silicone sport bands 6-pack for smart watches. Multiple colors with quick-release pins.",
+    "price": 16.99,
+    "category": "Accessories",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1434493789847-2f02dc6ca35d?w=500&h=500&fit=crop",
+    "stock": 240
+  },
+  {
+    "id": 169,
+    "name": "Car Vacuum Cleaner",
+    "description": "Cordless handheld car vacuum with strong suction. Includes attachments for hard-to-reach areas.",
+    "price": 44.99,
+    "category": "Automotive",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1590736969955-71cc94901144?w=500&h=500&fit=crop",
+    "stock": 108
+  },
+  {
+    "id": 170,
+    "name": "Saw Palmetto Supplement",
+    "description": "Saw palmetto extract for prostate health and urinary function support. Natural DHT blocker.",
+    "price": 20.99,
+    "category": "Health",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1550572017-4bfe41efe99c?w=500&h=500&fit=crop",
+    "stock": 160
+  },
+  {
+    "id": 171,
+    "name": "Monitor Arm Mount",
+    "description": "Adjustable single monitor arm with gas spring. Supports 13-32 inch screens up to 17.6 lbs.",
+    "price": 54.99,
+    "category": "Office",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1527443224154-c4a3942d3acf?w=500&h=500&fit=crop",
+    "stock": 125
+  },
+  {
+    "id": 172,
+    "name": "Kettlebell Set",
+    "description": "Vinyl-coated kettlebell set (5, 10, 15 lbs). Color-coded for easy identification.",
+    "price": 64.99,
+    "category": "Sports",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=500&h=500&fit=crop",
+    "stock": 78
+  },
+  {
+    "id": 173,
+    "name": "Water Bottle with Strainer",
+    "description": "32oz fruit infuser water bottle. BPA-free with flip-top lid and carrying loop.",
+    "price": 17.99,
+    "category": "Sports",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=500&h=500&fit=crop",
+    "stock": 210
+  },
+  {
+    "id": 174,
+    "name": "Lutein Eye Health Supplement",
+    "description": "Lutein and zeaxanthin for eye health and blue light protection. Supports vision clarity.",
+    "price": 24.99,
+    "category": "Health",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=500&h=500&fit=crop",
+    "stock": 145
+  },
+  {
+    "id": 175,
+    "name": "Bedside Table Lamp",
+    "description": "Modern touch lamp with 3 brightness levels. USB charging port and fabric shade.",
+    "price": 39.99,
+    "category": "Home & Kitchen",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=500&h=500&fit=crop",
+    "stock": 135
+  },
+  {
+    "id": 176,
+    "name": "Skateboard Complete",
+    "description": "7-layer maple skateboard with high-rebound wheels. ABEC-9 bearings for smooth rides.",
+    "price": 59.99,
+    "category": "Sports",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1547447134-cd3f5c716030?w=500&h=500&fit=crop",
+    "stock": 92
+  },
+  {
+    "id": 177,
+    "name": "Valerian Root Sleep Aid",
+    "description": "Natural valerian root extract for relaxation and sleep support. Non-habit forming.",
+    "price": 16.99,
+    "category": "Health",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=500&h=500&fit=crop",
+    "stock": 185
+  },
+  {
+    "id": 178,
+    "name": "Kitchen Scale Digital",
+    "description": "Precision food scale with tare function. Measures up to 11 lbs in grams, oz, lb, and ml.",
+    "price": 19.99,
+    "category": "Home & Kitchen",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1585928111819-f93e0c7d6b9a?w=500&h=500&fit=crop",
+    "stock": 165
+  },
+  {
+    "id": 179,
+    "name": "Dash Cam 1080p",
+    "description": "Full HD dash camera with night vision and G-sensor. Loop recording and parking mode.",
+    "price": 69.99,
+    "category": "Automotive",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1558002038-1055907df827?w=500&h=500&fit=crop",
+    "stock": 118
+  },
+  {
+    "id": 180,
+    "name": "Garlic Supplement",
+    "description": "Odorless garlic extract for heart health and immune support. Enteric-coated capsules.",
+    "price": 14.99,
+    "category": "Health",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1550572017-4bfe41efe99c?w=500&h=500&fit=crop",
+    "stock": 220
+  },
+  {
+    "id": 181,
+    "name": "Cordless Drill Set",
+    "description": "20V lithium-ion cordless drill with 2 batteries and accessory kit. Variable speed trigger.",
+    "price": 89.99,
+    "category": "Home & Kitchen",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1572981779307-38b8cabb2407?w=500&h=500&fit=crop",
+    "stock": 72
+  },
+  {
+    "id": 182,
+    "name": "Running Armband",
+    "description": "Adjustable phone armband for running with key holder. Sweat-resistant and reflective strip.",
+    "price": 12.99,
+    "category": "Sports",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1606207977157-f9db2171a0aa?w=500&h=500&fit=crop",
+    "stock": 260
+  },
+  {
+    "id": 183,
+    "name": "Chromium Picolinate",
+    "description": "Chromium supplement for blood sugar support and metabolism. Supports healthy glucose levels.",
+    "price": 13.99,
+    "category": "Health",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=500&h=500&fit=crop",
+    "stock": 195
+  },
+  {
+    "id": 184,
+    "name": "Wall-Mounted Shelves",
+    "description": "Floating wood shelves set of 3. Rustic design for books, plants, and decor.",
+    "price": 44.99,
+    "category": "Home & Kitchen",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1595428774223-ef52624120d2?w=500&h=500&fit=crop",
+    "stock": 105
+  },
+  {
+    "id": 185,
+    "name": "Bluetooth FM Transmitter",
+    "description": "Car Bluetooth adapter with dual USB charging. Stream music from phone to car stereo.",
+    "price": 22.99,
+    "category": "Automotive",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1609592043898-cb5c2a351e9d?w=500&h=500&fit=crop",
+    "stock": 180
+  },
+  {
+    "id": 186,
+    "name": "Folic Acid Supplement",
+    "description": "Folic acid 800mcg for prenatal health and cardiovascular support. Essential B vitamin.",
+    "price": 11.99,
+    "category": "Health",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1550572017-4bfe41efe99c?w=500&h=500&fit=crop",
+    "stock": 230
+  },
+  {
+    "id": 187,
+    "name": "Label Maker",
+    "description": "Portable label maker with LCD screen and multiple fonts. Includes starter tape rolls.",
+    "price": 29.99,
+    "category": "Office",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1611532736573-7a4b2b5a5580?w=500&h=500&fit=crop",
+    "stock": 145
+  },
+  {
+    "id": 188,
+    "name": "Badminton Racket Set",
+    "description": "4-player badminton set with net, birdies, and carrying bag. Lightweight aluminum frames.",
+    "price": 54.99,
+    "category": "Sports",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=500&h=500&fit=crop",
+    "stock": 88
+  },
+  {
+    "id": 189,
+    "name": "Lysine Supplement",
+    "description": "L-Lysine 1000mg for immune system support and collagen formation. Free form amino acid.",
+    "price": 15.99,
+    "category": "Health",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=500&h=500&fit=crop",
+    "stock": 175
+  },
+  {
+    "id": 190,
+    "name": "Mattress Topper Memory Foam",
+    "description": "3-inch gel memory foam mattress topper. Pressure relief and cooling technology.",
+    "price": 89.99,
+    "category": "Home & Kitchen",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1631049307264-da0ec9d70304?w=500&h=500&fit=crop",
+    "stock": 65
+  },
+  {
+    "id": 191,
+    "name": "Tire Pressure Gauge",
+    "description": "Digital tire pressure gauge with LCD display. Measures 0-150 PSI for cars, bikes, and motorcycles.",
+    "price": 14.99,
+    "category": "Automotive",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1486262715619-67b85e0b08d3?w=500&h=500&fit=crop",
+    "stock": 210
+  },
+  {
+    "id": 192,
+    "name": "GABA Supplement",
+    "description": "GABA 750mg for relaxation and stress relief. Supports calm mood and restful sleep.",
+    "price": 18.99,
+    "category": "Health",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=500&h=500&fit=crop",
+    "stock": 155
+  },
+  {
+    "id": 193,
+    "name": "Cable Management Kit",
+    "description": "Complete cable organizer kit with clips, sleeves, and ties. Keep desk and entertainment center tidy.",
+    "price": 19.99,
+    "category": "Office",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1558618666-fcd25c85cd4f?w=500&h=500&fit=crop",
+    "stock": 195
+  },
+  {
+    "id": 194,
+    "name": "Treadmill Folding",
+    "description": "Compact folding treadmill with LCD monitor. 12 preset programs and phone holder.",
+    "price": 499.99,
+    "category": "Sports",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=500&h=500&fit=crop",
+    "stock": 28
+  },
+  {
+    "id": 195,
+    "name": "Echinacea Supplement",
+    "description": "Echinacea extract for immune system support. Traditional herbal remedy for seasonal wellness.",
+    "price": 16.99,
+    "category": "Health",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1550572017-4bfe41efe99c?w=500&h=500&fit=crop",
+    "stock": 185
+  },
+  {
+    "id": 196,
+    "name": "Slow Cooker 6-Quart",
+    "description": "Programmable slow cooker with digital timer. Perfect for soups, stews, and meal prep.",
+    "price": 54.99,
+    "category": "Home & Kitchen",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1556910103-1c02745aae4d?w=500&h=500&fit=crop",
+    "stock": 98
+  },
+  {
+    "id": 197,
+    "name": "Seat Covers Car",
+    "description": "Universal fit car seat covers set. Waterproof and stain-resistant with airbag compatibility.",
+    "price": 39.99,
+    "category": "Automotive",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=500&h=500&fit=crop",
+    "stock": 115
+  },
+  {
+    "id": 198,
+    "name": "Cayenne Pepper Supplement",
+    "description": "Cayenne pepper capsules for metabolism and circulation support. High capsaicin content.",
+    "price": 14.99,
+    "category": "Health",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?w=500&h=500&fit=crop",
+    "stock": 200
+  },
+  {
+    "id": 199,
+    "name": "Paper Shredder",
+    "description": "Cross-cut paper shredder with 12-sheet capacity. Shreds credit cards and CDs. Auto start/stop.",
+    "price": 64.99,
+    "category": "Office",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1611532736573-7a4b2b5a5580?w=500&h=500&fit=crop",
+    "stock": 75
+  },
+  {
+    "id": 200,
+    "name": "Maca Root Supplement",
+    "description": "Organic maca root powder for energy, stamina, and hormonal balance. Peruvian superfood.",
+    "price": 23.99,
+    "category": "Health",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1608571423902-eed4a5ad8108?w=500&h=500&fit=crop",
+    "stock": 165
+  },
+  {
+    "id": 201,
+    "name": "Facial Cleanser Set",
+    "description": "Gentle foaming cleanser with charcoal and tea tree oil. Removes impurities and refreshes skin.",
+    "price": 28.99,
+    "category": "Beauty",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=500&h=500&fit=crop",
+    "stock": 145
+  },
+  {
+    "id": 202,
+    "name": "Hair Serum Argan Oil",
+    "description": "Nourishing argan oil hair serum for frizz control and shine. Lightweight and non-greasy formula.",
+    "price": 24.99,
+    "category": "Beauty",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1535585209827-a15fcdbc4c2d?w=500&h=500&fit=crop",
+    "stock": 160
+  },
+  {
+    "id": 203,
+    "name": "Eye Cream Anti-Aging",
+    "description": "Peptide eye cream reduces dark circles and puffiness. Firms and brightens under-eye area.",
+    "price": 34.99,
+    "category": "Beauty",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=500&h=500&fit=crop",
+    "stock": 125
+  },
+  {
+    "id": 204,
+    "name": "Face Mask Sheet Set",
+    "description": "Korean beauty sheet masks 12-pack. Hydrating, brightening, and soothing varieties included.",
+    "price": 19.99,
+    "category": "Beauty",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=500&h=500&fit=crop",
+    "stock": 200
+  },
+  {
+    "id": 205,
+    "name": "Lip Balm Gift Set",
+    "description": "Natural lip balm set with beeswax and vitamin E. 6 flavors in portable tin containers.",
+    "price": 16.99,
+    "category": "Beauty",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?w=500&h=500&fit=crop",
+    "stock": 185
+  },
+  {
+    "id": 206,
+    "name": "Makeup Brush Set Professional",
+    "description": "15-piece professional makeup brush set with synthetic bristles. Includes carrying case.",
+    "price": 39.99,
+    "category": "Beauty",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1512496015851-a90fb38ba796?w=500&h=500&fit=crop",
+    "stock": 110
+  },
+  {
+    "id": 207,
+    "name": "Nail Polish Set",
+    "description": "12-color nail polish set with quick-dry formula. Chip-resistant and long-lasting shine.",
+    "price": 29.99,
+    "category": "Beauty",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1604654894610-df63bc536371?w=500&h=500&fit=crop",
+    "stock": 155
+  },
+  {
+    "id": 208,
+    "name": "Facial Toner Rose Water",
+    "description": "Alcohol-free rose water toner balances pH and tightens pores. Suitable for all skin types.",
+    "price": 18.99,
+    "category": "Beauty",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1556228578-8c89e6adf883?w=500&h=500&fit=crop",
+    "stock": 175
+  },
+  {
+    "id": 209,
+    "name": "Body Scrub Exfoliating",
+    "description": "Coffee and coconut oil body scrub. Exfoliates dead skin and improves circulation.",
+    "price": 22.99,
+    "category": "Beauty",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1556228852-80a93c601d56?w=500&h=500&fit=crop",
+    "stock": 140
+  },
+  {
+    "id": 210,
+    "name": "Makeup Remover Wipes",
+    "description": "Micellar water makeup remover wipes. Gentle, hypoallergenic, and removes waterproof makeup.",
+    "price": 12.99,
+    "category": "Beauty",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1556228578-0d85b1a4d571?w=500&h=500&fit=crop",
+    "stock": 210
   }
 ]

@@ -1,552 +1,1632 @@
 [
-  {
-    "reviewId": "rev_001",
-    "userId": "user_001",
-    "productId": 1,
-    "rating": 5,
-    "category": "Quality",
-    "reviewText": "Absolutely loved it! The build quality is exceptional and exceeded all my expectations. Worth every penny.",
-    "timestamp": "2024-11-20T10:30:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_002",
-    "userId": "user_002",
-    "productId": 1,
-    "rating": 4,
-    "category": "Performance",
-    "reviewText": "Great performance overall. Fast and reliable. Would definitely recommend to friends and family.",
-    "timestamp": "2024-11-18T14:20:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_003",
-    "userId": "user_003",
-    "productId": 1,
-    "rating": 5,
-    "category": "Features",
-    "reviewText": "Feature-rich and intuitive. Everything I needed in one place. Super impressed with the attention to detail.",
-    "timestamp": "2024-11-15T09:45:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_004",
-    "userId": "user_004",
-    "productId": 1,
-    "rating": 4,
-    "category": "UI",
-    "reviewText": "Clean and modern interface. Easy to navigate and aesthetically pleasing. Minor improvements could be made.",
-    "timestamp": "2024-11-12T16:10:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_005",
-    "userId": "user_005",
-    "productId": 1,
-    "rating": 5,
-    "category": "Support",
-    "reviewText": "Customer service was outstanding! Quick responses and very helpful. Resolved my issue in minutes.",
-    "timestamp": "2024-11-10T11:30:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_006",
-    "userId": "user_006",
-    "productId": 1,
-    "rating": 4,
-    "category": "Quality",
-    "reviewText": "Good quality product. Durable and well-made. Packaging could be better but product itself is great.",
-    "timestamp": "2024-11-08T13:50:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_007",
-    "userId": "user_007",
-    "productId": 1,
-    "rating": 5,
-    "category": "Performance",
-    "reviewText": "Lightning fast! No lag whatsoever. Handles everything I throw at it with ease.",
-    "timestamp": "2024-11-05T10:20:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_008",
-    "userId": "user_008",
-    "productId": 1,
-    "rating": 3,
-    "category": "Accessibility",
-    "reviewText": "Decent but accessibility features need work. Would love to see better keyboard navigation and screen reader support.",
-    "timestamp": "2024-11-03T15:40:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_009",
-    "userId": "user_009",
-    "productId": 1,
-    "rating": 5,
-    "category": "UI",
-    "reviewText": "Stunning design! The UI is gorgeous and makes using it a pleasure. Best I've seen in this category.",
-    "timestamp": "2024-11-01T12:15:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_010",
-    "userId": "user_010",
-    "productId": 1,
-    "rating": 4,
-    "category": "Features",
-    "reviewText": "Packed with features. Does everything advertised and more. A few advanced features take time to learn.",
-    "timestamp": "2024-10-29T09:30:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_011",
-    "userId": "user_011",
-    "productId": 2,
-    "rating": 5,
-    "category": "Quality",
-    "reviewText": "Premium quality all around. You can tell they didn't cut corners. Highly satisfied with this purchase.",
-    "timestamp": "2024-11-19T11:45:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_012",
-    "userId": "user_012",
-    "productId": 2,
-    "rating": 4,
-    "category": "Performance",
-    "reviewText": "Solid performance. No complaints so far. Does exactly what it's supposed to do efficiently.",
-    "timestamp": "2024-11-17T14:30:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_013",
-    "userId": "user_013",
-    "productId": 2,
-    "rating": 5,
-    "category": "Support",
-    "reviewText": "Best customer support experience ever! They went above and beyond to help me. Really impressed.",
-    "timestamp": "2024-11-14T10:00:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_014",
-    "userId": "user_014",
-    "productId": 2,
-    "rating": 3,
-    "category": "UI",
-    "reviewText": "Interface is okay but could use some modernization. Feels a bit dated compared to competitors.",
-    "timestamp": "2024-11-11T16:20:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_015",
-    "userId": "user_015",
-    "productId": 2,
-    "rating": 4,
-    "category": "Features",
-    "reviewText": "Good feature set for the price. Missing a few things I'd like to see but overall very functional.",
-    "timestamp": "2024-11-09T13:10:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_016",
-    "userId": "user_016",
-    "productId": 3,
-    "rating": 5,
-    "category": "Quality",
-    "reviewText": "Outstanding craftsmanship! Attention to detail is remarkable. This is what quality looks like.",
-    "timestamp": "2024-11-21T09:15:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_017",
-    "userId": "user_017",
-    "productId": 3,
-    "rating": 5,
-    "category": "Performance",
-    "reviewText": "Blazing fast performance! No hiccups at all. Handles heavy workloads like a champ.",
-    "timestamp": "2024-11-18T11:40:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_018",
-    "userId": "user_018",
-    "productId": 3,
-    "rating": 4,
-    "category": "Accessibility",
-    "reviewText": "Good accessibility features included. Could be better but it's a solid start. Appreciate the effort.",
-    "timestamp": "2024-11-15T15:25:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_019",
-    "userId": "user_019",
-    "productId": 3,
-    "rating": 5,
-    "category": "UI",
-    "reviewText": "Beautifully designed interface! Everything is where you'd expect it to be. Intuitive and elegant.",
-    "timestamp": "2024-11-12T10:50:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_020",
-    "userId": "user_020",
-    "productId": 3,
-    "rating": 4,
-    "category": "Features",
-    "reviewText": "Comprehensive feature list. Covers all the basics and then some. A few advanced options missing.",
-    "timestamp": "2024-11-09T14:35:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_021",
-    "userId": "user_021",
-    "productId": 4,
-    "rating": 5,
-    "category": "Support",
-    "reviewText": "Customer support team is incredible! Fast, friendly, and knowledgeable. They truly care about customers.",
-    "timestamp": "2024-11-20T13:20:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_022",
-    "userId": "user_022",
-    "productId": 4,
-    "rating": 4,
-    "category": "Quality",
-    "reviewText": "Solid build quality. Feels premium in hand. Minor cosmetic issues but nothing that affects functionality.",
-    "timestamp": "2024-11-17T09:55:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_023",
-    "userId": "user_023",
-    "productId": 4,
-    "rating": 5,
-    "category": "Performance",
-    "reviewText": "Exceptional performance! Smooth as butter. Can't believe how well it runs even under load.",
-    "timestamp": "2024-11-14T16:10:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_024",
-    "userId": "user_024",
-    "productId": 4,
-    "rating": 3,
-    "category": "UI",
-    "reviewText": "UI needs work. Not very intuitive at first. Takes some time to get used to the layout.",
-    "timestamp": "2024-11-11T12:45:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_025",
-    "userId": "user_025",
-    "productId": 4,
-    "rating": 4,
-    "category": "Features",
-    "reviewText": "Great features for everyday use. Does what I need it to do without being overwhelming.",
-    "timestamp": "2024-11-08T10:30:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_026",
-    "userId": "user_026",
-    "productId": 5,
-    "rating": 5,
-    "category": "Quality",
-    "reviewText": "Top-tier quality! Material feels premium and durable. Best purchase I've made this year.",
-    "timestamp": "2024-11-19T14:50:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_027",
-    "userId": "user_027",
-    "productId": 5,
-    "rating": 4,
-    "category": "Performance",
-    "reviewText": "Reliable performance day after day. No issues encountered so far. Does its job well.",
-    "timestamp": "2024-11-16T11:20:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_028",
-    "userId": "user_028",
-    "productId": 5,
-    "rating": 5,
-    "category": "Accessibility",
-    "reviewText": "Excellent accessibility support! As someone who needs these features, I'm thrilled with the implementation.",
-    "timestamp": "2024-11-13T09:40:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_029",
-    "userId": "user_029",
-    "productId": 5,
-    "rating": 5,
-    "category": "UI",
-    "reviewText": "Perfect UI design! Clean, modern, and functional. Every element serves a purpose.",
-    "timestamp": "2024-11-10T15:15:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_030",
-    "userId": "user_030",
-    "productId": 5,
-    "rating": 4,
-    "category": "Features",
-    "reviewText": "Feature-packed without being bloated. Strikes a good balance between power and simplicity.",
-    "timestamp": "2024-11-07T13:05:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_031",
-    "userId": "user_031",
-    "productId": 6,
-    "rating": 5,
-    "category": "Support",
-    "reviewText": "Amazing support team! They answered all my questions promptly and professionally. 10/10 service.",
-    "timestamp": "2024-11-21T10:25:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_032",
-    "userId": "user_032",
-    "productId": 6,
-    "rating": 4,
-    "category": "Quality",
-    "reviewText": "Great quality for the price point. Sturdy construction and well thought out design.",
-    "timestamp": "2024-11-18T12:40:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_033",
-    "userId": "user_033",
-    "productId": 6,
-    "rating": 5,
-    "category": "Performance",
-    "reviewText": "Outstanding performance! Runs smoothly without any lag or stuttering. Highly efficient.",
-    "timestamp": "2024-11-15T14:55:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_034",
-    "userId": "user_034",
-    "productId": 6,
-    "rating": 4,
-    "category": "UI",
-    "reviewText": "Nice interface overall. Could use some polish in certain areas but generally well-designed.",
-    "timestamp": "2024-11-12T09:30:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_035",
-    "userId": "user_035",
-    "productId": 6,
-    "rating": 5,
-    "category": "Features",
-    "reviewText": "Love all the features! Everything I wanted and more. Nothing feels like an afterthought.",
-    "timestamp": "2024-11-09T16:20:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_036",
-    "userId": "user_036",
-    "productId": 7,
-    "rating": 4,
-    "category": "Quality",
-    "reviewText": "Quality meets expectations. Solid construction and materials used. No complaints here.",
-    "timestamp": "2024-11-20T11:10:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_037",
-    "userId": "user_037",
-    "productId": 7,
-    "rating": 5,
-    "category": "Performance",
-    "reviewText": "Incredible performance! Fast, responsive, and efficient. Couldn't ask for more.",
-    "timestamp": "2024-11-17T13:45:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_038",
-    "userId": "user_038",
-    "productId": 7,
-    "rating": 3,
-    "category": "Accessibility",
-    "reviewText": "Basic accessibility features present but room for improvement. Hope to see updates in the future.",
-    "timestamp": "2024-11-14T10:25:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_039",
-    "userId": "user_039",
-    "productId": 7,
-    "rating": 5,
-    "category": "UI",
-    "reviewText": "Gorgeous UI! Love the color scheme and layout. Makes using it a joy.",
-    "timestamp": "2024-11-11T15:50:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_040",
-    "userId": "user_040",
-    "productId": 7,
-    "rating": 4,
-    "category": "Features",
-    "reviewText": "Solid feature set. Covers most use cases well. A few niche features missing but not dealbreakers.",
-    "timestamp": "2024-11-08T12:35:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_041",
-    "userId": "user_041",
-    "productId": 8,
-    "rating": 5,
-    "category": "Support",
-    "reviewText": "Phenomenal customer support! Quick to respond and genuinely helpful. Makes a huge difference.",
-    "timestamp": "2024-11-19T09:50:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_042",
-    "userId": "user_042",
-    "productId": 8,
-    "rating": 4,
-    "category": "Quality",
-    "reviewText": "Good quality product. Well-made and reliable. Gets the job done without issues.",
-    "timestamp": "2024-11-16T14:15:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_043",
-    "userId": "user_043",
-    "productId": 8,
-    "rating": 5,
-    "category": "Performance",
-    "reviewText": "Amazing performance! No lag, no freezing. Just smooth sailing all the way.",
-    "timestamp": "2024-11-13T11:40:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_044",
-    "userId": "user_044",
-    "productId": 8,
-    "rating": 4,
-    "category": "UI",
-    "reviewText": "Clean and functional UI. Easy to learn and use. Minor tweaks would make it perfect.",
-    "timestamp": "2024-11-10T16:25:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_045",
-    "userId": "user_045",
-    "productId": 8,
-    "rating": 5,
-    "category": "Features",
-    "reviewText": "Excellent feature selection! Has everything I need and nothing I don't. Well balanced.",
-    "timestamp": "2024-11-07T10:05:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_046",
-    "userId": "user_046",
-    "productId": 9,
-    "rating": 5,
-    "category": "Quality",
-    "reviewText": "Superior quality! Craftsmanship is evident in every detail. Worth the investment.",
-    "timestamp": "2024-11-21T14:30:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_047",
-    "userId": "user_047",
-    "productId": 9,
-    "rating": 4,
-    "category": "Performance",
-    "reviewText": "Great performance overall. Handles tasks efficiently and reliably. Very satisfied.",
-    "timestamp": "2024-11-18T09:20:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_048",
-    "userId": "user_048",
-    "productId": 9,
-    "rating": 4,
-    "category": "Accessibility",
-    "reviewText": "Good accessibility options. Not perfect but better than most. Shows they care.",
-    "timestamp": "2024-11-15T13:45:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_049",
-    "userId": "user_049",
-    "productId": 9,
-    "rating": 5,
-    "category": "UI",
-    "reviewText": "Beautiful design! UI is modern, clean, and pleasant to use. Everything flows naturally.",
-    "timestamp": "2024-11-12T11:15:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_050",
-    "userId": "user_050",
-    "productId": 9,
-    "rating": 4,
-    "category": "Features",
-    "reviewText": "Well-rounded feature set. Does what it promises and does it well. No major complaints.",
-    "timestamp": "2024-11-09T15:30:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_051",
-    "userId": "user_051",
-    "productId": 10,
-    "rating": 5,
-    "category": "Support",
-    "reviewText": "World-class support! They resolved my issue quickly and professionally. Can't recommend enough.",
-    "timestamp": "2024-11-20T10:45:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_052",
-    "userId": "user_052",
-    "productId": 10,
-    "rating": 4,
-    "category": "Quality",
-    "reviewText": "Quality construction. Durable and well-designed. Feels like it will last for years.",
-    "timestamp": "2024-11-17T12:20:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_053",
-    "userId": "user_053",
-    "productId": 10,
-    "rating": 5,
-    "category": "Performance",
-    "reviewText": "Top-notch performance! Fast, reliable, and consistent. Exceeds expectations.",
-    "timestamp": "2024-11-14T14:55:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_054",
-    "userId": "user_054",
-    "productId": 10,
-    "rating": 3,
-    "category": "UI",
-    "reviewText": "UI is functional but not very modern. Could benefit from a redesign to match current trends.",
-    "timestamp": "2024-11-11T09:40:00Z",
-    "verified": true
-  },
-  {
-    "reviewId": "rev_055",
-    "userId": "user_055",
-    "productId": 10,
-    "rating": 4,
-    "category": "Features",
-    "reviewText": "Good range of features. Covers the essentials and adds some nice extras. Well thought out.",
-    "timestamp": "2024-11-08T16:10:00Z",
-    "verified": true
-  }
+    {
+        "reviewId":  "rev_001",
+        "userId":  "user_001",
+        "productId":  1,
+        "rating":  5,
+        "category":  "Electronics",
+        "reviewText":  "Absolutely loved it! The build quality is exceptional and exceeded all my expectations. Worth every penny.",
+        "timestamp":  "2024-11-20T10:30:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_002",
+        "userId":  "user_002",
+        "productId":  1,
+        "rating":  4,
+        "category":  "Electronics",
+        "reviewText":  "Great performance overall. Fast and reliable. Would definitely recommend to friends and family.",
+        "timestamp":  "2024-11-18T14:20:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_003",
+        "userId":  "user_003",
+        "productId":  1,
+        "rating":  5,
+        "category":  "Electronics",
+        "reviewText":  "Feature-rich and intuitive. Everything I needed in one place. Super impressed with the attention to detail.",
+        "timestamp":  "2024-11-15T09:45:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_004",
+        "userId":  "user_004",
+        "productId":  1,
+        "rating":  4,
+        "category":  "Electronics",
+        "reviewText":  "Clean and modern interface. Easy to navigate and aesthetically pleasing. Minor improvements could be made.",
+        "timestamp":  "2024-11-12T16:10:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_005",
+        "userId":  "user_005",
+        "productId":  1,
+        "rating":  5,
+        "category":  "Electronics",
+        "reviewText":  "Customer service was outstanding! Quick responses and very helpful. Resolved my issue in minutes.",
+        "timestamp":  "2024-11-10T11:30:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_006",
+        "userId":  "user_006",
+        "productId":  1,
+        "rating":  4,
+        "category":  "Electronics",
+        "reviewText":  "Good quality product. Durable and well-made. Packaging could be better but product itself is great.",
+        "timestamp":  "2024-11-08T13:50:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_007",
+        "userId":  "user_007",
+        "productId":  1,
+        "rating":  5,
+        "category":  "Electronics",
+        "reviewText":  "Lightning fast! No lag whatsoever. Handles everything I throw at it with ease.",
+        "timestamp":  "2024-11-05T10:20:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_008",
+        "userId":  "user_008",
+        "productId":  1,
+        "rating":  3,
+        "category":  "Electronics",
+        "reviewText":  "Decent but accessibility features need work. Would love to see better keyboard navigation and screen reader support.",
+        "timestamp":  "2024-11-03T15:40:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_009",
+        "userId":  "user_009",
+        "productId":  1,
+        "rating":  5,
+        "category":  "Electronics",
+        "reviewText":  "Stunning design! The UI is gorgeous and makes using it a pleasure. Best I\u0027ve seen in this category.",
+        "timestamp":  "2024-11-01T12:15:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_010",
+        "userId":  "user_010",
+        "productId":  1,
+        "rating":  4,
+        "category":  "Electronics",
+        "reviewText":  "Packed with features. Does everything advertised and more. A few advanced features take time to learn.",
+        "timestamp":  "2024-10-29T09:30:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_011",
+        "userId":  "user_011",
+        "productId":  2,
+        "rating":  5,
+        "category":  "Electronics",
+        "reviewText":  "Premium quality all around. You can tell they didn\u0027t cut corners. Highly satisfied with this purchase.",
+        "timestamp":  "2024-11-19T11:45:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_012",
+        "userId":  "user_012",
+        "productId":  2,
+        "rating":  4,
+        "category":  "Electronics",
+        "reviewText":  "Solid performance. No complaints so far. Does exactly what it\u0027s supposed to do efficiently.",
+        "timestamp":  "2024-11-17T14:30:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_013",
+        "userId":  "user_013",
+        "productId":  2,
+        "rating":  5,
+        "category":  "Electronics",
+        "reviewText":  "Best customer support experience ever! They went above and beyond to help me. Really impressed.",
+        "timestamp":  "2024-11-14T10:00:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_014",
+        "userId":  "user_014",
+        "productId":  2,
+        "rating":  3,
+        "category":  "Electronics",
+        "reviewText":  "Interface is okay but could use some modernization. Feels a bit dated compared to competitors.",
+        "timestamp":  "2024-11-11T16:20:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_015",
+        "userId":  "user_015",
+        "productId":  2,
+        "rating":  4,
+        "category":  "Electronics",
+        "reviewText":  "Good feature set for the price. Missing a few things I\u0027d like to see but overall very functional.",
+        "timestamp":  "2024-11-09T13:10:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_016",
+        "userId":  "user_016",
+        "productId":  3,
+        "rating":  5,
+        "category":  "Clothing",
+        "reviewText":  "Outstanding craftsmanship! Attention to detail is remarkable. This is what quality looks like.",
+        "timestamp":  "2024-11-21T09:15:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_017",
+        "userId":  "user_017",
+        "productId":  3,
+        "rating":  5,
+        "category":  "Clothing",
+        "reviewText":  "Blazing fast performance! No hiccups at all. Handles heavy workloads like a champ.",
+        "timestamp":  "2024-11-18T11:40:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_018",
+        "userId":  "user_018",
+        "productId":  3,
+        "rating":  4,
+        "category":  "Clothing",
+        "reviewText":  "Good accessibility features included. Could be better but it\u0027s a solid start. Appreciate the effort.",
+        "timestamp":  "2024-11-15T15:25:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_019",
+        "userId":  "user_019",
+        "productId":  3,
+        "rating":  5,
+        "category":  "Clothing",
+        "reviewText":  "Beautifully designed interface! Everything is where you\u0027d expect it to be. Intuitive and elegant.",
+        "timestamp":  "2024-11-12T10:50:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_020",
+        "userId":  "user_020",
+        "productId":  3,
+        "rating":  4,
+        "category":  "Clothing",
+        "reviewText":  "Comprehensive feature list. Covers all the basics and then some. A few advanced options missing.",
+        "timestamp":  "2024-11-09T14:35:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_021",
+        "userId":  "user_021",
+        "productId":  4,
+        "rating":  5,
+        "category":  "Accessories",
+        "reviewText":  "Customer support team is incredible! Fast, friendly, and knowledgeable. They truly care about customers.",
+        "timestamp":  "2024-11-20T13:20:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_022",
+        "userId":  "user_022",
+        "productId":  4,
+        "rating":  4,
+        "category":  "Accessories",
+        "reviewText":  "Solid build quality. Feels premium in hand. Minor cosmetic issues but nothing that affects functionality.",
+        "timestamp":  "2024-11-17T09:55:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_023",
+        "userId":  "user_023",
+        "productId":  4,
+        "rating":  5,
+        "category":  "Accessories",
+        "reviewText":  "Exceptional performance! Smooth as butter. Can\u0027t believe how well it runs even under load.",
+        "timestamp":  "2024-11-14T16:10:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_024",
+        "userId":  "user_024",
+        "productId":  4,
+        "rating":  3,
+        "category":  "Accessories",
+        "reviewText":  "UI needs work. Not very intuitive at first. Takes some time to get used to the layout.",
+        "timestamp":  "2024-11-11T12:45:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_025",
+        "userId":  "user_025",
+        "productId":  4,
+        "rating":  4,
+        "category":  "Accessories",
+        "reviewText":  "Great features for everyday use. Does what I need it to do without being overwhelming.",
+        "timestamp":  "2024-11-08T10:30:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_026",
+        "userId":  "user_026",
+        "productId":  5,
+        "rating":  5,
+        "category":  "Home & Kitchen",
+        "reviewText":  "Top-tier quality! Material feels premium and durable. Best purchase I\u0027ve made this year.",
+        "timestamp":  "2024-11-19T14:50:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_027",
+        "userId":  "user_027",
+        "productId":  5,
+        "rating":  4,
+        "category":  "Home & Kitchen",
+        "reviewText":  "Reliable performance day after day. No issues encountered so far. Does its job well.",
+        "timestamp":  "2024-11-16T11:20:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_028",
+        "userId":  "user_028",
+        "productId":  5,
+        "rating":  5,
+        "category":  "Home & Kitchen",
+        "reviewText":  "Excellent accessibility support! As someone who needs these features, I\u0027m thrilled with the implementation.",
+        "timestamp":  "2024-11-13T09:40:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_029",
+        "userId":  "user_029",
+        "productId":  5,
+        "rating":  5,
+        "category":  "Home & Kitchen",
+        "reviewText":  "Perfect UI design! Clean, modern, and functional. Every element serves a purpose.",
+        "timestamp":  "2024-11-10T15:15:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_030",
+        "userId":  "user_030",
+        "productId":  5,
+        "rating":  4,
+        "category":  "Home & Kitchen",
+        "reviewText":  "Feature-packed without being bloated. Strikes a good balance between power and simplicity.",
+        "timestamp":  "2024-11-07T13:05:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_031",
+        "userId":  "user_031",
+        "productId":  6,
+        "rating":  5,
+        "category":  "Sports",
+        "reviewText":  "Amazing support team! They answered all my questions promptly and professionally. 10/10 service.",
+        "timestamp":  "2024-11-21T10:25:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_032",
+        "userId":  "user_032",
+        "productId":  6,
+        "rating":  4,
+        "category":  "Sports",
+        "reviewText":  "Great quality for the price point. Sturdy construction and well thought out design.",
+        "timestamp":  "2024-11-18T12:40:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_033",
+        "userId":  "user_033",
+        "productId":  6,
+        "rating":  5,
+        "category":  "Sports",
+        "reviewText":  "Outstanding performance! Runs smoothly without any lag or stuttering. Highly efficient.",
+        "timestamp":  "2024-11-15T14:55:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_034",
+        "userId":  "user_034",
+        "productId":  6,
+        "rating":  4,
+        "category":  "Sports",
+        "reviewText":  "Nice interface overall. Could use some polish in certain areas but generally well-designed.",
+        "timestamp":  "2024-11-12T09:30:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_035",
+        "userId":  "user_035",
+        "productId":  6,
+        "rating":  5,
+        "category":  "Sports",
+        "reviewText":  "Love all the features! Everything I wanted and more. Nothing feels like an afterthought.",
+        "timestamp":  "2024-11-09T16:20:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_036",
+        "userId":  "user_036",
+        "productId":  7,
+        "rating":  4,
+        "category":  "Electronics",
+        "reviewText":  "Quality meets expectations. Solid construction and materials used. No complaints here.",
+        "timestamp":  "2024-11-20T11:10:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_037",
+        "userId":  "user_037",
+        "productId":  7,
+        "rating":  5,
+        "category":  "Electronics",
+        "reviewText":  "Incredible performance! Fast, responsive, and efficient. Couldn\u0027t ask for more.",
+        "timestamp":  "2024-11-17T13:45:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_038",
+        "userId":  "user_038",
+        "productId":  7,
+        "rating":  3,
+        "category":  "Electronics",
+        "reviewText":  "Basic accessibility features present but room for improvement. Hope to see updates in the future.",
+        "timestamp":  "2024-11-14T10:25:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_039",
+        "userId":  "user_039",
+        "productId":  7,
+        "rating":  5,
+        "category":  "Electronics",
+        "reviewText":  "Gorgeous UI! Love the color scheme and layout. Makes using it a joy.",
+        "timestamp":  "2024-11-11T15:50:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_040",
+        "userId":  "user_040",
+        "productId":  7,
+        "rating":  4,
+        "category":  "Electronics",
+        "reviewText":  "Solid feature set. Covers most use cases well. A few niche features missing but not dealbreakers.",
+        "timestamp":  "2024-11-08T12:35:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_041",
+        "userId":  "user_041",
+        "productId":  8,
+        "rating":  5,
+        "category":  "Home & Kitchen",
+        "reviewText":  "Phenomenal customer support! Quick to respond and genuinely helpful. Makes a huge difference.",
+        "timestamp":  "2024-11-19T09:50:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_042",
+        "userId":  "user_042",
+        "productId":  8,
+        "rating":  4,
+        "category":  "Home & Kitchen",
+        "reviewText":  "Good quality product. Well-made and reliable. Gets the job done without issues.",
+        "timestamp":  "2024-11-16T14:15:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_043",
+        "userId":  "user_043",
+        "productId":  8,
+        "rating":  5,
+        "category":  "Home & Kitchen",
+        "reviewText":  "Amazing performance! No lag, no freezing. Just smooth sailing all the way.",
+        "timestamp":  "2024-11-13T11:40:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_044",
+        "userId":  "user_044",
+        "productId":  8,
+        "rating":  4,
+        "category":  "Home & Kitchen",
+        "reviewText":  "Clean and functional UI. Easy to learn and use. Minor tweaks would make it perfect.",
+        "timestamp":  "2024-11-10T16:25:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_045",
+        "userId":  "user_045",
+        "productId":  8,
+        "rating":  5,
+        "category":  "Home & Kitchen",
+        "reviewText":  "Excellent feature selection! Has everything I need and nothing I don\u0027t. Well balanced.",
+        "timestamp":  "2024-11-07T10:05:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_046",
+        "userId":  "user_046",
+        "productId":  9,
+        "rating":  5,
+        "category":  "Sports",
+        "reviewText":  "Superior quality! Craftsmanship is evident in every detail. Worth the investment.",
+        "timestamp":  "2024-11-21T14:30:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_047",
+        "userId":  "user_047",
+        "productId":  9,
+        "rating":  4,
+        "category":  "Sports",
+        "reviewText":  "Great performance overall. Handles tasks efficiently and reliably. Very satisfied.",
+        "timestamp":  "2024-11-18T09:20:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_048",
+        "userId":  "user_048",
+        "productId":  9,
+        "rating":  4,
+        "category":  "Sports",
+        "reviewText":  "Good accessibility options. Not perfect but better than most. Shows they care.",
+        "timestamp":  "2024-11-15T13:45:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_049",
+        "userId":  "user_049",
+        "productId":  9,
+        "rating":  5,
+        "category":  "Sports",
+        "reviewText":  "Beautiful design! UI is modern, clean, and pleasant to use. Everything flows naturally.",
+        "timestamp":  "2024-11-12T11:15:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_050",
+        "userId":  "user_050",
+        "productId":  9,
+        "rating":  4,
+        "category":  "Sports",
+        "reviewText":  "Well-rounded feature set. Does what it promises and does it well. No major complaints.",
+        "timestamp":  "2024-11-09T15:30:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_051",
+        "userId":  "user_051",
+        "productId":  10,
+        "rating":  5,
+        "category":  "Office",
+        "reviewText":  "World-class support! They resolved my issue quickly and professionally. Can\u0027t recommend enough.",
+        "timestamp":  "2024-11-20T10:45:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_052",
+        "userId":  "user_052",
+        "productId":  10,
+        "rating":  4,
+        "category":  "Office",
+        "reviewText":  "Quality construction. Durable and well-designed. Feels like it will last for years.",
+        "timestamp":  "2024-11-17T12:20:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_053",
+        "userId":  "user_053",
+        "productId":  10,
+        "rating":  5,
+        "category":  "Office",
+        "reviewText":  "Top-notch performance! Fast, reliable, and consistent. Exceeds expectations.",
+        "timestamp":  "2024-11-14T14:55:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_054",
+        "userId":  "user_054",
+        "productId":  10,
+        "rating":  3,
+        "category":  "Office",
+        "reviewText":  "UI is functional but not very modern. Could benefit from a redesign to match current trends.",
+        "timestamp":  "2024-11-11T09:40:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_055",
+        "userId":  "user_055",
+        "productId":  10,
+        "rating":  4,
+        "category":  "Office",
+        "reviewText":  "Good range of features. Covers the essentials and adds some nice extras. Well thought out.",
+        "timestamp":  "2024-11-08T16:10:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_056",
+        "userId":  "user_056",
+        "productId":  11,
+        "rating":  5,
+        "category":  "Electronics",
+        "reviewText":  "Gaming mouse works flawlessly! Zero lag and the RGB lighting is stunning. Best purchase for my setup.",
+        "timestamp":  "2024-11-07T10:15:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_057",
+        "userId":  "user_057",
+        "productId":  11,
+        "rating":  4,
+        "category":  "Electronics",
+        "reviewText":  "Solid build quality. Buttons feel premium and responsive. Worth the price.",
+        "timestamp":  "2024-11-05T14:30:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_058",
+        "userId":  "user_058",
+        "productId":  11,
+        "rating":  5,
+        "category":  "Electronics",
+        "reviewText":  "Programmable buttons are a game changer! Customization options are endless.",
+        "timestamp":  "2024-11-03T09:20:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_059",
+        "userId":  "user_059",
+        "productId":  12,
+        "rating":  5,
+        "category":  "Health",
+        "reviewText":  "Best protein powder I\u0027ve tried! Tastes great and mixes smoothly. No chalky texture.",
+        "timestamp":  "2024-11-06T11:45:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_060",
+        "userId":  "user_060",
+        "productId":  12,
+        "rating":  4,
+        "category":  "Health",
+        "reviewText":  "Great for post-workout recovery. Noticed improvement in muscle recovery time.",
+        "timestamp":  "2024-11-04T16:20:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_061",
+        "userId":  "user_061",
+        "productId":  12,
+        "rating":  5,
+        "category":  "Health",
+        "reviewText":  "Customer service helped me choose the right flavor. Very knowledgeable and friendly.",
+        "timestamp":  "2024-11-02T13:10:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_062",
+        "userId":  "user_062",
+        "productId":  13,
+        "rating":  4,
+        "category":  "Clothing",
+        "reviewText":  "Classic denim jacket with great fit. Material is durable and vintage wash looks authentic.",
+        "timestamp":  "2024-11-08T15:40:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_063",
+        "userId":  "user_063",
+        "productId":  13,
+        "rating":  5,
+        "category":  "Clothing",
+        "reviewText":  "Perfect style for any outfit! Goes well with everything in my wardrobe.",
+        "timestamp":  "2024-11-06T09:55:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_064",
+        "userId":  "user_064",
+        "productId":  14,
+        "rating":  5,
+        "category":  "Home & Kitchen",
+        "reviewText":  "Diffuser works wonderfully! Room smells amazing and the LED lights create perfect ambiance.",
+        "timestamp":  "2024-11-09T12:25:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_065",
+        "userId":  "user_065",
+        "productId":  14,
+        "rating":  4,
+        "category":  "Home & Kitchen",
+        "reviewText":  "Love the timer feature. Automatic shut-off gives peace of mind when sleeping.",
+        "timestamp":  "2024-11-07T14:50:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_066",
+        "userId":  "user_066",
+        "productId":  14,
+        "rating":  5,
+        "category":  "Home & Kitchen",
+        "reviewText":  "Quiet operation is impressive. Runs all night without disturbing sleep.",
+        "timestamp":  "2024-11-05T10:30:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_067",
+        "userId":  "user_067",
+        "productId":  15,
+        "rating":  4,
+        "category":  "Accessories",
+        "reviewText":  "Polarization works great! No more glare while driving. Very comfortable to wear.",
+        "timestamp":  "2024-11-10T11:20:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_068",
+        "userId":  "user_068",
+        "productId":  15,
+        "rating":  5,
+        "category":  "Accessories",
+        "reviewText":  "Premium quality sunglasses at reasonable price. Metal frame feels sturdy and well-made.",
+        "timestamp":  "2024-11-08T13:45:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_069",
+        "userId":  "user_069",
+        "productId":  16,
+        "rating":  5,
+        "category":  "Electronics",
+        "reviewText":  "Amazing keyboard! Blue switches provide perfect tactile feedback. Typing feels premium.",
+        "timestamp":  "2024-11-11T09:30:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_070",
+        "userId":  "user_070",
+        "productId":  16,
+        "rating":  4,
+        "category":  "Electronics",
+        "reviewText":  "RGB lighting is customizable with tons of effects. Software is user-friendly.",
+        "timestamp":  "2024-11-09T15:15:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_071",
+        "userId":  "user_071",
+        "productId":  16,
+        "rating":  5,
+        "category":  "Electronics",
+        "reviewText":  "Build quality exceeds expectations. Heavy and solid, doesn\u0027t slide around during gaming.",
+        "timestamp":  "2024-11-07T10:40:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_072",
+        "userId":  "user_072",
+        "productId":  17,
+        "rating":  5,
+        "category":  "Sports",
+        "reviewText":  "Resistance bands are perfect for home workouts! Different tension levels cover all exercises.",
+        "timestamp":  "2024-11-12T14:20:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_073",
+        "userId":  "user_073",
+        "productId":  17,
+        "rating":  4,
+        "category":  "Sports",
+        "reviewText":  "Durable latex material. Comes with useful door anchor and carrying bag.",
+        "timestamp":  "2024-11-10T11:50:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_074",
+        "userId":  "user_074",
+        "productId":  18,
+        "rating":  5,
+        "category":  "Home & Kitchen",
+        "reviewText":  "Candles smell absolutely divine! Natural soy wax burns evenly and lasts long.",
+        "timestamp":  "2024-11-13T16:30:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_075",
+        "userId":  "user_075",
+        "productId":  18,
+        "rating":  5,
+        "category":  "Home & Kitchen",
+        "reviewText":  "Beautiful packaging makes them perfect as gifts. Scents are calming and not overwhelming.",
+        "timestamp":  "2024-11-11T12:15:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_076",
+        "userId":  "user_056",
+        "productId":  19,
+        "rating":  4,
+        "category":  "Accessories",
+        "reviewText":  "Backpack has excellent organization. Laptop compartment is well-padded and USB port is handy.",
+        "timestamp":  "2024-11-14T10:40:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_077",
+        "userId":  "user_057",
+        "productId":  19,
+        "rating":  5,
+        "category":  "Accessories",
+        "reviewText":  "Water-resistant material works as advertised. Got caught in rain and laptop stayed dry.",
+        "timestamp":  "2024-11-12T13:25:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_078",
+        "userId":  "user_058",
+        "productId":  20,
+        "rating":  5,
+        "category":  "Home & Kitchen",
+        "reviewText":  "Cookware heats evenly! No hot spots. Non-stick coating makes cleaning effortless.",
+        "timestamp":  "2024-11-15T11:50:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_079",
+        "userId":  "user_059",
+        "productId":  20,
+        "rating":  4,
+        "category":  "Home & Kitchen",
+        "reviewText":  "Solid stainless steel construction. Handles stay cool during cooking. Great set for the price.",
+        "timestamp":  "2024-11-13T14:30:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_080",
+        "userId":  "user_060",
+        "productId":  20,
+        "rating":  5,
+        "category":  "Home & Kitchen",
+        "reviewText":  "Compatible with all cooktops including induction. Oven-safe feature is very useful.",
+        "timestamp":  "2024-11-11T09:20:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_081",
+        "userId":  "user_061",
+        "productId":  21,
+        "rating":  5,
+        "category":  "Electronics",
+        "reviewText":  "Excellent office chair! Lumbar support is phenomenal. No more back pain after long work hours.",
+        "timestamp":  "2024-11-16T10:15:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_082",
+        "userId":  "user_062",
+        "productId":  21,
+        "rating":  4,
+        "category":  "Electronics",
+        "reviewText":  "Adjustable armrests and height are perfect. Breathable mesh keeps me cool all day.",
+        "timestamp":  "2024-11-14T13:40:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_083",
+        "userId":  "user_063",
+        "productId":  22,
+        "rating":  5,
+        "category":  "Home & Kitchen",
+        "reviewText":  "Running shoes are incredibly comfortable! Cushioning absorbs impact perfectly during runs.",
+        "timestamp":  "2024-11-17T09:25:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_084",
+        "userId":  "user_064",
+        "productId":  22,
+        "rating":  5,
+        "category":  "Home & Kitchen",
+        "reviewText":  "Breathable mesh upper keeps feet cool. Durable outsole provides excellent traction.",
+        "timestamp":  "2024-11-15T11:50:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_085",
+        "userId":  "user_065",
+        "productId":  23,
+        "rating":  4,
+        "category":  "Electronics",
+        "reviewText":  "Fitness tracker syncs seamlessly with phone app. Heart rate monitoring is accurate.",
+        "timestamp":  "2024-11-18T14:20:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_086",
+        "userId":  "user_066",
+        "productId":  23,
+        "rating":  5,
+        "category":  "Electronics",
+        "reviewText":  "Battery lasts 7 days as claimed! Sleep tracking insights helped improve my rest quality.",
+        "timestamp":  "2024-11-16T10:45:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_087",
+        "userId":  "user_067",
+        "productId":  24,
+        "rating":  5,
+        "category":  "Clothing",
+        "reviewText":  "Leather wallet is beautifully crafted. Stitching is perfect and leather smells premium.",
+        "timestamp":  "2024-11-19T11:30:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_088",
+        "userId":  "user_068",
+        "productId":  24,
+        "rating":  4,
+        "category":  "Clothing",
+        "reviewText":  "RFID blocking works great. Multiple card slots and organized layout. Slim profile fits easily in pocket.",
+        "timestamp":  "2024-11-17T15:10:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_089",
+        "userId":  "user_069",
+        "productId":  25,
+        "rating":  5,
+        "category":  "Accessories",
+        "reviewText":  "Blender is powerful! Crushes ice instantly and makes smoothies perfectly smooth.",
+        "timestamp":  "2024-11-20T09:40:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_090",
+        "userId":  "user_070",
+        "productId":  25,
+        "rating":  5,
+        "category":  "Accessories",
+        "reviewText":  "Built like a tank! Motor is super quiet compared to my old blender. Easy to clean.",
+        "timestamp":  "2024-11-18T13:25:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_091",
+        "userId":  "user_071",
+        "productId":  26,
+        "rating":  4,
+        "category":  "Home & Kitchen",
+        "reviewText":  "Gaming chair is comfortable for long gaming sessions. Recline function is smooth.",
+        "timestamp":  "2024-11-21T14:50:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_092",
+        "userId":  "user_072",
+        "productId":  26,
+        "rating":  5,
+        "category":  "Home & Kitchen",
+        "reviewText":  "PU leather feels premium. Sturdy frame supports my weight perfectly. Armrests are well-padded.",
+        "timestamp":  "2024-11-19T10:15:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_093",
+        "userId":  "user_073",
+        "productId":  27,
+        "rating":  5,
+        "category":  "Sports",
+        "reviewText":  "Smart bulbs integrate flawlessly with Alexa! Color options are endless. Great for mood lighting.",
+        "timestamp":  "2024-11-22T11:20:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_094",
+        "userId":  "user_074",
+        "productId":  27,
+        "rating":  4,
+        "category":  "Sports",
+        "reviewText":  "Brightness is impressive. Scheduling feature helps automate home lighting perfectly.",
+        "timestamp":  "2024-11-20T13:45:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_095",
+        "userId":  "user_075",
+        "productId":  28,
+        "rating":  5,
+        "category":  "Electronics",
+        "reviewText":  "Best yoga mat ever! Thickness provides perfect cushioning without being too soft.",
+        "timestamp":  "2024-11-23T09:30:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_096",
+        "userId":  "user_056",
+        "productId":  28,
+        "rating":  5,
+        "category":  "Electronics",
+        "reviewText":  "Non-slip surface works amazingly well. Stays in place even during hot yoga sessions.",
+        "timestamp":  "2024-11-21T14:10:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_097",
+        "userId":  "user_057",
+        "productId":  29,
+        "rating":  4,
+        "category":  "Home & Kitchen",
+        "reviewText":  "Drone is feature-packed! 4K camera captures stunning footage. GPS return-to-home is reassuring.",
+        "timestamp":  "2024-11-24T10:50:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_098",
+        "userId":  "user_058",
+        "productId":  29,
+        "rating":  5,
+        "category":  "Home & Kitchen",
+        "reviewText":  "Flight time exceeds 25 minutes. Stable hovering even in light wind. Controls are responsive.",
+        "timestamp":  "2024-11-22T15:20:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_099",
+        "userId":  "user_059",
+        "productId":  30,
+        "rating":  5,
+        "category":  "Office",
+        "reviewText":  "Book is incredibly inspiring! Practical advice that\u0027s easy to implement. Changed my perspective.",
+        "timestamp":  "2024-11-25T11:40:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_100",
+        "userId":  "user_060",
+        "productId":  30,
+        "rating":  4,
+        "category":  "Office",
+        "reviewText":  "Well-written and engaging. Chapter breakdowns make it easy to digest. Highly recommend!",
+        "timestamp":  "2024-11-23T13:55:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_101",
+        "userId":  "user_061",
+        "productId":  31,
+        "rating":  5,
+        "category":  "Electronics",
+        "reviewText":  "Coffee maker brews perfect coffee every time! Temperature control is precise and consistent.",
+        "timestamp":  "2024-11-26T09:15:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_102",
+        "userId":  "user_062",
+        "productId":  31,
+        "rating":  4,
+        "category":  "Electronics",
+        "reviewText":  "Programmable timer is convenient. Wake up to fresh coffee daily. Carafe keeps coffee hot for hours.",
+        "timestamp":  "2024-11-24T14:30:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_103",
+        "userId":  "user_063",
+        "productId":  32,
+        "rating":  5,
+        "category":  "Electronics",
+        "reviewText":  "Formal shirt fits perfectly! Fabric is breathable and wrinkle-resistant. Professional appearance.",
+        "timestamp":  "2024-11-27T10:45:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_104",
+        "userId":  "user_064",
+        "productId":  32,
+        "rating":  5,
+        "category":  "Electronics",
+        "reviewText":  "Classic design works for any occasion. Colors are true to pictures. Great value for money.",
+        "timestamp":  "2024-11-25T13:20:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_105",
+        "userId":  "user_065",
+        "productId":  33,
+        "rating":  4,
+        "category":  "Electronics",
+        "reviewText":  "Electric toothbrush cleans thoroughly! Notice significant improvement in dental health.",
+        "timestamp":  "2024-11-28T11:30:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_106",
+        "userId":  "user_066",
+        "productId":  33,
+        "rating":  5,
+        "category":  "Electronics",
+        "reviewText":  "Multiple cleaning modes are useful. Pressure sensor prevents aggressive brushing. Battery lasts 2 weeks.",
+        "timestamp":  "2024-11-26T14:45:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_107",
+        "userId":  "user_067",
+        "productId":  34,
+        "rating":  5,
+        "category":  "Electronics",
+        "reviewText":  "Tablet case is beautifully designed! Leather feels authentic and provides excellent protection.",
+        "timestamp":  "2024-11-29T10:20:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_108",
+        "userId":  "user_068",
+        "productId":  34,
+        "rating":  4,
+        "category":  "Electronics",
+        "reviewText":  "Auto wake/sleep function works flawlessly. Multiple viewing angles are convenient for typing.",
+        "timestamp":  "2024-11-27T15:35:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_109",
+        "userId":  "user_069",
+        "productId":  35,
+        "rating":  5,
+        "category":  "Electronics",
+        "reviewText":  "Desk lamp illuminates workspace perfectly! Brightness adjustment is smooth and precise.",
+        "timestamp":  "2024-11-30T09:50:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_110",
+        "userId":  "user_070",
+        "productId":  35,
+        "rating":  5,
+        "category":  "Electronics",
+        "reviewText":  "USB charging port is super handy. Touch controls are intuitive. Memory function remembers settings.",
+        "timestamp":  "2024-11-28T13:15:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_111",
+        "userId":  "user_071",
+        "productId":  36,
+        "rating":  4,
+        "category":  "Electronics",
+        "reviewText":  "Multivitamins have all essentials! Capsules are easy to swallow. Noticed increased energy levels.",
+        "timestamp":  "2024-12-01T11:40:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_112",
+        "userId":  "user_072",
+        "productId":  36,
+        "rating":  5,
+        "category":  "Electronics",
+        "reviewText":  "Feel more energetic since starting. No upset stomach. Third-party tested for purity.",
+        "timestamp":  "2024-11-29T14:25:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_113",
+        "userId":  "user_073",
+        "productId":  37,
+        "rating":  5,
+        "category":  "Electronics",
+        "reviewText":  "Portable charger charges phone 3 times! Fast charging works perfectly. Essential for travel.",
+        "timestamp":  "2024-12-02T10:30:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_114",
+        "userId":  "user_074",
+        "productId":  37,
+        "rating":  4,
+        "category":  "Electronics",
+        "reviewText":  "Dual USB ports allow charging two devices simultaneously. LED indicator shows remaining power.",
+        "timestamp":  "2024-11-30T13:50:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_115",
+        "userId":  "user_075",
+        "productId":  38,
+        "rating":  5,
+        "category":  "Electronics",
+        "reviewText":  "Casual sneakers are super comfortable! Perfect for daily wear. Stylish design gets compliments.",
+        "timestamp":  "2024-12-03T09:15:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_116",
+        "userId":  "user_056",
+        "productId":  38,
+        "rating":  5,
+        "category":  "Electronics",
+        "reviewText":  "Cushioned insole provides all-day comfort. Breathable material keeps feet cool. Great quality for price.",
+        "timestamp":  "2024-12-01T14:40:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_117",
+        "userId":  "user_057",
+        "productId":  39,
+        "rating":  4,
+        "category":  "Electronics",
+        "reviewText":  "Air purifier has excellent coverage! HEPA filter captures allergens effectively. Sleep mode is quiet.",
+        "timestamp":  "2024-12-04T11:25:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_118",
+        "userId":  "user_058",
+        "productId":  39,
+        "rating":  5,
+        "category":  "Electronics",
+        "reviewText":  "Noticed significant reduction in allergies! Air quality indicator is accurate. Filter replacement is easy.",
+        "timestamp":  "2024-12-02T15:10:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_119",
+        "userId":  "user_059",
+        "productId":  40,
+        "rating":  5,
+        "category":  "Electronics",
+        "reviewText":  "Cookbook has amazing recipes! Clear instructions and beautiful food photography. Family loves the meals.",
+        "timestamp":  "2024-12-05T10:50:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_120",
+        "userId":  "user_060",
+        "productId":  40,
+        "rating":  4,
+        "category":  "Electronics",
+        "reviewText":  "Well-organized by meal type. Ingredient lists are comprehensive. Nutritional info included.",
+        "timestamp":  "2024-12-03T13:35:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_121",
+        "userId":  "user_061",
+        "productId":  41,
+        "rating":  5,
+        "category":  "Clothing",
+        "reviewText":  "External SSD is lightning fast! File transfers are incredibly quick. Compact and portable design.",
+        "timestamp":  "2024-12-06T09:40:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_122",
+        "userId":  "user_062",
+        "productId":  41,
+        "rating":  5,
+        "category":  "Clothing",
+        "reviewText":  "Durable aluminum casing. Shock-resistant and reliable for backups. Worth every penny!",
+        "timestamp":  "2024-12-04T14:20:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_123",
+        "userId":  "user_063",
+        "productId":  42,
+        "rating":  4,
+        "category":  "Clothing",
+        "reviewText":  "Handbag is elegant and spacious! Premium leather construction. Organizational pockets are thoughtful.",
+        "timestamp":  "2024-12-07T11:15:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_124",
+        "userId":  "user_064",
+        "productId":  42,
+        "rating":  5,
+        "category":  "Clothing",
+        "reviewText":  "Versatile design works for office and casual outings. Color is exactly as shown. Sturdy handles.",
+        "timestamp":  "2024-12-05T15:45:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_125",
+        "userId":  "user_065",
+        "productId":  43,
+        "rating":  5,
+        "category":  "Clothing",
+        "reviewText":  "Dumbbells are perfect for home workouts! Weight adjustment is quick and secure. Saves space.",
+        "timestamp":  "2024-12-08T10:30:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_126",
+        "userId":  "user_066",
+        "productId":  43,
+        "rating":  4,
+        "category":  "Clothing",
+        "reviewText":  "Solid construction. Coating prevents slipping. Range from 5-50 lbs covers all my exercises.",
+        "timestamp":  "2024-12-06T13:55:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_127",
+        "userId":  "user_067",
+        "productId":  44,
+        "rating":  5,
+        "category":  "Clothing",
+        "reviewText":  "Webcam quality is exceptional! 1080p video is crystal clear. Built-in mic captures audio well.",
+        "timestamp":  "2024-12-09T09:20:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_128",
+        "userId":  "user_068",
+        "productId":  44,
+        "rating":  5,
+        "category":  "Clothing",
+        "reviewText":  "Perfect for video calls! Low-light correction works great. Plug-and-play setup is effortless.",
+        "timestamp":  "2024-12-07T14:10:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_129",
+        "userId":  "user_069",
+        "productId":  45,
+        "rating":  4,
+        "category":  "Accessories",
+        "reviewText":  "Moisturizer feels luxurious! Absorbs quickly without greasiness. Skin feels hydrated all day.",
+        "timestamp":  "2024-12-10T11:45:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_130",
+        "userId":  "user_070",
+        "productId":  45,
+        "rating":  5,
+        "category":  "Accessories",
+        "reviewText":  "Hyaluronic acid works wonders! Noticed visible improvement in skin texture. Fragrance-free formula.",
+        "timestamp":  "2024-12-08T15:30:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_131",
+        "userId":  "user_071",
+        "productId":  46,
+        "rating":  5,
+        "category":  "Accessories",
+        "reviewText":  "Monitor delivers stunning visuals! 144Hz refresh rate makes gaming incredibly smooth.",
+        "timestamp":  "2024-12-11T10:15:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_132",
+        "userId":  "user_072",
+        "productId":  46,
+        "rating":  4,
+        "category":  "Accessories",
+        "reviewText":  "IPS panel has excellent viewing angles. Multiple ports including DisplayPort and HDMI.",
+        "timestamp":  "2024-12-09T13:40:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_133",
+        "userId":  "user_073",
+        "productId":  47,
+        "rating":  5,
+        "category":  "Accessories",
+        "reviewText":  "Garden tools are incredibly durable! Rust-resistant coating and comfortable grips. Complete set.",
+        "timestamp":  "2024-12-12T09:50:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_134",
+        "userId":  "user_074",
+        "productId":  47,
+        "rating":  5,
+        "category":  "Accessories",
+        "reviewText":  "Makes gardening much easier! Sharp blades and ergonomic handles reduce hand fatigue.",
+        "timestamp":  "2024-12-10T14:25:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_135",
+        "userId":  "user_075",
+        "productId":  48,
+        "rating":  4,
+        "category":  "Accessories",
+        "reviewText":  "Instant camera is so much fun! Film develops right before your eyes. Great for parties.",
+        "timestamp":  "2024-12-13T11:30:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_136",
+        "userId":  "user_056",
+        "productId":  48,
+        "rating":  5,
+        "category":  "Accessories",
+        "reviewText":  "Retro design is charming. Photos have that nostalgic quality. Built-in flash works well.",
+        "timestamp":  "2024-12-11T15:10:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_137",
+        "userId":  "user_057",
+        "productId":  49,
+        "rating":  5,
+        "category":  "Accessories",
+        "reviewText":  "Vitamin C serum brightened my complexion! Noticeable reduction in dark spots after 3 weeks.",
+        "timestamp":  "2024-12-14T10:45:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_138",
+        "userId":  "user_058",
+        "productId":  49,
+        "rating":  4,
+        "category":  "Accessories",
+        "reviewText":  "Lightweight serum absorbs instantly. No sticky residue. Dropper makes application easy.",
+        "timestamp":  "2024-12-12T13:20:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_139",
+        "userId":  "user_059",
+        "productId":  50,
+        "rating":  5,
+        "category":  "Accessories",
+        "reviewText":  "Thermal flask keeps drinks hot for 12+ hours! Leakproof design is perfect for commuting.",
+        "timestamp":  "2024-12-15T09:35:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_140",
+        "userId":  "user_060",
+        "productId":  50,
+        "rating":  5,
+        "category":  "Accessories",
+        "reviewText":  "Wide mouth opening makes cleaning easy. Fits in cup holders. Durable stainless steel.",
+        "timestamp":  "2024-12-13T14:50:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_141",
+        "userId":  "user_061",
+        "productId":  51,
+        "rating":  4,
+        "category":  "Home & Kitchen",
+        "reviewText":  "Router extends WiFi coverage throughout house! Setup was straightforward. Stable connections.",
+        "timestamp":  "2024-12-16T11:15:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_142",
+        "userId":  "user_062",
+        "productId":  51,
+        "rating":  5,
+        "category":  "Home & Kitchen",
+        "reviewText":  "Dual-band technology works flawlessly. Parental controls are comprehensive. App interface is intuitive.",
+        "timestamp":  "2024-12-14T15:40:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_143",
+        "userId":  "user_063",
+        "productId":  52,
+        "rating":  5,
+        "category":  "Home & Kitchen",
+        "reviewText":  "Bedding set is incredibly soft! Egyptian cotton feels luxurious. Colors stay vibrant after washing.",
+        "timestamp":  "2024-12-17T10:25:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_144",
+        "userId":  "user_064",
+        "productId":  52,
+        "rating":  4,
+        "category":  "Home & Kitchen",
+        "reviewText":  "Breathable fabric regulates temperature perfectly. Elastic fitted sheet stays secure. Deep pockets.",
+        "timestamp":  "2024-12-15T13:55:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_145",
+        "userId":  "user_065",
+        "productId":  53,
+        "rating":  5,
+        "category":  "Home & Kitchen",
+        "reviewText":  "E-reader battery lasts weeks! Glare-free screen reads like real paper. Perfect for outdoor reading.",
+        "timestamp":  "2024-12-18T09:50:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_146",
+        "userId":  "user_066",
+        "productId":  53,
+        "rating":  5,
+        "category":  "Home & Kitchen",
+        "reviewText":  "Adjustable backlight is gentle on eyes. Waterproof design survived bath reading. Massive storage.",
+        "timestamp":  "2024-12-16T14:30:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_147",
+        "userId":  "user_067",
+        "productId":  54,
+        "rating":  4,
+        "category":  "Home & Kitchen",
+        "reviewText":  "Omega-3 supplements are high quality! No fishy aftertaste. Capsules are easy to swallow.",
+        "timestamp":  "2024-12-19T11:40:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_148",
+        "userId":  "user_068",
+        "productId":  54,
+        "rating":  5,
+        "category":  "Home & Kitchen",
+        "reviewText":  "Noticed improved focus and joint comfort. Third-party tested for purity. Great value for 180 capsules.",
+        "timestamp":  "2024-12-17T15:15:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_149",
+        "userId":  "user_069",
+        "productId":  55,
+        "rating":  5,
+        "category":  "Home & Kitchen",
+        "reviewText":  "Pressure cooker saves so much time! Makes perfect rice and tender meats. Easy to use.",
+        "timestamp":  "2024-12-20T10:20:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_150",
+        "userId":  "user_070",
+        "productId":  55,
+        "rating":  4,
+        "category":  "Home & Kitchen",
+        "reviewText":  "Multiple cooking programs are versatile. Safety features give peace of mind. Dishwasher-safe pot.",
+        "timestamp":  "2024-12-18T13:45:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_151",
+        "userId":  "user_071",
+        "productId":  56,
+        "rating":  5,
+        "category":  "Home & Kitchen",
+        "reviewText":  "Acoustic guitar sounds beautiful! Great tone and resonance. Perfect for beginners and intermediates.",
+        "timestamp":  "2024-12-21T09:30:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_152",
+        "userId":  "user_072",
+        "productId":  56,
+        "rating":  5,
+        "category":  "Home & Kitchen",
+        "reviewText":  "Comfortable neck profile. Stays in tune well. Comes with gig bag and picks. Excellent value!",
+        "timestamp":  "2024-12-19T14:10:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_153",
+        "userId":  "user_073",
+        "productId":  57,
+        "rating":  4,
+        "category":  "Home & Kitchen",
+        "reviewText":  "Security camera has sharp image quality! Night vision is impressively clear. Motion alerts work perfectly.",
+        "timestamp":  "2024-12-22T11:55:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_154",
+        "userId":  "user_074",
+        "productId":  57,
+        "rating":  5,
+        "category":  "Home & Kitchen",
+        "reviewText":  "Two-way audio is clear. Cloud storage option is convenient. Weather-resistant for outdoor use.",
+        "timestamp":  "2024-12-20T15:25:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_155",
+        "userId":  "user_075",
+        "productId":  58,
+        "rating":  5,
+        "category":  "Home & Kitchen",
+        "reviewText":  "Probiotics improved my digestion significantly! Noticed results within 2 weeks. High CFU count.",
+        "timestamp":  "2024-12-23T10:40:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_156",
+        "userId":  "user_056",
+        "productId":  201,
+        "rating":  5,
+        "category":  "Beauty",
+        "reviewText":  "Facial cleanser works wonderfully! Skin feels fresh and clean without being stripped. Love the charcoal formula.",
+        "timestamp":  "2024-12-10T11:20:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_157",
+        "userId":  "user_057",
+        "productId":  202,
+        "rating":  5,
+        "category":  "Beauty",
+        "reviewText":  "Hair serum is amazing! Tames frizz instantly and adds beautiful shine. Not greasy at all.",
+        "timestamp":  "2024-12-11T14:35:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_158",
+        "userId":  "user_058",
+        "productId":  203,
+        "rating":  4,
+        "category":  "Beauty",
+        "reviewText":  "Eye cream reduced my dark circles noticeably! Takes a few weeks but results are worth it.",
+        "timestamp":  "2024-12-12T09:50:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_159",
+        "userId":  "user_059",
+        "productId":  204,
+        "rating":  5,
+        "category":  "Beauty",
+        "reviewText":  "Best sheet masks ever! Skin feels hydrated and glowing after each use. Great variety pack.",
+        "timestamp":  "2024-12-13T15:15:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_160",
+        "userId":  "user_060",
+        "productId":  206,
+        "rating":  5,
+        "category":  "Beauty",
+        "reviewText":  "Professional quality makeup brushes! Soft bristles and sturdy handles. Worth every penny.",
+        "timestamp":  "2024-12-14T10:40:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_161",
+        "userId":  "user_061",
+        "productId":  208,
+        "rating":  4,
+        "category":  "Beauty",
+        "reviewText":  "Rose water toner is refreshing! Tightens pores and balances my combination skin perfectly.",
+        "timestamp":  "2024-12-15T13:25:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_162",
+        "userId":  "user_062",
+        "productId":  209,
+        "rating":  5,
+        "category":  "Beauty",
+        "reviewText":  "Body scrub smells incredible! Coffee exfoliates beautifully and coconut oil moisturizes. Skin is so smooth!",
+        "timestamp":  "2024-12-16T11:50:00Z",
+        "verified":  true
+    },
+    {
+        "reviewId":  "rev_163",
+        "userId":  "user_063",
+        "productId":  210,
+        "rating":  5,
+        "category":  "Beauty",
+        "reviewText":  "Makeup remover wipes are gentle and effective! Removes all makeup including waterproof mascara easily.",
+        "timestamp":  "2024-12-17T14:30:00Z",
+        "verified":  true
+    }
 ]
