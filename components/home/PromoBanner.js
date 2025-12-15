@@ -9,7 +9,6 @@ export default function PromoBanner() {
     <section className="py-16 md:py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {/* Large Promo */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -39,7 +38,6 @@ export default function PromoBanner() {
             </Link>
           </motion.div>
 
-          {/* Stacked Small Promos */}
           <div className="flex flex-col gap-6">
             <motion.div
               initial={{ opacity: 0, x: 20 }}

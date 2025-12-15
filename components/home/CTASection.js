@@ -7,7 +7,6 @@ import { FaArrowRight } from 'react-icons/fa';
 export default function CTASection() {
   return (
     <section className="relative min-h-[500px] md:min-h-[600px] bg-neutral-900 overflow-hidden">
-      {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="absolute inset-0" style={{
           backgroundImage: 'radial-gradient(circle at 2px 2px, white 1px, transparent 0)',
