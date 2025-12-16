@@ -33,7 +33,7 @@ export default function ProductCard({ product }) {
           )}
 
           <div className="absolute top-3 right-3 px-3 py-1.5 bg-white/95 backdrop-blur-sm rounded-lg text-sm font-semibold text-neutral-900">
-            ${product.price}
+            ₹{product.price}
           </div>
         </div>
 

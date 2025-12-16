@@ -48,9 +48,9 @@ export default function ProductInfo({ product, averageRating, reviewCount }) {
       {/* Price Section */}
       <div className="bg-linear-to-br from-gray-50 to-gray-100/50 rounded-xl md:rounded-2xl p-4 md:p-6 space-y-2">
         <div className="flex flex-wrap items-baseline gap-2 md:gap-3">
-          <span className="text-3xl md:text-4xl font-bold text-gray-900">${product.price}</span>
+          <span className="text-3xl md:text-4xl font-bold text-gray-900">₹{product.price}</span>
           <span className="text-lg md:text-xl text-gray-400 line-through">
-            ${(product.price * 1.3).toFixed(2)}
+            ₹{(product.price * 1.3).toFixed(2)}
           </span>
           <span className="px-2 md:px-3 py-1 bg-red-500 text-white rounded-full text-xs md:text-sm font-semibold">
             Save 30%

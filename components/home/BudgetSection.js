@@ -6,21 +6,21 @@ import { FaArrowRight } from 'react-icons/fa';
 
 const budgetRanges = [
   {
-    range: '$1-$99',
+    range: '₹1-₹99',
     title: 'Budget Friendly',
-    description: 'Amazing products under $99',
+    description: 'Amazing products under ₹99',
     href: '/products?maxPrice=99',
     image: 'https://images.unsplash.com/photo-1607082349566-187342175e2f?w=800'
   },
   {
-    range: '$99-$199',
+    range: '₹99-₹199',
     title: 'Mid Range',
     description: 'Quality meets affordability',
     href: '/products?minPrice=99&maxPrice=199',
     image: 'https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=800'
   },
   {
-    range: '$199+',
+    range: '₹199+',
     title: 'Premium',
     description: 'Luxury & high-end products',
     href: '/products?minPrice=199',

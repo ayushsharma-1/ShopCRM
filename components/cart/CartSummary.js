@@ -68,7 +68,7 @@ export default function CartSummary() {
       <div className="space-y-3 py-4 border-t border-b border-neutral-100">
         <div className="flex justify-between text-sm">
           <span className="text-neutral-600">Subtotal ({totalItems} items)</span>
-          <span className="font-medium text-neutral-900">${totalAmount.toFixed(2)}</span>
+          <span className="font-medium text-neutral-900">₹{totalAmount.toFixed(2)}</span>
         </div>
 
         <div className="flex justify-between text-sm">
@@ -77,21 +77,21 @@ export default function CartSummary() {
             {shippingCost === 0 ? (
               <span className="text-green-600">FREE</span>
             ) : (
-              `$${shippingCost.toFixed(2)}`
+              `₹${shippingCost.toFixed(2)}`
             )}
           </span>
         </div>
 
         <div className="flex justify-between text-sm">
           <span className="text-neutral-600">Tax</span>
-          <span className="font-medium text-neutral-900">${tax.toFixed(2)}</span>
+          <span className="font-medium text-neutral-900">₹{tax.toFixed(2)}</span>
         </div>
       </div>
 
       {/* Total */}
       <div className="flex justify-between items-baseline">
         <span className="text-base font-semibold text-neutral-900">Total</span>
-        <span className="text-2xl font-bold text-neutral-900">${finalTotal.toFixed(2)}</span>
+        <span className="text-2xl font-bold text-neutral-900">₹{finalTotal.toFixed(2)}</span>
       </div>
 
       {/* Checkout Button */}

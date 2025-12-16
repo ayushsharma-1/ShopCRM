@@ -14,7 +14,7 @@ A modern, feature-rich e-commerce application built with Next.js 16, React 19, R
 - **Product Listing** with 100 diverse products across 10 categories
 - **Advanced Filtering:**
   - Search by name/description
-  - Price range slider ($0 - $10,000)
+  - Price range slider (₹0 - ₹10,000)
   - Minimum rating filter (1-5 stars)
   - Category filter (Electronics, Clothing, Home & Kitchen, Books, Toys, Sports, Beauty, Automotive, Garden, Office)
 - **Load More** pagination functionality
@@ -30,7 +30,7 @@ A modern, feature-rich e-commerce application built with Next.js 16, React 19, R
 - Add/Remove items
 - Update quantities
 - Real-time price calculations
-- Free shipping on orders over $100
+- Free shipping on orders over ₹100
 - Persistent cart (localStorage)
 - **Guest users can browse and add to cart**
 

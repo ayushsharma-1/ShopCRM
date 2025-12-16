@@ -113,7 +113,7 @@ export default function ProductFilters() {
           <div className="space-y-2">
             <div className="flex justify-between text-xs text-neutral-600">
               <span>Min</span>
-              <span className="font-semibold text-neutral-900">${filters.minPrice}</span>
+              <span className="font-semibold text-neutral-900">₹{filters.minPrice}</span>
             </div>
             <input
               type="range"
@@ -128,7 +128,7 @@ export default function ProductFilters() {
           <div className="space-y-2">
             <div className="flex justify-between text-xs text-neutral-600">
               <span>Max</span>
-              <span className="font-semibold text-neutral-900">${filters.maxPrice}</span>
+              <span className="font-semibold text-neutral-900">₹{filters.maxPrice}</span>
             </div>
             <input
               type="range"

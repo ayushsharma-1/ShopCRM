@@ -28,7 +28,7 @@ export default function SimilarProducts({ products }) {
               />
               <div className="absolute top-3 right-3 px-3 py-1.5 bg-white/90 backdrop-blur-sm rounded-full shadow-sm">
                 <span className="text-sm font-semibold text-gray-900">
-                  ${product.price}
+                  ₹{product.price}
                 </span>
               </div>
             </div>

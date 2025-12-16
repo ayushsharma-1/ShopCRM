@@ -102,10 +102,10 @@ export default function CartItem({ item }) {
             {/* Price */}
             <div className="text-right">
               <p className="text-sm font-semibold text-neutral-900">
-                ${subtotal}
+                ₹{subtotal}
               </p>
               <p className="text-xs text-neutral-500">
-                ${item.price} each
+                ₹{item.price} each
               </p>
             </div>
           </div>

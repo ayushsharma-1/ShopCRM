@@ -65,10 +65,10 @@ export default function FeaturedDealsSection() {
                   </div>
                   <div className="flex items-baseline gap-2">
                     <span className="text-xl font-bold text-neutral-900">
-                      ${deal.price}
+                      ₹{deal.price}
                     </span>
                     <span className="text-sm text-neutral-400 line-through">
-                      ${deal.originalPrice}
+                      ₹{deal.originalPrice}
                     </span>
                   </div>
                 </div>
@@ -129,10 +129,10 @@ export default function FeaturedDealsSection() {
                   </div>
                   <div className="flex items-baseline gap-2">
                     <span className="text-xl font-bold text-neutral-900">
-                      ${deal.price}
+                      ₹{deal.price}
                     </span>
                     <span className="text-sm text-neutral-400 line-through">
-                      ${deal.originalPrice}
+                      ₹{deal.originalPrice}
                     </span>
                   </div>
                 </div>
