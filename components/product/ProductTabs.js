@@ -108,12 +108,12 @@ export default function ProductTabs({ product, reviews }) {
 
         {activeTab === 'reviews' && (
           <div className="space-y-8 animate-fadeIn">
-            <div className="flex items-center justify-between">
+            {/* <div className="flex items-center justify-between">
               <h3 className="text-2xl font-bold text-gray-900">Customer Reviews</h3>
               <button className="px-4 py-2 bg-gray-900 text-white rounded-lg text-sm font-medium hover:bg-gray-800 transition-colors">
                 Write a Review
               </button>
-            </div>
+            </div> */}
 
             {reviews.length > 0 ? (
               <div className="space-y-6">
