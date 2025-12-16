@@ -1,44 +1,88 @@
 'use client';
 
-import { useParams } from 'next/navigation';
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import { FaStar, FaShoppingCart, FaHeart, FaCheckCircle } from 'react-icons/fa';
-import { useDispatch } from 'react-redux';
-import { addItem } from '@/lib/redux/slices/cartSlice';
-import { toast } from 'react-toastify';
+import { useEffect, useState } from 'react';
+import { useParams, useRouter } from 'next/navigation';
+import LoadingSpinner from '@/components/common/LoadingSpinner';
+import ProductImageGallery from '@/components/product/ProductImageGallery';
+import ProductInfo from '@/components/product/ProductInfo';
+import ProductActions from '@/components/product/ProductActions';
+import ProductTabs from '@/components/product/ProductTabs';
+import SimilarProducts from '@/components/product/SimilarProducts';
 import deals from '@/data/deals.json';
+import { getProductReviews, getAverageRating, getReviewCount } from '@/lib/utils/reviewUtils';
 
 export default function DealDetailPage() {
   const params = useParams();
-  const dispatch = useDispatch();
-  const [quantity, setQuantity] = useState(1);
-  
-  const deal = deals.find(d => d.id === params.id);
+  const router = useRouter();
+  const [deal, setDeal] = useState(null);
+  const [isLoading, setIsLoading] = useState(true);
+  const [similarDeals, setSimilarDeals] = useState([]);
+  const [reviews, setReviews] = useState([]);
+  const [averageRating, setAverageRating] = useState(0);
+  const [reviewCount, setReviewCount] = useState(0);
+
+  useEffect(() => {
+    setTimeout(() => {
+      // Handle both string and numeric IDs
+      const foundDeal = deals.find(d => {
+        if (typeof d.id === 'number') {
+          return d.id === parseInt(params.id);
+        }
+        return d.id === params.id;
+      });
+      
+      setDeal(foundDeal);
+
+      if (foundDeal) {
+        // Get similar deals
+        const similar = deals
+          .filter((d) => d.category === foundDeal.category && d.id !== foundDeal.id)
+          .slice(0, 4);
+        setSimilarDeals(similar);
+
+        // Get reviews for this deal (if it has a numeric ID, use it)
+        if (typeof foundDeal.id === 'number') {
+          const dealReviews = getProductReviews(foundDeal.id, 4);
+          setReviews(dealReviews);
+
+          const avgRating = getAverageRating(foundDeal.id);
+          const revCount = getReviewCount(foundDeal.id);
+          setAverageRating(avgRating);
+          setReviewCount(revCount);
+        } else {
+          // For string IDs, use the rating from the deal itself
+          setAverageRating(foundDeal.rating || 0);
+          setReviewCount(0);
+        }
+      }
+      
+      setIsLoading(false);
+    }, 500);
+  }, [params.id]);
+
+  if (isLoading) {
+    return <LoadingSpinner fullScreen />;
+  }
 
   if (!deal) {
     return (
-      <div className="min-h-screen flex items-center justify-center">
+      <div className="min-h-screen flex items-center justify-center bg-gray-50 px-4">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-neutral-900 mb-2">Deal Not Found</h1>
-          <p className="text-neutral-600">This deal may have expired or is no longer available.</p>
+          <h1 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">Deal Not Found</h1>
+          <p className="text-gray-600 mb-6">This deal may have expired or is no longer available.</p>
+          <button
+            onClick={() => router.push('/products')}
+            className="px-6 py-3 bg-gray-900 text-white rounded-lg font-medium hover:bg-gray-800 transition-colors"
+          >
+            Back to Shop
+          </button>
         </div>
       </div>
     );
   }
 
-  const handleAddToCart = () => {
-    dispatch(addItem({
-      id: deal.id,
-      name: deal.name,
-      price: deal.price,
-      image: deal.image,
-      quantity: quantity
-    }));
-    toast.success('Added to cart!');
-  };
-
   const calculateTimeLeft = () => {
+    if (!deal.dealEndDate) return { days: 0, hours: 0 };
     const endDate = new Date(deal.dealEndDate);
     const now = new Date();
     const difference = endDate - now;
@@ -46,169 +90,95 @@ export default function DealDetailPage() {
     const days = Math.floor(difference / (1000 * 60 * 60 * 24));
     const hours = Math.floor((difference / (1000 * 60 * 60)) % 24);
     
-    return { days, hours };
+    return { days: Math.max(0, days), hours: Math.max(0, hours) };
   };
 
   const timeLeft = calculateTimeLeft();
 
+  // Transform deal data to match product structure for components
+  const productData = {
+    ...deal,
+    id: deal.id,
+    name: deal.name,
+    description: deal.description,
+    price: deal.price,
+    originalPrice: deal.originalPrice,
+    discount: deal.discount,
+    category: deal.category,
+    rating: averageRating || deal.rating,
+    image: deal.image,
+    stock: deal.stock,
+    // Add deal-specific timer badge
+    dealTimer: timeLeft,
+    dealEndDate: deal.dealEndDate,
+    dealType: deal.dealType,
+    features: deal.features
+  };
+
   return (
-    <div className="min-h-screen bg-neutral-50 py-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Image Section */}
-          <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            className="relative"
-          >
-            <div className="sticky top-24">
-              <div className="relative aspect-square rounded-2xl overflow-hidden bg-white border border-neutral-200">
-                <img
-                  src={deal.image}
-                  alt={deal.name}
-                  className="w-full h-full object-cover"
-                />
-                <span className="absolute top-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-bold shadow-lg">
-                  {deal.discount}
-                </span>
-                <span className="absolute top-4 left-4 bg-neutral-900 text-white px-4 py-2 rounded-lg text-xs font-medium">
-                  ❄️ {deal.dealType}
-                </span>
-              </div>
-            </div>
-          </motion.div>
-
-          {/* Details Section */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.5 }}
-            className="space-y-6"
-          >
-            {/* Deal Timer */}
-            <div className="bg-red-50 border border-red-200 rounded-xl p-4">
-              <p className="text-sm font-medium text-red-800 mb-2">⏰ Deal Ends In:</p>
-              <div className="flex gap-4">
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-red-600">{timeLeft.days}</div>
-                  <div className="text-xs text-red-800">Days</div>
-                </div>
-                <div className="text-center">
-                  <div className="text-2xl font-bold text-red-600">{timeLeft.hours}</div>
-                  <div className="text-xs text-red-800">Hours</div>
-                </div>
-              </div>
-            </div>
-
-            <div>
-              <h1 className="text-3xl md:text-4xl font-bold text-neutral-900 mb-3">
-                {deal.name}
-              </h1>
-              
-              <div className="flex items-center gap-3 mb-4">
-                <div className="flex items-center gap-1.5">
-                  <FaStar className="text-yellow-400 text-lg" />
-                  <span className="text-lg font-semibold text-neutral-900">{deal.rating}</span>
-                  <span className="text-neutral-600">(250+ reviews)</span>
-                </div>
-              </div>
-
-              <p className="text-neutral-600 text-lg leading-relaxed">
-                {deal.description}
-              </p>
-            </div>
-
-            {/* Price Section */}
-            <div className="bg-white rounded-xl p-6 border border-neutral-200">
-              <div className="flex items-baseline gap-3 mb-2">
-                <span className="text-4xl font-bold text-neutral-900">
-                  ${deal.price.toFixed(2)}
-                </span>
-                <span className="text-2xl text-neutral-400 line-through">
-                  ${deal.originalPrice.toFixed(2)}
-                </span>
-                <span className="text-lg font-semibold text-green-600">
-                  Save ${(deal.originalPrice - deal.price).toFixed(2)}
-                </span>
-              </div>
-              <p className="text-sm text-neutral-600">Inclusive of all taxes</p>
-            </div>
-
-            {/* Features */}
-            <div className="bg-white rounded-xl p-6 border border-neutral-200">
-              <h3 className="font-semibold text-neutral-900 mb-4">Key Features</h3>
-              <div className="grid grid-cols-1 gap-3">
-                {deal.features.map((feature, index) => (
-                  <div key={index} className="flex items-center gap-3">
-                    <FaCheckCircle className="text-green-600 flex-shrink-0" />
-                    <span className="text-neutral-700">{feature}</span>
-                  </div>
-                ))}
-              </div>
-            </div>
-
-            {/* Stock Status */}
-            <div className="flex items-center gap-2 text-sm">
-              <span className={`inline-block w-2 h-2 rounded-full ${deal.stock > 20 ? 'bg-green-500' : 'bg-orange-500'}`} />
-              <span className="text-neutral-700">
-                {deal.stock > 20 ? 'In Stock' : `Only ${deal.stock} left!`}
-              </span>
-            </div>
-
-            {/* Quantity Selector */}
-            <div className="flex items-center gap-4">
-              <span className="text-neutral-700 font-medium">Quantity:</span>
-              <div className="flex items-center border border-neutral-300 rounded-lg">
-                <button
-                  onClick={() => setQuantity(Math.max(1, quantity - 1))}
-                  className="px-4 py-2 hover:bg-neutral-100 transition-colors"
-                >
-                  -
-                </button>
-                <span className="px-6 py-2 border-x border-neutral-300">{quantity}</span>
-                <button
-                  onClick={() => setQuantity(Math.min(deal.stock, quantity + 1))}
-                  className="px-4 py-2 hover:bg-neutral-100 transition-colors"
-                >
-                  +
-                </button>
-              </div>
-            </div>
-
-            {/* Action Buttons */}
-            <div className="flex gap-4">
-              <button
-                onClick={handleAddToCart}
-                className="flex-1 bg-neutral-900 text-white py-4 px-6 rounded-xl font-semibold hover:bg-neutral-800 transition-colors flex items-center justify-center gap-2"
-              >
-                <FaShoppingCart />
-                Add to Cart
-              </button>
-              <button className="p-4 border border-neutral-300 rounded-xl hover:bg-neutral-50 transition-colors">
-                <FaHeart className="text-xl text-neutral-700" />
-              </button>
-            </div>
-
-            {/* Additional Info */}
-            <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 space-y-2">
-              <div className="flex items-start gap-2">
-                <FaCheckCircle className="text-blue-600 mt-0.5" />
-                <div>
-                  <p className="font-medium text-blue-900">Free Shipping</p>
-                  <p className="text-sm text-blue-700">On orders above $50</p>
-                </div>
-              </div>
-              <div className="flex items-start gap-2">
-                <FaCheckCircle className="text-blue-600 mt-0.5" />
-                <div>
-                  <p className="font-medium text-blue-900">Easy Returns</p>
-                  <p className="text-sm text-blue-700">30-day return policy</p>
-                </div>
-              </div>
-            </div>
-          </motion.div>
+    <div className="min-h-screen bg-gray-50">
+      {/* Breadcrumb Navigation */}
+      <div className="bg-white border-b border-gray-100">
+        <div className="container mx-auto px-4 py-3 md:py-4">
+          <div className="flex items-center gap-2 text-xs md:text-sm overflow-x-auto">
+            <button
+              onClick={() => router.push('/')}
+              className="text-gray-500 hover:text-gray-900 transition-colors"
+            >
+              Home
+            </button>
+            <span className="text-gray-300">/</span>
+            <button
+              onClick={() => router.push('/products')}
+              className="text-gray-500 hover:text-gray-900 transition-colors"
+            >
+              Deals
+            </button>
+            <span className="text-gray-300">/</span>
+            <span className="text-gray-900 font-medium">{deal.category}</span>
+          </div>
         </div>
+      </div>
+
+      <div className="container mx-auto px-4 py-8 lg:py-12 space-y-8">
+        {/* Deal Details Grid */}
+        <div className="bg-white rounded-2xl p-6 lg:p-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
+          <ProductImageGallery product={productData} />
+          
+          <div className="space-y-8">
+            {/* Deal Timer Banner */}
+            {deal.dealEndDate && (
+              <div className="bg-gradient-to-r from-red-50 to-orange-50 border border-red-200 rounded-xl p-4">
+                <p className="text-sm font-medium text-red-800 mb-2">⏰ Deal Ends In:</p>
+                <div className="flex gap-4">
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-red-600">{timeLeft.days}</div>
+                    <div className="text-xs text-red-800">Days</div>
+                  </div>
+                  <div className="text-center">
+                    <div className="text-2xl font-bold text-red-600">{timeLeft.hours}</div>
+                    <div className="text-xs text-red-800">Hours</div>
+                  </div>
+                </div>
+              </div>
+            )}
+            
+            <ProductInfo 
+              product={productData} 
+              averageRating={averageRating || deal.rating} 
+              reviewCount={reviewCount} 
+            />
+            <ProductActions product={productData} />
+          </div>
+        </div>
+
+        {/* Product Tabs */}
+        <ProductTabs product={productData} reviews={reviews} />
+
+        {/* Similar Deals */}
+        {similarDeals.length > 0 && (
+          <SimilarProducts products={similarDeals} title="Similar Deals" />
+        )}
       </div>
     </div>
   );
