@@ -38,7 +38,6 @@ export default function ProductImageGallery({ product }) {
         )}
       </div>
 
-      {/* Thumbnail Grid */}
       <div className="grid grid-cols-4 gap-2 md:gap-3">
         {images.map((img, index) => (
           <button

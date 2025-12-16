@@ -48,7 +48,6 @@ export default function OrderSummary() {
 
   return (
     <div className="space-y-5">
-      {/* Shipping Address */}
       <CheckoutSection title="Shipping Address">
         <div className="text-sm text-neutral-600 space-y-1">
           <p className="font-semibold text-neutral-900">{address.fullName}</p>
@@ -62,7 +61,6 @@ export default function OrderSummary() {
         </div>
       </CheckoutSection>
 
-      {/* Payment Method */}
       <CheckoutSection title="Payment Method" delay={0.1}>
         <div className="text-sm text-neutral-600 space-y-1">
           <p className="font-semibold text-neutral-900">{payment.cardName}</p>
@@ -71,7 +69,6 @@ export default function OrderSummary() {
         </div>
       </CheckoutSection>
 
-      {/* Order Items */}
       <CheckoutSection title={`Order Items (${items.length})`} delay={0.2}>
         <div className="space-y-3">
           {items.map((item) => (
@@ -99,7 +96,6 @@ export default function OrderSummary() {
         </div>
       </CheckoutSection>
 
-      {/* Price Summary */}
       <CheckoutSection delay={0.3}>
         <div className="space-y-3">
           <div className="flex justify-between text-sm text-neutral-600">
@@ -131,7 +127,6 @@ export default function OrderSummary() {
         </div>
       </CheckoutSection>
 
-      {/* Action Buttons */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

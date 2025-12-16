@@ -5,7 +5,6 @@ import { FaStar } from 'react-icons/fa';
 export default function ProductInfo({ product, averageRating, reviewCount }) {
   return (
     <div className="space-y-4 md:space-y-6">
-      {/* Category & Status */}
       <div className="flex items-center gap-2 md:gap-3 flex-wrap">
         <span className="px-2.5 md:px-3 py-1 bg-linear-to-r from-blue-50 to-purple-50 text-blue-700 rounded-full text-xs font-semibold uppercase tracking-wide">
           {product.category}
@@ -44,8 +43,6 @@ export default function ProductInfo({ product, averageRating, reviewCount }) {
         <span className="text-gray-300">|</span>
         <span className="text-gray-600 text-sm">1.2K Sold</span>
       </div>
-
-      {/* Price Section */}
       <div className="bg-linear-to-br from-gray-50 to-gray-100/50 rounded-xl md:rounded-2xl p-4 md:p-6 space-y-2">
         <div className="flex flex-wrap items-baseline gap-2 md:gap-3">
           <span className="text-3xl md:text-4xl font-bold text-gray-900">₹{product.price}</span>
@@ -60,13 +57,9 @@ export default function ProductInfo({ product, averageRating, reviewCount }) {
           Inclusive of all taxes • <span className="font-medium">Free Shipping</span>
         </p>
       </div>
-
-      {/* Product Description */}
       <div className="pt-2">
         <p className="text-sm md:text-base text-gray-600 leading-relaxed">{product.description}</p>
       </div>
-
-      {/* Trust Badges */}
       <div className="grid grid-cols-3 gap-2 md:gap-4 pt-2 md:pt-4">
         <div className="text-center space-y-2 p-4 rounded-xl bg-gray-50/50 hover:bg-gray-50 transition-colors">
           <div className="w-10 h-10 mx-auto bg-blue-100 rounded-full flex items-center justify-center">

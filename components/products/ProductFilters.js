@@ -48,7 +48,6 @@ export default function ProductFilters() {
       animate={{ opacity: 1, x: 0 }}
       className="bg-white border border-neutral-200/60 rounded-2xl p-5 space-y-6 sticky top-24 h-fit"
     >
-      {/* Header */}
       <div className="flex items-center justify-between">
         <h2 className="text-lg font-semibold text-neutral-900">Filters</h2>
         {hasActiveFilters && (
@@ -61,7 +60,6 @@ export default function ProductFilters() {
         )}
       </div>
 
-      {/* Search */}
       <div className="space-y-2">
         <label className="block text-sm font-medium text-neutral-700">Search</label>
         <div className="relative">
@@ -84,7 +82,6 @@ export default function ProductFilters() {
         </div>
       </div>
 
-      {/* Category */}
       <div className="space-y-3">
         <label className="block text-sm font-medium text-neutral-700">Category</label>
         <div className="flex flex-wrap gap-2">
@@ -104,7 +101,6 @@ export default function ProductFilters() {
         </div>
       </div>
 
-      {/* Price Range */}
       <div className="space-y-3">
         <label className="block text-sm font-medium text-neutral-700">
           Price Range
@@ -143,7 +139,6 @@ export default function ProductFilters() {
         </div>
       </div>
 
-      {/* Rating */}
       <div className="space-y-3">
         <label className="block text-sm font-medium text-neutral-700">
           Minimum Rating

@@ -29,19 +29,15 @@ export default function PaymentForm() {
   const handleChange = (e) => {
     let { name, value } = e.target;
     
-    // Strict validation: Only numbers allowed for card number
     if (name === 'cardNumber') {
       value = value.replace(/\D/g, '').slice(0, 16);
-      // Format with spaces for display
       value = value.replace(/(.{4})/g, '$1 ').trim();
     }
     
-    // Strict validation: Only letters and spaces for cardholder name
     if (name === 'cardName') {
       value = value.replace(/[^a-zA-Z\s]/g, '');
     }
     
-    // Strict validation: Only numbers for expiry date, format as MM/YY
     if (name === 'expiryDate') {
       value = value.replace(/\D/g, '');
       if (value.length >= 2) {
@@ -50,7 +46,6 @@ export default function PaymentForm() {
       value = value.slice(0, 5);
     }
 
-    // Strict validation: Only numbers for CVV, max 3 digits
     if (name === 'cvv') {
       value = value.replace(/\D/g, '').slice(0, 3);
     }
@@ -64,7 +59,6 @@ export default function PaymentForm() {
   const validate = () => {
     const newErrors = {};
     
-    // Strict card number validation
     if (!formData.cardNumber) {
       newErrors.cardNumber = 'Card number is required';
     } else {
@@ -74,7 +68,6 @@ export default function PaymentForm() {
       }
     }
     
-    // Strict cardholder name validation
     if (!formData.cardName) {
       newErrors.cardName = 'Cardholder name is required';
     } else if (formData.cardName.trim().length < 3) {
@@ -83,7 +76,6 @@ export default function PaymentForm() {
       newErrors.cardName = 'Name can only contain letters';
     }
     
-    // Strict expiry date validation
     if (!formData.expiryDate) {
       newErrors.expiryDate = 'Expiry date is required';
     } else if (!/^\d{2}\/\d{2}$/.test(formData.expiryDate)) {
@@ -102,7 +94,6 @@ export default function PaymentForm() {
       }
     }
     
-    // Strict CVV validation (exactly 3 digits)
     if (!formData.cvv) {
       newErrors.cvv = 'CVV is required';
     } else if (!/^\d{3}$/.test(formData.cvv)) {

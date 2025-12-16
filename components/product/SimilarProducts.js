@@ -19,7 +19,6 @@ export default function SimilarProducts({ products }) {
             onClick={() => router.push(`/products/${product.id}`)}
             className="group bg-white rounded-xl border border-gray-100 hover:border-gray-200 overflow-hidden transition-all hover:shadow-md"
           >
-            {/* Product Image */}
             <div className="relative aspect-square bg-linear-to-br from-gray-50 to-gray-100 overflow-hidden">
               <img
                 src={product.image}
@@ -33,7 +32,6 @@ export default function SimilarProducts({ products }) {
               </div>
             </div>
 
-            {/* Product Info */}
             <div className="p-5 text-left">
               <span className="inline-block px-2.5 py-1 bg-gray-100 text-gray-700 rounded-full text-xs font-medium mb-3">
                 {product.category}

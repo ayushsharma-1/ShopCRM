@@ -1,10 +1,3 @@
-/**
- * Product Options Configuration
- * Maps categories to their available product options
- * Supports scalable addition of new options and categories
- */
-
-// Available option definitions
 export const OPTION_TYPES = {
   COLOR: 'color',
   SIZE: 'size',
@@ -12,7 +5,6 @@ export const OPTION_TYPES = {
   STORAGE: 'storage'
 };
 
-// Option data and configurations
 export const OPTIONS_DATA = {
   [OPTION_TYPES.COLOR]: {
     label: 'Color',
@@ -42,32 +34,14 @@ export const OPTIONS_DATA = {
   }
 };
 
-// Category to options mapping
 export const CATEGORY_OPTIONS = {
-  // Clothing items - color and size options
   clothing: [OPTION_TYPES.COLOR, OPTION_TYPES.SIZE],
-  
-  // Electronics - color options for devices
   electronics: [OPTION_TYPES.COLOR],
-  
-  // Accessories - color options for bags, watches, etc.
   accessories: [OPTION_TYPES.COLOR],
-  
-  // Home & Kitchen - color options for decorative items
   'home & kitchen': [OPTION_TYPES.COLOR],
-  
-  // Sports - size and color options for gear and apparel
   sports: [OPTION_TYPES.COLOR, OPTION_TYPES.SIZE],
-  
-  // Office - no customization options
   office: [],
-  
-  // Health - no customization options for supplements
-  health: [],
-  
-  // Easily extendable for new categories
-  // smartphones: [OPTION_TYPES.COLOR, OPTION_TYPES.STORAGE],
-  // furniture: [OPTION_TYPES.MATERIAL, OPTION_TYPES.COLOR],
+  health: []
 };
 
 /**

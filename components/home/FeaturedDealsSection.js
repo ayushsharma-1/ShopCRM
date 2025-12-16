@@ -6,14 +6,12 @@ import { FaStar } from 'react-icons/fa';
 import deals from '@/data/deals.json';
 
 export default function FeaturedDealsSection() {
-  // Separate winter sale deals (sports shoes) from other deals
   const winterDeals = deals.filter(deal => deal.dealType === 'Winter Sale').slice(0, 4);
   const hotDeals = deals.filter(deal => deal.dealType !== 'Winter Sale').slice(0, 8);
 
   return (
     <section className="py-16 md:py-24 bg-neutral-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Winter Sale Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -76,8 +74,6 @@ export default function FeaturedDealsSection() {
             </motion.div>
           ))}
         </div>
-
-        {/* Hot Deals Section */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}

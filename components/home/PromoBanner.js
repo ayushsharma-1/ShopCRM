@@ -6,7 +6,6 @@ import { FaArrowRight } from 'react-icons/fa';
 import products from '@/data/products.json';
 
 export default function PromoBanner() {
-  // Filter products with 50% discount
   const saleProducts = products.filter(product => 
     product.discount === '50% OFF' && product.originalPrice
   );

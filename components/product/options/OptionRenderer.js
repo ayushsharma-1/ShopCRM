@@ -1,8 +1,3 @@
-/**
- * OptionRenderer Component
- * Factory component that renders the appropriate option selector
- * based on option type, using composition over conditionals
- */
 import ColorSelector from './ColorSelector';
 import SizeSelector from './SizeSelector';
 import GenericSelector from './GenericSelector';
@@ -18,7 +13,6 @@ export default function OptionRenderer({ optionType, selectedValue, onValueChang
 
   const { label, choices } = config;
 
-  // Render specific component based on option type
   switch (optionType) {
     case OPTION_TYPES.COLOR:
       return (
@@ -37,9 +31,6 @@ export default function OptionRenderer({ optionType, selectedValue, onValueChang
           onSizeChange={onValueChange}
         />
       );
-
-    // Material, Storage, and all future options use GenericSelector
-    case OPTION_TYPES.MATERIAL:
     case OPTION_TYPES.STORAGE:
     default:
       return (

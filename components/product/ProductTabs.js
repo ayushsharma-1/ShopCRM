@@ -35,7 +35,6 @@ export default function ProductTabs({ product, reviews }) {
 
   return (
     <div className="bg-white rounded-2xl overflow-hidden border border-gray-100">
-      {/* Tab Navigation */}
       <div className="flex border-b border-gray-100">
         {tabs.map((tab) => (
           <button
@@ -55,7 +54,6 @@ export default function ProductTabs({ product, reviews }) {
         ))}
       </div>
 
-      {/* Tab Content */}
       <div className="p-8 lg:p-10">
         {activeTab === 'description' && (
           <div className="space-y-8 animate-fadeIn">
@@ -114,7 +112,6 @@ export default function ProductTabs({ product, reviews }) {
                 Write a Review
               </button>
             </div> */}
-
             {reviews.length > 0 ? (
               <div className="space-y-6">
                 {reviews.map((review) => (

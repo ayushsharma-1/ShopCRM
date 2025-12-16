@@ -34,7 +34,6 @@ export default function CartItem({ item }) {
   return (
     <article className="bg-white border border-neutral-200/60 rounded-2xl p-4 md:p-5 transition-all duration-300 hover:border-neutral-300">
       <div className="flex gap-4">
-        {/* Product Image */}
         <Link href={`/products/${item.id}`} className="shrink-0 group">
           <div className="w-20 h-20 md:w-24 md:h-24 rounded-xl overflow-hidden bg-neutral-50">
             <img
@@ -45,7 +44,6 @@ export default function CartItem({ item }) {
           </div>
         </Link>
 
-        {/* Product Info */}
         <div className="flex-1 min-w-0">
           <div className="flex items-start justify-between gap-3 mb-2">
             <div className="flex-1 min-w-0">
@@ -59,7 +57,6 @@ export default function CartItem({ item }) {
               </p>
             </div>
             
-            {/* Remove Button */}
             <button
               onClick={handleRemove}
               disabled={isRemoving}
@@ -70,9 +67,7 @@ export default function CartItem({ item }) {
             </button>
           </div>
 
-          {/* Price & Quantity Controls */}
           <div className="flex items-center justify-between gap-4 mt-3">
-            {/* Quantity Controls */}
             <div className="flex items-center gap-2">
               <motion.button
                 whileTap={{ scale: 0.95 }}
@@ -99,7 +94,6 @@ export default function CartItem({ item }) {
               </motion.button>
             </div>
 
-            {/* Price */}
             <div className="text-right">
               <p className="text-sm font-semibold text-neutral-900">
                 ₹{subtotal}
@@ -110,7 +104,6 @@ export default function CartItem({ item }) {
             </div>
           </div>
 
-          {/* Stock Warning */}
           {item.quantity >= item.stock && (
             <p className="text-xs text-amber-600 mt-2">
               Maximum available quantity

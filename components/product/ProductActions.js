@@ -11,14 +11,10 @@ import { getOptionsForCategory, getOptionConfig } from '@/config/productOptions'
 export default function ProductActions({ product }) {
   const dispatch = useDispatch();
   const [quantity, setQuantity] = useState(1);
-  
-  // Get available options for this product's category
   const availableOptions = useMemo(
     () => getOptionsForCategory(product.category),
     [product.category]
   );
-
-  // Initialize selected values based on available options
   const [selectedOptions, setSelectedOptions] = useState(() => {
     const initial = {};
     availableOptions.forEach((optionType) => {
@@ -28,7 +24,6 @@ export default function ProductActions({ product }) {
     return initial;
   });
 
-  // Update selected option value
   const handleOptionChange = (optionType, value) => {
     setSelectedOptions(prev => ({
       ...prev,
@@ -48,7 +43,6 @@ export default function ProductActions({ product }) {
 
   return (
     <div className="space-y-6">
-      {/* Dynamic Product Options - Configuration Driven */}
       {availableOptions.map((optionType) => (
         <OptionRenderer
           key={optionType}
@@ -58,7 +52,6 @@ export default function ProductActions({ product }) {
         />
       ))}
 
-      {/* Quantity Selection */}
       <div className="space-y-3">
         <label className="block text-sm font-semibold text-gray-900">Quantity</label>
         <div className="flex items-center gap-3">
@@ -85,7 +78,6 @@ export default function ProductActions({ product }) {
         </div>
       </div>
 
-      {/* Action Buttons */}
       <div className="flex gap-3 pt-2">
         <button
           onClick={handleAddToCart}

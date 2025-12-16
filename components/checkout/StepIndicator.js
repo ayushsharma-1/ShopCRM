@@ -15,7 +15,6 @@ export default function StepIndicator({ currentStep }) {
       <div className="flex items-start justify-center max-w-3xl mx-auto px-4">
         {steps.map((step, index) => (
           <div key={step.number} className="flex items-center">
-            {/* Step Circle and Label */}
             <div className="flex flex-col items-center min-w-[100px]">
               <motion.div
                 initial={{ scale: 0.8, opacity: 0 }}
@@ -57,7 +56,6 @@ export default function StepIndicator({ currentStep }) {
               </div>
             </div>
 
-            {/* Connector Line */}
             {index < steps.length - 1 && (
               <div className="w-24 md:w-32 lg:w-40 h-0.5 bg-neutral-100 mx-4 mt-6 relative overflow-hidden flex-shrink-0">
                 <motion.div

@@ -6,7 +6,6 @@ import { formatRelativeTime } from '@/lib/utils/reviewUtils';
 export default function ReviewCard({ review }) {
   const { user, rating, reviewText, timestamp, verified, category } = review;
 
-  // Category colors
   const categoryColors = {
     Quality: 'bg-blue-100 text-blue-700',
     Performance: 'bg-purple-100 text-purple-700',
@@ -19,7 +18,6 @@ export default function ReviewCard({ review }) {
   return (
     <div className="pb-6 border-b border-gray-100 last:border-0 last:pb-0 group">
       <div className="flex items-start gap-4">
-        {/* Avatar */}
         <div className="relative shrink-0">
           <img
             src={user.avatar}
@@ -35,7 +33,6 @@ export default function ReviewCard({ review }) {
           )}
         </div>
 
-        {/* Content */}
         <div className="flex-1 min-w-0">
           <div className="flex items-start justify-between gap-4 mb-2">
             <div className="flex-1">
@@ -49,7 +46,6 @@ export default function ReviewCard({ review }) {
               </div>
             </div>
             
-            {/* Rating */}
             <div className="flex items-center gap-1">
               {[...Array(5)].map((_, i) => (
                 <FaStar
@@ -62,14 +58,12 @@ export default function ReviewCard({ review }) {
             </div>
           </div>
 
-          {/* Category Badge */}
           {category && (
             <span className={`inline-block px-2.5 py-1 rounded-full text-xs font-medium mb-3 ${categoryColors[category] || 'bg-gray-100 text-gray-700'}`}>
               {category}
             </span>
           )}
 
-          {/* Review Text */}
           <p className="text-gray-600 leading-relaxed">{reviewText}</p>
         </div>
       </div>

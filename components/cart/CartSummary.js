@@ -32,10 +32,7 @@ export default function CartSummary() {
       animate={{ opacity: 1, y: 0 }}
       className="bg-white border border-neutral-200/60 rounded-2xl p-5 space-y-5 lg:sticky lg:top-24"
     >
-      {/* Header */}
       <h2 className="text-lg font-semibold text-neutral-900">Order Summary</h2>
-
-      {/* Free Shipping Progress */}
       {totalAmount < 100 && (
         <div className="space-y-2">
           <div className="flex items-center justify-between text-sm">
@@ -64,7 +61,6 @@ export default function CartSummary() {
         </div>
       )}
 
-      {/* Price Breakdown */}
       <div className="space-y-3 py-4 border-t border-b border-neutral-100">
         <div className="flex justify-between text-sm">
           <span className="text-neutral-600">Subtotal ({totalItems} items)</span>
@@ -88,13 +84,11 @@ export default function CartSummary() {
         </div>
       </div>
 
-      {/* Total */}
       <div className="flex justify-between items-baseline">
         <span className="text-base font-semibold text-neutral-900">Total</span>
         <span className="text-2xl font-bold text-neutral-900">₹{finalTotal.toFixed(2)}</span>
       </div>
 
-      {/* Checkout Button */}
       <motion.button
         whileTap={{ scale: 0.98 }}
         onClick={handleCheckout}
@@ -104,15 +98,11 @@ export default function CartSummary() {
         <FaLock className="text-xs" />
         <span>Proceed to Checkout</span>
       </motion.button>
-
-      {/* Auth Notice */}
       {!isAuthenticated && (
         <p className="text-xs text-center text-neutral-500">
           You'll be asked to login before checkout
         </p>
       )}
-
-      {/* Trust Badges */}
       <div className="pt-4 border-t border-neutral-100">
         <div className="grid grid-cols-2 gap-3 text-xs text-neutral-600">
           <div className="flex items-center gap-2">
