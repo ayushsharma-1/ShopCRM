@@ -18,12 +18,12 @@ export default function ProductCard({ product }) {
 
   return (
     <Link href={`/products/${product.id}`} className="group block h-full">
-      <article className="h-full bg-white border border-neutral-200/60 rounded-2xl overflow-hidden transition-all duration-300 hover:border-neutral-300 hover:shadow-lg hover:shadow-neutral-200/50 flex flex-col">
+      <article className="h-full bg-white border border-neutral-200/60 rounded-2xl overflow-hidden transition-all duration-300 hover:border-neutral-300 hover:shadow-xl hover:shadow-neutral-200/60 hover:-translate-y-0.5 flex flex-col">
         <div className="relative aspect-square overflow-hidden bg-neutral-50">
           <img
             src={product.image}
             alt={product.name}
-            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+            className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
           />
 
           {product.stock < 20 && (
@@ -42,23 +42,26 @@ export default function ProductCard({ product }) {
             {product.category}
           </span>
 
-          <h3 className="mt-2 text-base font-semibold text-neutral-900 line-clamp-2 min-h-[3rem] group-hover:text-neutral-700 transition-colors">
+          <h3 className="mt-2 text-base font-semibold text-neutral-900 line-clamp-2 min-h-[3rem] group-hover:text-neutral-700 transition-colors duration-200">
             {product.name}
           </h3>
-          <p className="mt-2 text-sm text-neutral-500 line-clamp-2 flex-1">
+          <p className="mt-2 text-sm text-neutral-500 line-clamp-2 flex-1 group-hover:text-neutral-600 transition-colors duration-200">
             {product.description}
           </p>
           <div className="mt-4 pt-4 border-t border-neutral-100 flex items-center justify-between gap-3">
             <div className="flex items-center gap-1.5">
-              <FaStar className="text-yellow-400 text-sm" />
+              <FaStar className="text-yellow-400 text-sm group-hover:text-yellow-500 transition-colors duration-200" />
               <span className="text-sm font-medium text-neutral-900">{product.rating}</span>
+              {product.ratingCount && (
+                <span className="text-xs text-neutral-400">({product.ratingCount})</span>
+              )}
             </div>
             
             <button
               onClick={handleAddToCart}
-              className="flex items-center gap-2 px-4 py-2 bg-neutral-900 text-white rounded-xl hover:bg-neutral-800 transition-all duration-200 text-sm font-medium group/btn"
+              className="flex items-center gap-2 px-4 py-2 bg-neutral-900 text-white rounded-xl hover:bg-neutral-800 active:scale-95 transition-all duration-200 text-sm font-medium group/btn"
             >
-              <FaShoppingCart className="text-xs group-hover/btn:scale-110 transition-transform" />
+              <FaShoppingCart className="text-xs group-hover/btn:scale-110 transition-transform duration-200" />
               <span className="hidden sm:inline">Add</span>
             </button>
           </div>

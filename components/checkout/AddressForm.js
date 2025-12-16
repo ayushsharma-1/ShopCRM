@@ -48,51 +48,60 @@ export default function AddressForm() {
     
     if (!formData.fullName) {
       newErrors.fullName = 'Full name is required';
-    } else if (formData.fullName.trim().length < 2) {
+    } 
+    else if (formData.fullName.trim().length < 2) {
       newErrors.fullName = 'Name must be at least 2 characters';
-    } else if (!/^[a-zA-Z\s]+$/.test(formData.fullName)) {
+    } 
+    else if (!/^[a-zA-Z\s]+$/.test(formData.fullName)) {
       newErrors.fullName = 'Name can only contain letters';
     }
     
     if (!formData.email) {
       newErrors.email = 'Email is required';
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
+    } 
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
       newErrors.email = 'Email is invalid';
     }
     
     if (!formData.phone) {
       newErrors.phone = 'Phone number is required';
-    } else if (formData.phone.replace(/[^0-9]/g, '').length < 10) {
+    } 
+    else if (formData.phone.replace(/[^0-9]/g, '').length < 10) {
       newErrors.phone = 'Phone must be at least 10 digits';
     }
     
     if (!formData.street) {
       newErrors.street = 'Street address is required';
-    } else if (formData.street.trim().length < 5) {
+    } 
+    else if (formData.street.trim().length < 5) {
       newErrors.street = 'Street address must be at least 5 characters';
     }
     
     if (!formData.city) {
       newErrors.city = 'City is required';
-    } else if (!/^[a-zA-Z\s-]+$/.test(formData.city)) {
+    } 
+    else if (!/^[a-zA-Z\s-]+$/.test(formData.city)) {
       newErrors.city = 'City can only contain letters';
     }
     
     if (!formData.state) {
       newErrors.state = 'State is required';
-    } else if (!/^[a-zA-Z\s-]+$/.test(formData.state)) {
+    } 
+    else if (!/^[a-zA-Z\s-]+$/.test(formData.state)) {
       newErrors.state = 'State can only contain letters';
     }
     
     if (!formData.zipCode) {
       newErrors.zipCode = 'ZIP code is required';
-    } else if (formData.zipCode.replace(/[^a-zA-Z0-9]/g, '').length < 4) {
+    } 
+    else if (formData.zipCode.replace(/[^a-zA-Z0-9]/g, '').length < 4) {
       newErrors.zipCode = 'ZIP code must be at least 4 characters';
     }
     
     if (!formData.country) {
       newErrors.country = 'Country is required';
-    } else if (!/^[a-zA-Z\s-]+$/.test(formData.country)) {
+    } 
+    else if (!/^[a-zA-Z\s-]+$/.test(formData.country)) {
       newErrors.country = 'Country can only contain letters';
     }
     
