@@ -25,17 +25,19 @@ function ProductsContent() {
     const category = searchParams.get('category');
     const minPrice = searchParams.get('minPrice');
     const maxPrice = searchParams.get('maxPrice');
+    const onSale = searchParams.get('onSale');
 
     // Simulate loading
     const loadTimer = setTimeout(() => {
       dispatch(setProducts(productsData));
       
       // Apply filters from URL parameters
-      if (category || minPrice || maxPrice) {
+      if (category || minPrice || maxPrice || onSale) {
         dispatch(setFilters({
           category: category || 'all',
           minPrice: minPrice ? parseFloat(minPrice) : 0,
           maxPrice: maxPrice ? parseFloat(maxPrice) : 10000,
+          onSale: onSale === 'true',
         }));
       }
       
