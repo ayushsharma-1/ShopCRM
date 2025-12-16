@@ -20,7 +20,7 @@ const categories = [
   {
     name: 'Home & Living',
     description: 'Comfort & style',
-    href: '/products?category=Home%20&%20Kitchen',
+    href: '/products?category=Home%20%26%20Kitchen',
     image: 'https://images.unsplash.com/photo-1556228453-efd6c1ff04f6?w=800'
   }
 ];
