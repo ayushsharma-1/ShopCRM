@@ -2,21 +2,27 @@
 
 import { useEffect, useState } from 'react';
 import { useParams, useRouter } from 'next/navigation';
-import { FaRobot } from 'react-icons/fa';
+import { useDispatch, useSelector } from 'react-redux';
+import { FaRobot, FaBell, FaSync } from 'react-icons/fa';
+import { toast } from 'react-toastify';
 import LoadingSpinner from '@/components/common/LoadingSpinner';
 import ProductImageGallery from '@/components/product/ProductImageGallery';
 import ProductInfo from '@/components/product/ProductInfo';
 import ProductActions from '@/components/product/ProductActions';
 import ProductTabs from '@/components/product/ProductTabs';
 import SimilarProducts from '@/components/product/SimilarProducts';
+import Modal from '@/components/common/Modal';
 import productsData from '@/data/products.json';
 import dealsData from '@/data/deals.json';
 import { getProductReviews, getAverageRating, getReviewCount } from '@/lib/utils/reviewUtils';
 import { askProductAssistant } from '@/lib/ai/productAssistant';
+import { addRule } from '@/lib/redux/slices/agentsSlice';
+import { normalizeRulePayload } from '@/lib/agents/ruleUtils';
 
 export default function ProductDetailPage() {
   const params = useParams();
   const router = useRouter();
+  const dispatch = useDispatch();
   const [product, setProduct] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [similarProducts, setSimilarProducts] = useState([]);
@@ -27,6 +33,15 @@ export default function ProductDetailPage() {
   const [answer, setAnswer] = useState('');
   const [isAsking, setIsAsking] = useState(false);
   const [isDeal, setIsDeal] = useState(false);
+  const [priceAlertOpen, setPriceAlertOpen] = useState(false);
+  const [restockAlertOpen, setRestockAlertOpen] = useState(false);
+  const [priceThreshold, setPriceThreshold] = useState('');
+  const [restockQty, setRestockQty] = useState(1);
+  const [keepActive, setKeepActive] = useState(false);
+  const [actionMode, setActionMode] = useState('notify');
+  const [selectedAddressId, setSelectedAddressId] = useState(null);
+  const [userConsent, setUserConsent] = useState(false);
+  const { addresses } = useSelector((state) => state.addresses);
 
   useEffect(() => {
     setTimeout(() => {
@@ -96,6 +111,78 @@ export default function ProductDetailPage() {
     } finally {
       setIsAsking(false);
     }
+  };
+
+  const handleSavePriceAlert = () => {
+    if (!priceThreshold || parseFloat(priceThreshold) <= 0) {
+      toast.error('Please enter a valid price threshold');
+      return;
+    }
+
+    if (actionMode === 'auto_order' && !selectedAddressId) {
+      toast.error('Please select a saved address for auto-order');
+      return;
+    }
+
+    if (actionMode === 'auto_order' && !userConsent) {
+      toast.error('Please confirm consent for auto-order');
+      return;
+    }
+
+    const rule = normalizeRulePayload({
+      type: 'priceDrop',
+      productId: product.id,
+      threshold: parseFloat(priceThreshold),
+      keepActive,
+      actionMode,
+      addressId: actionMode === 'auto_order' ? selectedAddressId : null,
+      userConsent: actionMode === 'auto_order' ? userConsent : false,
+    });
+
+    dispatch(addRule(rule));
+    toast.success('Price alert saved — Agent will notify you when conditions match');
+    setPriceAlertOpen(false);
+    setPriceThreshold('');
+    setKeepActive(false);
+    setActionMode('notify');
+    setSelectedAddressId(null);
+    setUserConsent(false);
+  };
+
+  const handleSaveRestockAlert = () => {
+    if (!restockQty || restockQty <= 0) {
+      toast.error('Please enter a valid quantity');
+      return;
+    }
+
+    if (actionMode === 'auto_order' && !selectedAddressId) {
+      toast.error('Please select a saved address for auto-order');
+      return;
+    }
+
+    if (actionMode === 'auto_order' && !userConsent) {
+      toast.error('Please confirm consent for auto-order');
+      return;
+    }
+
+    const rule = normalizeRulePayload({
+      type: 'autoRestock',
+      productId: product.id,
+      restockQty: parseInt(restockQty),
+      keepActive,
+      actionMode,
+      addressId: actionMode === 'auto_order' ? selectedAddressId : null,
+      userConsent: actionMode === 'auto_order' ? userConsent : false,
+    });
+
+    dispatch(addRule(rule));
+    toast.success('Auto-restock rule saved — Agent will monitor inventory');
+    setRestockAlertOpen(false);
+    setRestockQty(1);
+    setKeepActive(false);
+    setActionMode('notify');
+    setSelectedAddressId(null);
+    setUserConsent(false);
   };
 
   if (isLoading) {
@@ -180,6 +267,24 @@ export default function ProductDetailPage() {
               reviewCount={reviewCount} 
             />
             <ProductActions product={product} />
+            
+            {/* Agent Actions */}
+            <div className="grid grid-cols-2 gap-3 pt-4 border-t border-neutral-100">
+              <button
+                onClick={() => setPriceAlertOpen(true)}
+                className="flex items-center justify-center gap-2 px-4 py-2.5 bg-neutral-100 hover:bg-neutral-200 text-neutral-800 rounded-xl text-sm font-medium transition-all duration-150 active:scale-95"
+              >
+                <FaBell className="text-base" />
+                Set Price Alert
+              </button>
+              <button
+                onClick={() => setRestockAlertOpen(true)}
+                className="flex items-center justify-center gap-2 px-4 py-2.5 bg-neutral-100 hover:bg-neutral-200 text-neutral-800 rounded-xl text-sm font-medium transition-all duration-150 active:scale-95"
+              >
+                <FaSync className="text-base" />
+                Auto-Restock
+              </button>
+            </div>
           </div>
         </div>
 
@@ -254,32 +359,318 @@ export default function ProductDetailPage() {
           </div>
         </div>
 
-        {/* v>
-      </div>
-
-      <div className="container mx-auto px-4 py-8 lg:py-12 space-y-8">
-        {/* Product Details Grid */}
-        <div className="bg-white rounded-2xl p-6 lg:p-10 grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12">
-          <ProductImageGallery product={product} />
-          
-          <div className="space-y-8">
-            <ProductInfo 
-              product={product} 
-              averageRating={averageRating} 
-              reviewCount={reviewCount} 
-            />
-            <ProductActions product={product} />
-          </div>
-        </div>
-
-        {/* Product Tabs */}
-        <ProductTabs product={product} reviews={reviews} />
-
         {/* Similar Products */}
         {similarProducts.length > 0 && (
           <SimilarProducts products={similarProducts} />
         )}
       </div>
+
+      {/* Price Alert Modal */}
+      <Modal isOpen={priceAlertOpen} onClose={() => setPriceAlertOpen(false)} title="Set Price Alert">
+        <div className="space-y-5">
+          <p className="text-sm text-neutral-600">
+            Get notified when <strong>{product.name}</strong> drops below your target price.
+          </p>
+          
+          <div>
+            <label htmlFor="priceThreshold" className="block text-sm font-medium text-neutral-700 mb-2">
+              Alert when price drops below (₹)
+            </label>
+            <input
+              id="priceThreshold"
+              type="number"
+              min="1"
+              step="0.01"
+              value={priceThreshold}
+              onChange={(e) => setPriceThreshold(e.target.value)}
+              placeholder="Enter target price"
+              className="w-full px-4 py-2.5 border border-neutral-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-neutral-400 focus:border-neutral-400 text-sm text-neutral-900"
+            />
+            <p className="text-xs text-neutral-500 mt-2">
+              Current price: ₹{product.price?.toLocaleString('en-IN')}
+            </p>
+          </div>
+
+          <div className="flex items-center gap-3">
+            <input
+              id="keepActivePriceAlert"
+              type="checkbox"
+              checked={keepActive}
+              onChange={(e) => setKeepActive(e.target.checked)}
+              className="w-4 h-4 rounded border-neutral-300 text-neutral-900 focus:ring-1 focus:ring-neutral-400"
+            />
+            <label htmlFor="keepActivePriceAlert" className="text-sm text-neutral-700">
+              Keep alert active after trigger (re-notify on future drops)
+            </label>
+          </div>
+
+          {/* Action Mode Selection */}
+          <div>
+            <label className="block text-sm font-medium text-neutral-700 mb-3">
+              What should the agent do?
+            </label>
+            <div className="space-y-2">
+              <label className="flex items-center gap-3 p-3 border border-neutral-200 rounded-xl cursor-pointer hover:bg-neutral-50 transition-colors">
+                <input
+                  type="radio"
+                  name="actionMode"
+                  value="notify"
+                  checked={actionMode === 'notify'}
+                  onChange={(e) => setActionMode(e.target.value)}
+                  className="w-4 h-4"
+                />
+                <div>
+                  <div className="font-medium text-neutral-900 text-sm">Notify Only</div>
+                  <div className="text-xs text-neutral-600">Show alert, I'll decide</div>
+                </div>
+              </label>
+
+              <label className="flex items-center gap-3 p-3 border border-neutral-200 rounded-xl cursor-pointer hover:bg-neutral-50 transition-colors">
+                <input
+                  type="radio"
+                  name="actionMode"
+                  value="add_to_cart"
+                  checked={actionMode === 'add_to_cart'}
+                  onChange={(e) => setActionMode(e.target.value)}
+                  className="w-4 h-4"
+                />
+                <div>
+                  <div className="font-medium text-neutral-900 text-sm">Auto Add to Cart</div>
+                  <div className="text-xs text-neutral-600">Automatically add item</div>
+                </div>
+              </label>
+
+              <label className="flex items-center gap-3 p-3 border border-neutral-200 rounded-xl cursor-pointer hover:bg-neutral-50 transition-colors">
+                <input
+                  type="radio"
+                  name="actionMode"
+                  value="auto_order"
+                  checked={actionMode === 'auto_order'}
+                  onChange={(e) => setActionMode(e.target.value)}
+                  className="w-4 h-4"
+                />
+                <div>
+                  <div className="font-medium text-neutral-900 text-sm">Auto Order</div>
+                  <div className="text-xs text-neutral-600">Place order automatically</div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          {/* Address Selection (only for auto_order) */}
+          {actionMode === 'auto_order' && (
+            <>
+              <div>
+                <label className="block text-sm font-medium text-neutral-700 mb-2">
+                  Delivery Address
+                </label>
+                {addresses.length === 0 ? (
+                  <div className="p-4 bg-amber-50 border border-amber-200 rounded-xl text-sm text-amber-800">
+                    No saved addresses. <button onClick={() => router.push('/addresses')} className="underline font-medium">Add one now</button>
+                  </div>
+                ) : (
+                  <select
+                    value={selectedAddressId || ''}
+                    onChange={(e) => setSelectedAddressId(e.target.value)}
+                    className="w-full px-4 py-2.5 border border-neutral-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-neutral-400 text-sm"
+                  >
+                    <option value="">Select address</option>
+                    {addresses.map(addr => (
+                      <option key={addr.id} value={addr.id}>
+                        {addr.fullName} - {addr.street}, {addr.city}
+                      </option>
+                    ))}
+                  </select>
+                )}
+              </div>
+
+              <div className="flex items-start gap-3 p-4 bg-neutral-50 rounded-xl">
+                <input
+                  id="userConsentPrice"
+                  type="checkbox"
+                  checked={userConsent}
+                  onChange={(e) => setUserConsent(e.target.checked)}
+                  className="w-4 h-4 mt-0.5 rounded border-neutral-300"
+                />
+                <label htmlFor="userConsentPrice" className="text-sm text-neutral-700 flex-1">
+                  <strong>I allow the agent to place orders for me</strong> using the selected address.
+                </label>
+              </div>
+            </>
+          )}
+
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={() => {
+                setPriceAlertOpen(false);
+                setActionMode('notify');
+                setSelectedAddressId(null);
+                setUserConsent(false);
+              }}
+              className="flex-1 px-4 py-2.5 border border-neutral-200 text-neutral-700 rounded-xl hover:bg-neutral-50 transition-all duration-150 text-sm font-medium"
+            >
+              Cancel
+            </button>
+            <button
+              onClick={handleSavePriceAlert}
+              className="flex-1 px-4 py-2.5 bg-neutral-900 text-white rounded-xl hover:bg-neutral-800 transition-all duration-150 text-sm font-medium active:scale-95"
+            >
+              Save Alert
+            </button>
+          </div>
+        </div>
+      </Modal>
+
+      {/* Auto-Restock Modal */}
+      <Modal isOpen={restockAlertOpen} onClose={() => setRestockAlertOpen(false)} title="Auto-Restock">
+        <div className="space-y-5">
+          <p className="text-sm text-neutral-600">
+            Automatically add <strong>{product.name}</strong> to your cart when it's out of stock.
+          </p>
+          
+          <div>
+            <label htmlFor="restockQty" className="block text-sm font-medium text-neutral-700 mb-2">
+              Quantity to add
+            </label>
+            <input
+              id="restockQty"
+              type="number"
+              min="1"
+              value={restockQty}
+              onChange={(e) => setRestockQty(parseInt(e.target.value) || 1)}
+              className="w-full px-4 py-2.5 border border-neutral-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-neutral-400 focus:border-neutral-400 text-sm text-neutral-900"
+            />
+          </div>
+
+          <div className="flex items-center gap-3">
+            <input
+              id="keepActiveRestock"
+              type="checkbox"
+              checked={keepActive}
+              onChange={(e) => setKeepActive(e.target.checked)}
+              className="w-4 h-4 rounded border-neutral-300 text-neutral-900 focus:ring-1 focus:ring-neutral-400"
+            />
+            <label htmlFor="keepActiveRestock" className="text-sm text-neutral-700">
+              Keep restocking (continue monitoring after first trigger)
+            </label>
+          </div>
+
+          {/* Action Mode Selection */}
+          <div>
+            <label className="block text-sm font-medium text-neutral-700 mb-3">
+              What should the agent do?
+            </label>
+            <div className="space-y-2">
+              <label className="flex items-center gap-3 p-3 border border-neutral-200 rounded-xl cursor-pointer hover:bg-neutral-50 transition-colors">
+                <input
+                  type="radio"
+                  name="actionModeRestock"
+                  value="notify"
+                  checked={actionMode === 'notify'}
+                  onChange={(e) => setActionMode(e.target.value)}
+                  className="w-4 h-4"
+                />
+                <div>
+                  <div className="font-medium text-neutral-900 text-sm">Notify Only</div>
+                  <div className="text-xs text-neutral-600">Show alert, I'll decide</div>
+                </div>
+              </label>
+
+              <label className="flex items-center gap-3 p-3 border border-neutral-200 rounded-xl cursor-pointer hover:bg-neutral-50 transition-colors">
+                <input
+                  type="radio"
+                  name="actionModeRestock"
+                  value="add_to_cart"
+                  checked={actionMode === 'add_to_cart'}
+                  onChange={(e) => setActionMode(e.target.value)}
+                  className="w-4 h-4"
+                />
+                <div>
+                  <div className="font-medium text-neutral-900 text-sm">Auto Add to Cart</div>
+                  <div className="text-xs text-neutral-600">Automatically add item</div>
+                </div>
+              </label>
+
+              <label className="flex items-center gap-3 p-3 border border-neutral-200 rounded-xl cursor-pointer hover:bg-neutral-50 transition-colors">
+                <input
+                  type="radio"
+                  name="actionModeRestock"
+                  value="auto_order"
+                  checked={actionMode === 'auto_order'}
+                  onChange={(e) => setActionMode(e.target.value)}
+                  className="w-4 h-4"
+                />
+                <div>
+                  <div className="font-medium text-neutral-900 text-sm">Auto Order</div>
+                  <div className="text-xs text-neutral-600">Place order automatically</div>
+                </div>
+              </label>
+            </div>
+          </div>
+
+          {/* Address Selection (only for auto_order) */}
+          {actionMode === 'auto_order' && (
+            <>
+              <div>
+                <label className="block text-sm font-medium text-neutral-700 mb-2">
+                  Delivery Address
+                </label>
+                {addresses.length === 0 ? (
+                  <div className="p-4 bg-amber-50 border border-amber-200 rounded-xl text-sm text-amber-800">
+                    No saved addresses. <button onClick={() => router.push('/addresses')} className="underline font-medium">Add one now</button>
+                  </div>
+                ) : (
+                  <select
+                    value={selectedAddressId || ''}
+                    onChange={(e) => setSelectedAddressId(e.target.value)}
+                    className="w-full px-4 py-2.5 border border-neutral-200 rounded-xl focus:outline-none focus:ring-1 focus:ring-neutral-400 text-sm"
+                  >
+                    <option value="">Select address</option>
+                    {addresses.map(addr => (
+                      <option key={addr.id} value={addr.id}>
+                        {addr.fullName} - {addr.street}, {addr.city}
+                      </option>
+                    ))}
+                  </select>
+                )}
+              </div>
+
+              <div className="flex items-start gap-3 p-4 bg-neutral-50 rounded-xl">
+                <input
+                  id="userConsentRestock"
+                  type="checkbox"
+                  checked={userConsent}
+                  onChange={(e) => setUserConsent(e.target.checked)}
+                  className="w-4 h-4 mt-0.5 rounded border-neutral-300"
+                />
+                <label htmlFor="userConsentRestock" className="text-sm text-neutral-700 flex-1">
+                  <strong>I allow the agent to place orders for me</strong> using the selected address.
+                </label>
+              </div>
+            </>
+          )}
+
+          <div className="flex gap-3 pt-4">
+            <button
+              onClick={() => {
+                setRestockAlertOpen(false);
+                setActionMode('notify');
+                setSelectedAddressId(null);
+                setUserConsent(false);
+              }}
+              className="flex-1 px-4 py-2.5 border border-neutral-200 text-neutral-700 rounded-xl hover:bg-neutral-50 transition-all duration-150 text-sm font-medium"
+            >
+              Cancel
+            </button>
+            <button
+              onClick={handleSaveRestockAlert}
+              className="flex-1 px-4 py-2.5 bg-neutral-900 text-white rounded-xl hover:bg-neutral-800 transition-all duration-150 text-sm font-medium active:scale-95"
+            >
+              Enable Auto-Restock
+            </button>
+          </div>
+        </div>
+      </Modal>
     </div>
   );
 }

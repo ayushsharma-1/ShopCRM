@@ -1,7 +1,7 @@
 'use client';
 
 import Link from 'next/link';
-import { FaUser, FaSignOutAlt } from 'react-icons/fa';
+import { FaUser, FaSignOutAlt, FaBell, FaMapMarkerAlt } from 'react-icons/fa';
 import { motion, AnimatePresence } from 'framer-motion';
 import NavLink from './NavLink';
 
@@ -43,6 +43,14 @@ export default function MobileMenu({
                       <p className="text-xs text-neutral-500 truncate">{user?.email}</p>
                     </div>
                   </div>
+                  <NavLink href="/agent-dashboard" mobile onClick={onClose}>
+                    <FaBell className="inline mr-2" />
+                    Automation & Alerts
+                  </NavLink>
+                  <NavLink href="/addresses" mobile onClick={onClose}>
+                    <FaMapMarkerAlt className="inline mr-2" />
+                    Saved Addresses
+                  </NavLink>
                   <button
                     onClick={onLogout}
                     className="w-full flex items-center justify-center gap-2 px-4 py-2.5 bg-neutral-900 text-white rounded-xl hover:bg-neutral-800 transition-colors font-medium"

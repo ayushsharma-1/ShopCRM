@@ -1,23 +1,26 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { useSelector, useDispatch } from 'react-redux';
+import { useSelector, useDispatch, useStore } from 'react-redux';
 import { useRouter, usePathname } from 'next/navigation';
 import { logout } from '@/lib/redux/slices/authSlice';
 import { toast } from 'react-toastify';
-import { FaRobot } from 'react-icons/fa';
+import { FaRobot, FaBell } from 'react-icons/fa';
 import Logo from './header/Logo';
 import NavLink from './header/NavLink';
 import CartButton from './header/CartButton';
 import UserMenu from './header/UserMenu';
 import MobileMenu from './header/MobileMenu';
 import Modal from '../common/Modal';
+import AgentModal from '../agents/AgentModal';
 import { askGlobalAssistant, parseNavigationAction } from '@/lib/ai/productAssistant';
+import { runAllRules } from '@/lib/agents/ruleEngine';
 
 export default function Header() {
   const dispatch = useDispatch();
   const router = useRouter();
   const pathname = usePathname();
+  const store = useStore();
   const { isAuthenticated, user } = useSelector((state) => state.auth);
   const { totalItems, items } = useSelector((state) => state.cart);
   const { products } = useSelector((state) => state.products);
@@ -25,6 +28,8 @@ export default function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [mounted, setMounted] = useState(false);
   const [assistantOpen, setAssistantOpen] = useState(false);
+  const [agentModalOpen, setAgentModalOpen] = useState(false);
+  const [actionableEvents, setActionableEvents] = useState([]);
   const [messages, setMessages] = useState([]);
   const [inputValue, setInputValue] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -44,6 +49,18 @@ export default function Header() {
   useEffect(() => {
     setMobileMenuOpen(false);
   }, [router]);
+
+  useEffect(() => {
+    const checkEvents = () => {
+      const events = runAllRules(store);
+      setActionableEvents(events);
+    };
+
+    checkEvents();
+    const interval = setInterval(checkEvents, 30000); // Check every 30 seconds
+
+    return () => clearInterval(interval);
+  }, [store, items, products]);
 
 
   const handleSendMessage = async () => {
@@ -120,8 +137,23 @@ export default function Header() {
               onClick={() => setAssistantOpen(true)}
               className="p-2 text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 rounded-xl transition-all duration-200"
               title="AI Shopping Assistant"
+              aria-label="AI Shopping Assistant"
             >
               <FaRobot className="text-lg" />
+            </button>
+
+            <button
+              onClick={() => setAgentModalOpen(true)}
+              className="relative p-2 text-neutral-600 hover:text-neutral-900 hover:bg-neutral-100 rounded-xl transition-all duration-200"
+              title="Agent Notifications"
+              aria-label={`Agent Notifications - ${actionableEvents.length} pending`}
+            >
+              <FaBell className="text-lg" />
+              {actionableEvents.length > 0 && (
+                <span className="absolute -top-1 -right-1 w-5 h-5 bg-red-500 text-white text-xs font-medium rounded-full flex items-center justify-center animate-pulse">
+                  {actionableEvents.length}
+                </span>
+              )}
             </button>
 
             <CartButton totalItems={totalItems} mounted={mounted} />
@@ -303,6 +335,16 @@ export default function Header() {
           </div>
         </div>
       </Modal>
+
+      <AgentModal
+        isOpen={agentModalOpen}
+        onClose={() => setAgentModalOpen(false)}
+        events={actionableEvents}
+        onEventDismiss={(ruleId) => {
+          setActionableEvents(prev => prev.filter(e => e.ruleId !== ruleId));
+        }}
+      />
+
       <MobileMenu
         isOpen={mobileMenuOpen}
         isAuthenticated={isAuthenticated}
