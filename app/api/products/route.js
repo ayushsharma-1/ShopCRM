@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server';
 import { getDb } from '@/lib/db/mongo';
 import { COLLECTIONS } from '@/lib/db/collections';
+import { seedDatabase } from '@/lib/db/seed';
 import productsData from '@/data/products.json';
 import dealsData from '@/data/deals.json';
 
@@ -15,17 +16,26 @@ export async function GET(request) {
     );
 
     // Fetch from MongoDB
-    const items = await collection.find({}).toArray();
+    let items = await collection.find({}).toArray();
 
-    // Fallback to JSON if MongoDB empty
+    // Seed if MongoDB empty
     if (items.length === 0) {
-      console.log(`[API] No ${type} in DB, using JSON fallback`);
-      const fallbackData = type === 'deals' ? dealsData : productsData;
-      return NextResponse.json({
-        success: true,
-        data: fallbackData,
-        source: 'json'
-      });
+      console.log(`[API] No ${type} in DB, triggering seed...`);
+      await seedDatabase();
+      
+      // Refetch after seeding
+      items = await collection.find({}).toArray();
+      
+      // If still empty, use JSON fallback
+      if (items.length === 0) {
+        console.log(`[API] Seed failed, using JSON fallback`);
+        const fallbackData = type === 'deals' ? dealsData : productsData;
+        return NextResponse.json({
+          success: true,
+          data: fallbackData,
+          source: 'json'
+        });
+      }
     }
 
     return NextResponse.json({
