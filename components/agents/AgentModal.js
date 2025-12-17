@@ -1,6 +1,6 @@
 'use client';
 
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useRouter } from 'next/navigation';
 import { toast } from 'react-toastify';
 import Modal from '../common/Modal';
@@ -10,23 +10,43 @@ import { setLastTriggered } from '@/lib/redux/slices/agentsSlice';
 export default function AgentModal({ isOpen, onClose, events, onEventDismiss }) {
   const dispatch = useDispatch();
   const router = useRouter();
+  const { user } = useSelector((state) => state.auth);
 
-  const handleConfirm = (event) => {
+  const handleConfirm = async (event) => {
     try {
       // Trigger the action
-      triggerAction(event.rule, { product: event.product, restockQty: event.rule.restockQty || 1 }, dispatch);
+      const result = await triggerAction(
+        event.rule, 
+        { product: event.product, restockQty: event.rule.restockQty || 1 }, 
+        dispatch,
+        user
+      );
       
-      toast.success(`Action completed: ${event.message}`);
+      if (!result.success) {
+        toast.error(result.error || 'Action failed');
+        return;
+      }
+
+      // Success message based on action mode
+      if (event.rule.actionMode === 'auto_order') {
+        toast.success('Auto-order placed successfully!');
+        // Navigate to orders page
+        setTimeout(() => {
+          router.push('/orders');
+        }, 1000);
+      } else {
+        toast.success(`Action completed: ${event.message}`);
+        // Navigate to cart if add_to_cart
+        if (event.rule.actionMode === 'add_to_cart') {
+          setTimeout(() => {
+            router.push('/cart');
+          }, 500);
+        }
+      }
       
       // Close modal and remove event
       onEventDismiss(event.ruleId);
       
-      // Navigate to checkout if it's a purchase action
-      if (event.actionType === 'priceDrop') {
-        setTimeout(() => {
-          router.push('/cart');
-        }, 500);
-      }
     } catch (error) {
       toast.error('Failed to complete action');
       console.error('Agent action error:', error);
@@ -92,7 +112,8 @@ export default function AgentModal({ isOpen, onClose, events, onEventDismiss }) 
                   onClick={() => handleConfirm(event)}
                   className="flex-1 px-4 py-2 bg-neutral-900 text-white text-sm font-medium rounded-lg hover:bg-neutral-800 transition-colors duration-150"
                 >
-                  {event.actionType === 'cartReminder' ? 'Proceed to Checkout' : 'Add to Cart'}
+                  {event.rule.actionMode === 'auto_order' ? 'Place Auto-Order' : 
+                   event.actionType === 'cartReminder' ? 'Proceed to Checkout' : 'Add to Cart'}
                 </button>
                 <button
                   onClick={() => handleDismiss(event)}

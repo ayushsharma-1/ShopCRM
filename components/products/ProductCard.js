@@ -57,13 +57,20 @@ export default function ProductCard({ product }) {
               )}
             </div>
             
-            <button
-              onClick={handleAddToCart}
-              className="flex items-center gap-2 px-4 py-2 bg-neutral-900 text-white rounded-xl hover:bg-neutral-800 active:scale-95 transition-all duration-200 text-sm font-medium group/btn"
-            >
-              <FaShoppingCart className="text-xs group-hover/btn:scale-110 transition-transform duration-200" />
-              <span className="hidden sm:inline">Add</span>
-            </button>
+            {product.stock === 0 ? (
+              <div className="flex items-center gap-2 px-4 py-2 bg-neutral-100 text-neutral-500 rounded-xl text-sm font-medium cursor-not-allowed">
+                <span>Out of Stock</span>
+              </div>
+            ) : (
+              <button
+                onClick={handleAddToCart}
+                disabled={product.stock === 0}
+                className="flex items-center gap-2 px-4 py-2 bg-neutral-900 text-white rounded-xl hover:bg-neutral-800 active:scale-95 transition-all duration-200 text-sm font-medium group/btn disabled:bg-neutral-300 disabled:cursor-not-allowed"
+              >
+                <FaShoppingCart className="text-xs group-hover/btn:scale-110 transition-transform duration-200" />
+                <span className="hidden sm:inline">Add</span>
+              </button>
+            )}
           </div>
         </div>
       </article>

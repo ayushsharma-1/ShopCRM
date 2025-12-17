@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useRouter } from 'next/navigation';
 import { toast } from 'react-toastify';
@@ -17,8 +17,15 @@ export default function CheckoutPage() {
   const { isAuthenticated } = useSelector((state) => state.auth);
   const { currentStep } = useSelector((state) => state.checkout);
   const { items } = useSelector((state) => state.cart);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isMounted) return;
+
     if (!isAuthenticated) {
       toast.warning('Please login to access checkout');
       router.push('/login');
@@ -32,7 +39,7 @@ export default function CheckoutPage() {
     }
 
     dispatch(resetCheckout());
-  }, [isAuthenticated, items, router, dispatch]);
+  }, [isAuthenticated, items, router, dispatch, isMounted]);
 
   const renderStep = () => {
     switch (currentStep) {
@@ -47,8 +54,24 @@ export default function CheckoutPage() {
     }
   };
 
+  if (!isMounted) {
+    return (
+      <div className="min-h-screen bg-neutral-50/50">
+        <div className="flex items-center justify-center min-h-screen">
+          <div className="text-neutral-500">Loading...</div>
+        </div>
+      </div>
+    );
+  }
+
   if (!isAuthenticated || items.length === 0) {
-    return null;
+    return (
+      <div className="min-h-screen bg-neutral-50/50">
+        <div className="flex items-center justify-center min-h-screen">
+          <div className="text-neutral-500">Redirecting...</div>
+        </div>
+      </div>
+    );
   }
 
   return (

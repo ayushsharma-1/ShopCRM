@@ -79,13 +79,20 @@ export default function ProductActions({ product }) {
       </div>
 
       <div className="flex gap-3 pt-2">
-        <button
-          onClick={handleAddToCart}
-          className="flex-1 bg-gray-900 hover:bg-gray-800 text-white py-3.5 rounded-xl font-medium flex items-center justify-center gap-2 transition-all shadow-sm hover:shadow-md"
-        >
-          <FaShoppingCart size={18} />
-          <span>Add to Cart</span>
-        </button>
+        {product.stock === 0 ? (
+          <div className="flex-1 bg-neutral-100 text-neutral-500 py-3.5 rounded-xl font-medium flex items-center justify-center gap-2 cursor-not-allowed">
+            <span>Out of Stock</span>
+          </div>
+        ) : (
+          <button
+            onClick={handleAddToCart}
+            disabled={product.stock === 0}
+            className="flex-1 bg-gray-900 hover:bg-gray-800 text-white py-3.5 rounded-xl font-medium flex items-center justify-center gap-2 transition-all shadow-sm hover:shadow-md disabled:bg-neutral-300 disabled:cursor-not-allowed"
+          >
+            <FaShoppingCart size={18} />
+            <span>Add to Cart</span>
+          </button>
+        )}
         <button
           className="px-5 py-3.5 border-2 border-gray-200 rounded-xl hover:border-gray-300 hover:bg-gray-50 transition-all"
           aria-label="Add to wishlist"
