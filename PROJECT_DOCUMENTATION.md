@@ -12,6 +12,11 @@ E-commerce platform built with Next.js 16 featuring AI-powered product search an
 - **React 19.2.1** - UI library
 - **Tailwind CSS 4** - Styling
 
+### Database
+- **MongoDB Atlas** - Cloud database (source of truth)
+- **MongoDB Node.js Driver** - Native database driver
+- **JSON Files** - Seed sources + fallback data
+
 ### State Management
 - **Redux Toolkit 2.0.1** - Global state management
 - **React Redux 9.2.0** - React bindings for Redux
@@ -266,24 +271,42 @@ Shop-CRM/
 
 ## Key Modules
 
-### AI Configuration
-```javascript
-// .env.local
-NEXT_PUBLIC_GROQ_API_KEY=your_groq_api_key_here
-```
+### Database Configuration
+**MongoDB Atlas** - Primary data source
+- Connection: Cached, pooled (2-10 connections)
+- Collections: users, products, deals, reviews, addresses, agents, orders
+- Seeding: Automatic on first boot from JSON files
+- Fallback: JSON files used if MongoDB unavailable
+
+**Collections:**
+- `users` - Authentication, 163 reviews seeded
+- `products` - 210 items with indexed fields
+- `deals` - 24 deals with expiration dates
+- `reviews` - Product reviews linked to products
+- `addresses` - User delivery addresses
+- `agents` - Agent automation rules
+- `orders` - Order history including auto-orders
+
+### API Routes
+- `/api/auth/*` - Login, register (MongoDB)
+- `/api/products` - Products/deals (MongoDB → JSON fallback)
+- `/api/reviews` - Product reviews (MongoDB → JSON fallback)
+- `/api/addresses` - CRUD for user addresses (MongoDB)
+- `/api/agents` - CRUD for agent rules (MongoDB)
+- `/api/orders` - Order management (MongoDB)
 
 ### Redux Slices
-- **authSlice**: User authentication, token management
+- **authSlice**: User authentication, MongoDB user IDs
 - **cartSlice**: Cart items, quantities, totals
 - **checkoutSlice**: Multi-step checkout state
-- **productsSlice**: Products, filters, AI filters, sorting, pagination
-- **agentsSlice**: Agent rules, trigger timestamps, active states
-- **addressSlice**: Saved addresses, default address management
+- **productsSlice**: Products from MongoDB/JSON, filters, AI filters, sorting
+- **agentsSlice**: Agent rules (syncs with MongoDB via API)
+- **addressSlice**: Saved addresses (syncs with MongoDB via API)
 
-### Data Files
-- **products.json**: 210 products with prices ₹10-₹10,000
-- **deals.json**: 24 deals with string IDs and deal metadata
-- **reviews.json**: Product reviews with ratings
+### Data Files (Seed Sources)
+- **products.json**: 210 products - seeds MongoDB on first boot
+- **deals.json**: 24 deals - seeds MongoDB on first boot
+- **reviews.json**: Product reviews - seeds MongoDB on first boot
 
 ### AI Implementation
 - **Model**: llama-3.3-70b-versatile (Groq)
@@ -317,6 +340,8 @@ NEXT_PUBLIC_GROQ_API_KEY=your_groq_api_key_here
 
 **Required:**
 - `NEXT_PUBLIC_GROQ_API_KEY` - Groq API key for AI features (get from https://console.groq.com/keys)
+- `MONGODB_URI` - MongoDB Atlas connection string
+- `MONGODB_DB_NAME` - Database name (ShopCRM)
 
 ---
 
@@ -347,14 +372,18 @@ NEXT_PUBLIC_GROQ_API_KEY=your_groq_api_key_here
 
 ## Performance Optimizations
 
-1. **Debounced Search**: 400ms delay for AI parsing
-2. **Agent Evaluation**: 500ms debounce, 5-minute intervals
-3. **Lazy Loading**: Images with Next.js Image component
-4. **Pagination**: 12 items per page
-5. **Minimal AI Context**: Only essential product data
-6. **Client Components**: Strategic use of 'use client'
-7. **Scroll Optimization**: Auto-scroll to top on navigation
-8. **LocalStorage Caching**: Cart, auth, agents, addresses persisted
+1. **MongoDB Connection Pooling**: Min 2, max 10 connections, cached across hot reloads
+2. **Database Indexing**: Optimized queries on products, users, agents, addresses
+3. **Debounced Search**: 400ms delay for AI parsing
+4. **Agent Evaluation**: 500ms debounce, 5-minute intervals
+5. **Lazy Loading**: Images with Next.js Image component
+6. **Pagination**: 12 items per page
+7. **Minimal AI Context**: Only essential product data
+8. **Client Components**: Strategic use of 'use client'
+9. **Scroll Optimization**: Auto-scroll to top on navigation
+10. **LocalStorage Caching**: Cart, auth persisted (agents/addresses in MongoDB)
+11. **Automatic Seeding**: Idempotent, runs only if collections empty
+12. **JSON Fallback**: Seamless degradation if MongoDB unavailable
 
 ---
 
@@ -401,6 +430,15 @@ NEXT_PUBLIC_GROQ_API_KEY=your_groq_api_key_here
 
 ## Future Enhancements
 
+### Data & Backend
+- Order history and tracking system
+- MongoDB Change Streams for real-time updates
+- Atlas Search for full-text product search
+- Aggregation pipelines for analytics dashboard
+- Password hashing (bcrypt) and JWT authentication
+- Backend API migration for production
+
+### Features
 - User profiles with order history
 - Wishlist functionality
 - Product comparisons
@@ -410,5 +448,7 @@ NEXT_PUBLIC_GROQ_API_KEY=your_groq_api_key_here
 - Email/SMS notifications for agent triggers
 - Product recommendations based on browsing history
 - Machine learning for predictive restocking
-- Backend API for rule persistence
 - Analytics dashboard for rule performance
+
+### Documentation
+- See [MONGODB_MIGRATION.md](./MONGODB_MIGRATION.md) for complete database integration guide

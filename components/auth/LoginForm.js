@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import Input from '../common/Input';
 import Button from '../common/Button';
 import { loginSuccess } from '@/lib/redux/slices/authSlice';
+import { loadCartFromDB } from '@/lib/redux/slices/cartSlice';
 import { toast } from 'react-toastify';
 
 const DEMO_USERS = [
@@ -58,25 +59,42 @@ export default function LoginForm() {
 
     setIsLoading(true);
 
-    setTimeout(() => {
-      const user = DEMO_USERS.find(
-        (u) => u.email === formData.email && u.password === formData.password
-      );
+    try {
+      // Call MongoDB login API
+      const response = await fetch('/api/auth/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: formData.email,
+          password: formData.password
+        })
+      });
 
-      if (user) {
+      const data = await response.json();
+
+      if (response.ok && data.success) {
         dispatch(loginSuccess({ 
-          email: user.email, 
-          name: user.name,
-          id: Math.random().toString(36).substr(2, 9)
+          userId: data.user.userId,
+          email: data.user.email, 
+          name: data.user.name
         }));
-        toast.success(`Welcome back, ${user.name}!`);
+        
+        // Load user's cart from MongoDB
+        dispatch(loadCartFromDB(data.user.userId));
+        
+        toast.success(`Welcome back, ${data.user.name}!`);
         router.push('/products');
       } else {
-        toast.error('Invalid email or password');
+        toast.error(data.error || 'Invalid email or password');
         setErrors({ password: 'Invalid credentials' });
       }
+    } catch (error) {
+      console.error('[Login] Error:', error);
+      toast.error('Login failed. Please try again.');
+      setErrors({ password: 'Login failed' });
+    } finally {
       setIsLoading(false);
-    }, 1000);
+    }
   };
 
   const handleDemoLogin = (user) => {
