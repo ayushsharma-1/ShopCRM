@@ -115,7 +115,7 @@ Shop-CRM/
 │
 ├── data/                        # Static data
 │   ├── deals.json              # Deal products (24 items)
-│   ├── products.json           # Main products (210 items)
+│   ├── products.json           # Main products (310 items)
 │   └── reviews.json            # Product reviews
 │
 ├── lib/                         # Utilities and logic
@@ -177,7 +177,7 @@ Shop-CRM/
   - Cart inquiry
   - Navigation suggestions
   - Price-based filtering
-  - All 210 products in context (minimal data)
+  - All 310 products in context (minimal data)
 - **Tech**: 
   - Compact JSON (id, name, price, category only)
   - Product cards clickable to detail pages
@@ -211,7 +211,7 @@ Shop-CRM/
   - Guest: Redux + localStorage only
 
 ### 5. **Product Catalog**
-- **Data**: 210 products + 24 deals
+- **Data**: 310 products + 24 deals
 - **Features**:
   - Grid/list view
   - Filtering: category, price, rating, search
@@ -335,7 +335,7 @@ Shop-CRM/
 
 **Collections:**
 - `users` - Authentication with role field ('admin' | 'user'), 3 demo users seeded
-- `products` - 210 items with indexed fields (seeded from JSON), editable via admin panel
+- `products` - 310 items with indexed fields (seeded from JSON), editable via admin panel
 - `deals` - 24 deals with expiration dates (seeded from JSON)
 - `reviews` - 163 product reviews (seeded from JSON)
 - `addresses` - User delivery addresses (user-specific)
@@ -354,17 +354,17 @@ Shop-CRM/
 - `/api/orders` - GET/POST/PUT orders (MongoDB, user-specific)
 - `/api/admin/products` - Admin CRUD (GET/POST/PUT/DELETE with role verification, admin-only)
 
-### Redux Slices with role field, MongoDB user IDs, login/logout, role migration for existing users
+### Redux Slices
+- **authSlice**: User authentication with role field, MongoDB user IDs, login/logout, role migration for existing users
 - **cartSlice**: Cart items, quantities, totals, MongoDB sync thunks (loadCartFromDB, saveCartToDB)
 - **checkoutSlice**: Multi-step checkout state
 - **productsSlice**: Products from MongoDB/JSON, filters, AI filters, sorting, fetchProducts thunk
 - **adminProductsSlice**: Admin product management (fetchAllProducts, createProduct, updateProduct, deleteProduct), includes inactive products, separate from storefront
-- **productsSlice**: Products from MongoDB/JSON, filters, AI filters, sorting, fetchProducts thunk
 - **agentsSlice**: Agent rules (localStorage → needs MongoDB migration)
 - **addressSlice**: Saved addresses (localStorage → needs MongoDB migration)
 
 ### Data Files (Seed Sources)
-- **products.json**: 210 products - seeds MongoDB on first boot
+- **products.json**: 310 products - seeds MongoDB on first boot
 - **deals.json**: 24 deals - seeds MongoDB on first boot
 - **reviews.json**: Product reviews - seeds MongoDB on first boot
 
@@ -391,14 +391,14 @@ Shop-CRM/
 - `/cart` - Shopping cart
 - `/checkout` - Checkout process
 - `/order-confirmation` - Order success
+- `/agent-dashboard` - Agent automation & alerts management
+- `/addresses` - Saved addresses management
 
 ### Admin Routes (requires admin role)
 - `/admin` - Admin dashboard with stats
 - `/admin/products` - Product list with bulk selection and offers
 - `/admin/products/new` - Create new product
 - `/admin/products/[id]` - Edit existing product
-- `/agent-dashboard` - Agent automation & alerts management
-- `/addresses` - Saved addresses management
 
 ---
 
@@ -509,11 +509,10 @@ Shop-CRM/
    - `FeaturedDealsSection.js` - Direct JSON import
    - `PromoBanner.js` - Direct JSON import
    - **TODO**: Convert to use `/api/products?type=deals`
-7/11 features (64%)
-- **Static**: 4/11 features (36%)
-- **Seeded Collections**: users (3 with roles), products (210), deals (24), reviews (163)
-- **User-Specific Collections**: carts, addresses, agents, orders
-- **Admin Features**: Full product management, offer system, role-based acces
+
+2. **Product Detail Page**
+   - `products/[id]/page.js` - Direct JSON imports
+   - **TODO**: Fetch via API instead
 
 3. **Deal Detail Page**
    - `deals/[id]/page.js` - Direct JSON import
@@ -528,10 +527,11 @@ Shop-CRM/
    - **TODO**: Fetch via `/api/reviews`
 
 ### Summary
-- **Dynamic**: 6/11 features (55%)
-- **Static**: 5/11 features (45%)
-- **Seeded Collections**: users (3), products (210), deals (24), reviews (163)
+- **Dynamic**: 7/12 features (58%)
+- **Static**: 5/12 features (42%)
+- **Seeded Collections**: users (3 with roles), products (310), deals (24), reviews (163)
 - **User-Specific Collections**: carts, addresses, agents, orders
+- **Admin Features**: Full product management, offer system, role-based access
 
 ---
 
@@ -562,7 +562,26 @@ Shop-CRM/
 2. Periodic evaluation every 5 minutes
 3. Debounced on cart/products state changes (500ms)
 4. Rule engine checks active, non-snoozed rules
-5. Events stored and displayed in  with role-based access
+5. Events stored and displayed in header bell icon
+6. User confirms/snoozes/dismisses in AgentModal
+7. Actions executed only on user confirmation
+
+### Address Validation Rules
+- **Full Name**: Letters & spaces, min 2 chars
+- **Email**: Standard email format
+- **Phone**: Numbers + - ( ) spaces, 10-20 chars
+- **Street**: Min 5 chars, any characters
+- **City/State/Country**: Letters, spaces, hyphens only
+- **ZIP Code**: Alphanumeric + hyphens, 4-10 chars
+
+---
+
+## Future Enhancements
+
+### Data & Backend
+- **COMPLETED**: MongoDB integration with cart, users, addresses, agents, orders
+- **COMPLETED**: Cart auto-sync for authenticated users
+- **COMPLETED**: Demo user seeding with role-based access
 - **COMPLETED**: Admin panel with full CRUD and offer management
 - **COMPLETED**: Role-based authentication and API security
 - **TODO**: Migrate remaining static components (homepage, detail pages) to use API
@@ -590,7 +609,7 @@ Shop-CRM/
 - **TODO**: Order management dashboard
 - **TODO**: Analytics and reporting
 
-### Features
+### Future Feature Roadmap
 - User profiles with order history
 - Wishlist functionality
 - Product comparisons
@@ -602,22 +621,3 @@ Shop-CRM/
 - Machine learning for predictive restocking
 - Analytics dashboard for rule performance
 - Multi-admin support with granular permissions
-- **TODO**: Migrate remaining static components (homepage, detail pages) to use API
-- **TODO**: Order history and tracking UI
-- **TODO**: MongoDB Change Streams for real-time updates
-- **TODO**: Atlas Search for full-text product search
-- **TODO**: Aggregation pipelines for analytics dashboard
-- **TODO**: Password hashing (bcrypt) and JWT authentication
-- **TODO**: Backend API migration for production
-
-### Features
-- User profiles with order history
-- Wishlist functionality
-- Product comparisons
-- Advanced filtering (multi-select)
-- Real-time inventory updates via WebSocket
-- Payment gateway integration
-- Email/SMS notifications for agent triggers
-- Product recommendations based on browsing history
-- Machine learning for predictive restocking
-- Analytics dashboard for rule performance

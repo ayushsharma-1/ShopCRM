@@ -9822,5 +9822,1805 @@
       ],
       "similarityGroup": "beauty"
     }
+  },
+  {
+    "id": 211,
+    "name": "Samsung Galaxy M14 5G Smartphone",
+    "description": "6GB RAM, 128GB Storage, 6000mAh battery, 50MP triple camera, 6.6 inch FHD+ display",
+    "price": 14999,
+    "category": "Electronics",
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?w=500&h=500&fit=crop",
+    "stock": 35,
+    "ratingCount": 2847,
+    "attributes": {
+      "color": "black",
+      "brand": "Samsung",
+      "usage": ["daily", "communication"],
+      "material": "glass-metal"
+    },
+    "tags": ["smartphone", "5g", "android", "electronics", "mobile", "bestseller"]
+  },
+  {
+    "id": 212,
+    "name": "boAt Airdopes 131 TWS Earbuds",
+    "description": "True wireless earbuds with 60 hours playback, ASAP charge, IWP technology, IPX4 water resistance",
+    "price": 1299,
+    "category": "Electronics",
+    "rating": 4.1,
+    "image": "https://images.unsplash.com/photo-1590658268037-6bf12165a8df?w=500&h=500&fit=crop",
+    "stock": 150,
+    "ratingCount": 18562,
+    "attributes": {
+      "color": "black",
+      "brand": "boAt",
+      "usage": ["music", "sports"],
+      "material": "plastic"
+    },
+    "tags": ["earbuds", "wireless", "bluetooth", "electronics", "bestseller", "affordable"]
+  },
+  {
+    "id": 213,
+    "name": "Fire-Boltt Phoenix Smart Watch",
+    "description": "1.3 inch Bluetooth calling smartwatch, SpO2 monitoring, 120+ sports modes, IP67 waterproof",
+    "price": 1999,
+    "category": "Electronics",
+    "rating": 4.0,
+    "image": "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=500&h=500&fit=crop",
+    "stock": 89,
+    "ratingCount": 9843,
+    "attributes": {
+      "color": "black",
+      "brand": "Fire-Boltt",
+      "usage": ["fitness", "daily"],
+      "material": "metal-silicone"
+    },
+    "tags": ["smartwatch", "fitness", "bluetooth", "sports", "health", "affordable"]
+  },
+  {
+    "id": 214,
+    "name": "Logitech MK215 Wireless Keyboard & Mouse Combo",
+    "description": "Wireless keyboard and mouse with long battery life, plug-and-play USB receiver, spill resistant",
+    "price": 1295,
+    "category": "Electronics",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1587829741301-dc798b83add3?w=500&h=500&fit=crop",
+    "stock": 67,
+    "ratingCount": 4521,
+    "attributes": {
+      "color": "black",
+      "brand": "Logitech",
+      "usage": ["work", "office"],
+      "material": "plastic"
+    },
+    "tags": ["keyboard", "mouse", "wireless", "office", "electronics", "combo"]
+  },
+  {
+    "id": 215,
+    "name": "Allen Solly Men's Cotton Shirt",
+    "description": "Regular fit formal shirt, 100% cotton, button down collar, machine washable",
+    "price": 1299,
+    "category": "Clothing",
+    "rating": 4.2,
+    "image": "https://images.unsplash.com/photo-1602810318383-e386cc2a3ccf?w=500&h=500&fit=crop",
+    "stock": 45,
+    "ratingCount": 1234,
+    "attributes": {
+      "color": "blue",
+      "brand": "Allen Solly",
+      "usage": ["formal", "office"],
+      "material": "cotton"
+    },
+    "tags": ["shirt", "formal", "cotton", "clothing", "mens", "office"]
+  },
+  {
+    "id": 216,
+    "name": "Levi's 511 Slim Fit Jeans",
+    "description": "Classic slim fit jeans, stretch denim, 5-pocket styling, versatile and comfortable",
+    "price": 2999,
+    "category": "Clothing",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1542272604-787c3835535d?w=500&h=500&fit=crop",
+    "stock": 78,
+    "ratingCount": 3456,
+    "attributes": {
+      "color": "blue",
+      "brand": "Levi's",
+      "usage": ["casual", "daily"],
+      "material": "denim"
+    },
+    "tags": ["jeans", "denim", "clothing", "mens", "casual", "bestseller"]
+  },
+  {
+    "id": 217,
+    "name": "Puma Women's Running Shoes",
+    "description": "Lightweight running shoes with SoftFoam+ sockliner, breathable mesh upper, rubber outsole",
+    "price": 2799,
+    "category": "Sports",
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1460353581641-37baddab0fa2?w=500&h=500&fit=crop",
+    "stock": 92,
+    "ratingCount": 2187,
+    "attributes": {
+      "color": "pink",
+      "brand": "Puma",
+      "usage": ["sports", "running"],
+      "material": "synthetic"
+    },
+    "tags": ["shoes", "running", "sports", "fitness", "womens", "athletic"]
+  },
+  {
+    "id": 218,
+    "name": "Prestige Svachh Hard Anodised Pressure Cooker 5L",
+    "description": "Hard anodised outer lid pressure cooker with deep lid for cooking and serving, alpha base",
+    "price": 2345,
+    "category": "Home & Kitchen",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1556911220-bff31c812dba?w=500&h=500&fit=crop",
+    "stock": 54,
+    "ratingCount": 7892,
+    "attributes": {
+      "color": "black",
+      "brand": "Prestige",
+      "usage": ["cooking", "kitchen"],
+      "material": "metal"
+    },
+    "tags": ["pressure cooker", "kitchen", "cooking", "home", "bestseller"]
+  },
+  {
+    "id": 219,
+    "name": "Pigeon Stovekraft Aluminium Nonstick Cookware Set",
+    "description": "5-piece cookware set with tawa, kadai, fry pan. Non-stick coating, induction base compatible",
+    "price": 1599,
+    "category": "Home & Kitchen",
+    "rating": 4.2,
+    "image": "https://images.unsplash.com/photo-1585515320310-259814833e62?w=500&h=500&fit=crop",
+    "stock": 68,
+    "ratingCount": 3421,
+    "attributes": {
+      "color": "black",
+      "brand": "Pigeon",
+      "usage": ["cooking", "kitchen"],
+      "material": "aluminium"
+    },
+    "tags": ["cookware", "nonstick", "kitchen", "home", "affordable", "set"]
+  },
+  {
+    "id": 220,
+    "name": "Bajaj Rex 500-Watt Mixer Grinder",
+    "description": "3 jars mixer grinder with powerful motor, nutri-pro feature, sturdy handles, 2 year warranty",
+    "price": 2199,
+    "category": "Home & Kitchen",
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1570222094114-d054a817e56b?w=500&h=500&fit=crop",
+    "stock": 41,
+    "ratingCount": 5678,
+    "attributes": {
+      "color": "white",
+      "brand": "Bajaj",
+      "usage": ["kitchen", "grinding"],
+      "material": "plastic-metal"
+    },
+    "tags": ["mixer", "grinder", "kitchen", "home", "appliance", "bestseller"]
+  },
+  {
+    "id": 221,
+    "name": "Milton Thermosteel Water Bottle 1000ml",
+    "description": "Vacuum insulated stainless steel bottle, keeps hot for 24 hours, cold for 24 hours, leak proof",
+    "price": 599,
+    "category": "Home & Kitchen",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1602143407151-7111542de6e8?w=500&h=500&fit=crop",
+    "stock": 156,
+    "ratingCount": 8934,
+    "attributes": {
+      "color": "silver",
+      "brand": "Milton",
+      "usage": ["daily", "travel"],
+      "material": "stainless steel"
+    },
+    "tags": ["water bottle", "thermos", "insulated", "home", "travel", "bestseller"]
+  },
+  {
+    "id": 222,
+    "name": "Classmate Octane Notebook Bundle Pack",
+    "description": "Pack of 6 single line notebooks, 172 pages each, perfect for students, premium quality paper",
+    "price": 299,
+    "category": "Office",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=500&h=500&fit=crop",
+    "stock": 234,
+    "ratingCount": 4521,
+    "attributes": {
+      "color": "multicolor",
+      "brand": "Classmate",
+      "usage": ["study", "office"],
+      "material": "paper"
+    },
+    "tags": ["notebook", "stationery", "office", "study", "affordable", "students"]
+  },
+  {
+    "id": 223,
+    "name": "Cello Butterflow Ballpoint Pen Set",
+    "description": "Pack of 10 blue ballpoint pens with smooth writing, anti-skid grip, lightweight body",
+    "price": 99,
+    "category": "Office",
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1586864387634-1fd22f96a5ca?w=500&h=500&fit=crop",
+    "stock": 489,
+    "ratingCount": 6782,
+    "attributes": {
+      "color": "blue",
+      "brand": "Cello",
+      "usage": ["writing", "office"],
+      "material": "plastic"
+    },
+    "tags": ["pen", "ballpoint", "stationery", "office", "affordable", "writing"]
+  },
+  {
+    "id": 224,
+    "name": "HP DeskJet 2331 All-in-One Printer",
+    "description": "Color printer with print, scan, copy functions, USB connectivity, affordable ink cartridges",
+    "price": 3999,
+    "category": "Electronics",
+    "rating": 4.1,
+    "image": "https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?w=500&h=500&fit=crop",
+    "stock": 28,
+    "ratingCount": 2341,
+    "attributes": {
+      "color": "white",
+      "brand": "HP",
+      "usage": ["office", "home"],
+      "material": "plastic"
+    },
+    "tags": ["printer", "scanner", "office", "electronics", "all-in-one"]
+  },
+  {
+    "id": 225,
+    "name": "Fastrack Analog Men's Watch",
+    "description": "Stainless steel strap, mineral crystal glass, water resistant, 2 year warranty",
+    "price": 1495,
+    "category": "Accessories",
+    "rating": 4.2,
+    "image": "https://images.unsplash.com/photo-1524592094714-0f0654e20314?w=500&h=500&fit=crop",
+    "stock": 73,
+    "ratingCount": 1876,
+    "attributes": {
+      "color": "silver",
+      "brand": "Fastrack",
+      "usage": ["daily", "formal"],
+      "material": "metal"
+    },
+    "tags": ["watch", "analog", "accessories", "mens", "fashion", "formal"]
+  },
+  {
+    "id": 226,
+    "name": "Wildcraft Polyester Backpack 35L",
+    "description": "Laptop compatible backpack with rain cover, multiple compartments, padded shoulder straps",
+    "price": 1799,
+    "category": "Accessories",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&h=500&fit=crop",
+    "stock": 94,
+    "ratingCount": 3421,
+    "attributes": {
+      "color": "black",
+      "brand": "Wildcraft",
+      "usage": ["travel", "daily"],
+      "material": "polyester"
+    },
+    "tags": ["backpack", "bag", "accessories", "travel", "laptop", "bestseller"]
+  },
+  {
+    "id": 227,
+    "name": "Ray-Ban Wayfarer Sunglasses",
+    "description": "Classic wayfarer design, UV protected lenses, durable acetate frame, 100% authentic",
+    "price": 7999,
+    "category": "Accessories",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1572635196237-14b3f281503f?w=500&h=500&fit=crop",
+    "stock": 38,
+    "ratingCount": 987,
+    "attributes": {
+      "color": "black",
+      "brand": "Ray-Ban",
+      "usage": ["outdoor", "fashion"],
+      "material": "acetate"
+    },
+    "tags": ["sunglasses", "eyewear", "accessories", "premium", "fashion", "uv-protection"]
+  },
+  {
+    "id": 228,
+    "name": "Yoga Mat 6mm with Carry Bag",
+    "description": "Non-slip exercise mat, eco-friendly TPE material, perfect for yoga, pilates, and workouts",
+    "price": 799,
+    "category": "Sports",
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1601925260368-ae2f83cf8b7f?w=500&h=500&fit=crop",
+    "stock": 126,
+    "ratingCount": 2341,
+    "attributes": {
+      "color": "purple",
+      "brand": "Strauss",
+      "usage": ["yoga", "fitness"],
+      "material": "tpe"
+    },
+    "tags": ["yoga mat", "exercise", "fitness", "sports", "workout", "affordable"]
+  },
+  {
+    "id": 229,
+    "name": "Nivia Encounter Football Size 5",
+    "description": "High quality PU material football, hand-stitched, suitable for all surfaces, FIFA approved size",
+    "price": 599,
+    "category": "Sports",
+    "rating": 4.2,
+    "image": "https://images.unsplash.com/photo-1614632537197-38a17061c2bd?w=500&h=500&fit=crop",
+    "stock": 87,
+    "ratingCount": 1567,
+    "attributes": {
+      "color": "white-black",
+      "brand": "Nivia",
+      "usage": ["sports", "outdoor"],
+      "material": "pu"
+    },
+    "tags": ["football", "soccer", "sports", "outdoor", "game", "ball"]
+  },
+  {
+    "id": 230,
+    "name": "Cosco Cricket Bat Kashmir Willow",
+    "description": "Full size cricket bat for tennis ball, Kashmir willow wood, rubber grip, lightweight",
+    "price": 899,
+    "category": "Sports",
+    "rating": 4.1,
+    "image": "https://images.unsplash.com/photo-1624526267942-ab0ff8a3e972?w=500&h=500&fit=crop",
+    "stock": 52,
+    "ratingCount": 876,
+    "attributes": {
+      "color": "brown",
+      "brand": "Cosco",
+      "usage": ["cricket", "sports"],
+      "material": "willow"
+    },
+    "tags": ["cricket bat", "sports", "cricket", "outdoor", "game", "affordable"]
+  },
+  {
+    "id": 231,
+    "name": "Omron HEM-7120 Blood Pressure Monitor",
+    "description": "Fully automatic digital BP monitor with IntelliSense technology, irregular heartbeat detector",
+    "price": 1899,
+    "category": "Health",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1615486511484-92e172cc4fe0?w=500&h=500&fit=crop",
+    "stock": 61,
+    "ratingCount": 3421,
+    "attributes": {
+      "color": "white",
+      "brand": "Omron",
+      "usage": ["health", "medical"],
+      "material": "plastic"
+    },
+    "tags": ["bp monitor", "health", "medical", "blood pressure", "digital", "bestseller"]
+  },
+  {
+    "id": 232,
+    "name": "Dr. Morepen Glucometer with 50 Strips",
+    "description": "Blood glucose monitoring system, accurate results in 5 seconds, requires small blood sample",
+    "price": 799,
+    "category": "Health",
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1603398938378-e54eab446dde?w=500&h=500&fit=crop",
+    "stock": 89,
+    "ratingCount": 2134,
+    "attributes": {
+      "color": "white",
+      "brand": "Dr. Morepen",
+      "usage": ["health", "diabetes"],
+      "material": "plastic"
+    },
+    "tags": ["glucometer", "health", "diabetes", "medical", "blood sugar", "monitor"]
+  },
+  {
+    "id": 233,
+    "name": "HealthSense Ultra-Lite Digital Weighing Scale",
+    "description": "Personal weighing scale with LCD display, 180kg capacity, step-on technology, tempered glass",
+    "price": 699,
+    "category": "Health",
+    "rating": 4.2,
+    "image": "https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?w=500&h=500&fit=crop",
+    "stock": 142,
+    "ratingCount": 4567,
+    "attributes": {
+      "color": "black",
+      "brand": "HealthSense",
+      "usage": ["health", "fitness"],
+      "material": "glass-plastic"
+    },
+    "tags": ["weighing scale", "health", "fitness", "weight", "digital", "affordable"]
+  },
+  {
+    "id": 234,
+    "name": "Vicks VapoRub 50ml Jar",
+    "description": "Topical cough suppressant and analgesic ointment for cold relief, fast acting formula",
+    "price": 149,
+    "category": "Health",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=500&h=500&fit=crop",
+    "stock": 345,
+    "ratingCount": 12341,
+    "attributes": {
+      "color": "blue",
+      "brand": "Vicks",
+      "usage": ["health", "cold"],
+      "material": "ointment"
+    },
+    "tags": ["vaporub", "health", "cold relief", "medicine", "bestseller", "trusted"]
+  },
+  {
+    "id": 235,
+    "name": "Lakme Absolute Matte Lipstick",
+    "description": "Long-lasting matte finish lipstick, enriched with vitamin E, transfer-proof formula",
+    "price": 599,
+    "category": "Beauty",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1586495777744-4413f21062fa?w=500&h=500&fit=crop",
+    "stock": 178,
+    "ratingCount": 5432,
+    "attributes": {
+      "color": "red",
+      "brand": "Lakme",
+      "usage": ["makeup", "daily"],
+      "material": "cosmetic"
+    },
+    "tags": ["lipstick", "makeup", "beauty", "cosmetics", "matte", "bestseller"]
+  },
+  {
+    "id": 236,
+    "name": "Mamaearth Onion Hair Oil 250ml",
+    "description": "Hair growth oil with onion, biotin, and redensyl, reduces hair fall, promotes hair growth",
+    "price": 399,
+    "category": "Beauty",
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=500&h=500&fit=crop",
+    "stock": 234,
+    "ratingCount": 8976,
+    "attributes": {
+      "color": "brown",
+      "brand": "Mamaearth",
+      "usage": ["hair care", "daily"],
+      "material": "natural"
+    },
+    "tags": ["hair oil", "beauty", "hair care", "onion", "natural", "bestseller"]
+  },
+  {
+    "id": 237,
+    "name": "Nivea Soft Light Moisturizer Cream 200ml",
+    "description": "Non-greasy moisturizing cream with vitamin E and jojoba oil, suitable for all skin types",
+    "price": 249,
+    "category": "Beauty",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1556228720-195a672e8a03?w=500&h=500&fit=crop",
+    "stock": 289,
+    "ratingCount": 7654,
+    "attributes": {
+      "color": "white",
+      "brand": "Nivea",
+      "usage": ["skincare", "daily"],
+      "material": "cream"
+    },
+    "tags": ["moisturizer", "cream", "beauty", "skincare", "nivea", "affordable"]
+  },
+  {
+    "id": 238,
+    "name": "Philips BT1210/15 Beard Trimmer",
+    "description": "Cordless beard trimmer with 6 length settings, 45 minutes runtime, skin-friendly blades",
+    "price": 1095,
+    "category": "Electronics",
+    "rating": 4.2,
+    "image": "https://images.unsplash.com/photo-1621607512214-68297480165e?w=500&h=500&fit=crop",
+    "stock": 92,
+    "ratingCount": 3421,
+    "attributes": {
+      "color": "black",
+      "brand": "Philips",
+      "usage": ["grooming", "daily"],
+      "material": "plastic-metal"
+    },
+    "tags": ["trimmer", "beard", "grooming", "electronics", "cordless", "philips"]
+  },
+  {
+    "id": 239,
+    "name": "Havells Instanio 10L Storage Water Heater",
+    "description": "10 liter geyser with 5 star rating, vitreous enamel coating, 2000W heating element",
+    "price": 6999,
+    "category": "Home & Kitchen",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1595514535116-8d1f3f1e39c0?w=500&h=500&fit=crop",
+    "stock": 34,
+    "ratingCount": 1876,
+    "attributes": {
+      "color": "white",
+      "brand": "Havells",
+      "usage": ["bathroom", "home"],
+      "material": "metal"
+    },
+    "tags": ["geyser", "water heater", "home", "bathroom", "appliance", "havells"]
+  },
+  {
+    "id": 240,
+    "name": "Orient Electric Stand-56 Pedestal Fan",
+    "description": "400mm sweep size, 3 speed settings, high air delivery, quiet operation, adjustable height",
+    "price": 3199,
+    "category": "Home & Kitchen",
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1558353686-b0ca10d0c550?w=500&h=500&fit=crop",
+    "stock": 47,
+    "ratingCount": 2341,
+    "attributes": {
+      "color": "white",
+      "brand": "Orient",
+      "usage": ["cooling", "home"],
+      "material": "plastic-metal"
+    },
+    "tags": ["fan", "pedestal", "cooling", "home", "appliance", "summer"]
+  },
+  {
+    "id": 241,
+    "name": "Croma Table Lamp LED Desk Light",
+    "description": "Adjustable LED study lamp with touch control, 3 color modes, USB charging port, eye-care",
+    "price": 999,
+    "category": "Home & Kitchen",
+    "rating": 4.1,
+    "image": "https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=500&h=500&fit=crop",
+    "stock": 118,
+    "ratingCount": 987,
+    "attributes": {
+      "color": "white",
+      "brand": "Croma",
+      "usage": ["study", "work"],
+      "material": "plastic-metal"
+    },
+    "tags": ["lamp", "led", "desk", "study", "home", "office", "light"]
+  },
+  {
+    "id": 242,
+    "name": "Safari Thorium Polycarbonate Cabin Luggage 55cm",
+    "description": "Hard sided cabin suitcase with 4 wheels, TSA lock, lightweight, scratch resistant",
+    "price": 3499,
+    "category": "Accessories",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1565026057447-bc90a3dceb87?w=500&h=500&fit=crop",
+    "stock": 56,
+    "ratingCount": 2134,
+    "attributes": {
+      "color": "blue",
+      "brand": "Safari",
+      "usage": ["travel", "luggage"],
+      "material": "polycarbonate"
+    },
+    "tags": ["luggage", "suitcase", "travel", "cabin", "trolley", "safari"]
+  },
+  {
+    "id": 243,
+    "name": "Titan Edge Slim Ceramic Watch",
+    "description": "Ultra-slim ceramic watch, scratch resistant, water resistant, sapphire crystal, premium",
+    "price": 14995,
+    "category": "Accessories",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1523170335258-f5ed11844a49?w=500&h=500&fit=crop",
+    "stock": 23,
+    "ratingCount": 543,
+    "attributes": {
+      "color": "black",
+      "brand": "Titan",
+      "usage": ["formal", "premium"],
+      "material": "ceramic"
+    },
+    "tags": ["watch", "premium", "ceramic", "accessories", "luxury", "titan", "formal"]
+  },
+  {
+    "id": 244,
+    "name": "Tommy Hilfiger Men's Leather Wallet",
+    "description": "Genuine leather bifold wallet with multiple card slots, coin pocket, signature logo",
+    "price": 2199,
+    "category": "Accessories",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1627123424574-724758594e93?w=500&h=500&fit=crop",
+    "stock": 89,
+    "ratingCount": 1432,
+    "attributes": {
+      "color": "brown",
+      "brand": "Tommy Hilfiger",
+      "usage": ["daily", "formal"],
+      "material": "leather"
+    },
+    "tags": ["wallet", "leather", "accessories", "mens", "premium", "fashion"]
+  },
+  {
+    "id": 245,
+    "name": "Decathlon Domyos Resistance Bands Set",
+    "description": "Set of 5 elastic resistance bands with different resistance levels, door anchor, handles",
+    "price": 699,
+    "category": "Sports",
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1598289431512-b97b0917affc?w=500&h=500&fit=crop",
+    "stock": 145,
+    "ratingCount": 2987,
+    "attributes": {
+      "color": "multicolor",
+      "brand": "Decathlon",
+      "usage": ["fitness", "workout"],
+      "material": "latex"
+    },
+    "tags": ["resistance bands", "fitness", "workout", "sports", "exercise", "home gym"]
+  },
+  {
+    "id": 246,
+    "name": "Yonex Mavis 350 Nylon Shuttlecock",
+    "description": "Pack of 6 nylon shuttles, medium speed, durable, suitable for recreational play",
+    "price": 899,
+    "category": "Sports",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?w=500&h=500&fit=crop",
+    "stock": 134,
+    "ratingCount": 1876,
+    "attributes": {
+      "color": "yellow",
+      "brand": "Yonex",
+      "usage": ["badminton", "sports"],
+      "material": "nylon"
+    },
+    "tags": ["shuttlecock", "badminton", "sports", "outdoor", "yonex", "durable"]
+  },
+  {
+    "id": 247,
+    "name": "Wilson NBA Team Basketball Size 7",
+    "description": "Official size basketball with pebbled surface, suitable for indoor/outdoor play, durable",
+    "price": 1499,
+    "category": "Sports",
+    "rating": 4.2,
+    "image": "https://images.unsplash.com/photo-1546519638-68e109498ffc?w=500&h=500&fit=crop",
+    "stock": 67,
+    "ratingCount": 987,
+    "attributes": {
+      "color": "orange",
+      "brand": "Wilson",
+      "usage": ["basketball", "sports"],
+      "material": "rubber"
+    },
+    "tags": ["basketball", "sports", "outdoor", "indoor", "wilson", "nba"]
+  },
+  {
+    "id": 248,
+    "name": "Godrej aer Spray Air Freshener 240ml",
+    "description": "Room freshener with cool surf blue fragrance, instant freshness, long-lasting",
+    "price": 199,
+    "category": "Home & Kitchen",
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1585421514738-01798e348b17?w=500&h=500&fit=crop",
+    "stock": 267,
+    "ratingCount": 5432,
+    "attributes": {
+      "color": "blue",
+      "brand": "Godrej",
+      "usage": ["home", "freshener"],
+      "material": "spray"
+    },
+    "tags": ["air freshener", "home", "fragrance", "spray", "room", "godrej"]
+  },
+  {
+    "id": 249,
+    "name": "Amazon Basics AA Alkaline Batteries Pack of 20",
+    "description": "Long-lasting alkaline batteries, 10-year shelf life, suitable for high-drain devices",
+    "price": 399,
+    "category": "Electronics",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1591290619762-c588f7e0c7a0?w=500&h=500&fit=crop",
+    "stock": 456,
+    "ratingCount": 8934,
+    "attributes": {
+      "color": "gold",
+      "brand": "Amazon Basics",
+      "usage": ["electronics", "power"],
+      "material": "alkaline"
+    },
+    "tags": ["batteries", "aa", "electronics", "power", "alkaline", "amazon basics"]
+  },
+  {
+    "id": 250,
+    "name": "iBall Musi Play A1 Bluetooth Speaker",
+    "description": "Wireless portable speaker with FM radio, USB, microSD, AUX support, rechargeable battery",
+    "price": 799,
+    "category": "Electronics",
+    "rating": 4.1,
+    "image": "https://images.unsplash.com/photo-1608043152269-423dbba4e7e1?w=500&h=500&fit=crop",
+    "stock": 98,
+    "ratingCount": 2341,
+    "attributes": {
+      "color": "black",
+      "brand": "iBall",
+      "usage": ["music", "portable"],
+      "material": "plastic"
+    },
+    "tags": ["bluetooth speaker", "wireless", "portable", "electronics", "music", "affordable"]
+  },
+  {
+    "id": 251,
+    "name": "Portronics Konnect L 1.2M Fast Charging Cable",
+    "description": "Type-C charging cable with 3A fast charging, braided nylon, durable aluminum connectors",
+    "price": 249,
+    "category": "Electronics",
+    "rating": 4.2,
+    "image": "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=500&h=500&fit=crop",
+    "stock": 345,
+    "ratingCount": 4567,
+    "attributes": {
+      "color": "black",
+      "brand": "Portronics",
+      "usage": ["charging", "cable"],
+      "material": "nylon-metal"
+    },
+    "tags": ["charging cable", "type-c", "fast charging", "electronics", "durable", "affordable"]
+  },
+  {
+    "id": 252,
+    "name": "Colgate MaxFresh Toothpaste 300g",
+    "description": "Anticavity toothpaste with cooling crystals, freshens breath, fights germs, peppermint flavor",
+    "price": 189,
+    "category": "Health",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1622266568689-74a8e8c63bea?w=500&h=500&fit=crop",
+    "stock": 456,
+    "ratingCount": 12341,
+    "attributes": {
+      "color": "blue",
+      "brand": "Colgate",
+      "usage": ["dental", "daily"],
+      "material": "toothpaste"
+    },
+    "tags": ["toothpaste", "dental", "health", "oral care", "colgate", "bestseller"]
+  },
+  {
+    "id": 253,
+    "name": "Dove Shampoo Hair Fall Rescue 650ml",
+    "description": "Nourishing shampoo with Nutrilock actives, reduces hair fall, strengthens hair from roots",
+    "price": 399,
+    "category": "Beauty",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1631730486572-226d1f595b68?w=500&h=500&fit=crop",
+    "stock": 234,
+    "ratingCount": 6789,
+    "attributes": {
+      "color": "pink",
+      "brand": "Dove",
+      "usage": ["hair care", "daily"],
+      "material": "liquid"
+    },
+    "tags": ["shampoo", "hair care", "beauty", "dove", "hair fall", "nourishing"]
+  },
+  {
+    "id": 254,
+    "name": "Garnier Skin Naturals Light Complete Facewash",
+    "description": "Vitamin C enriched facewash, removes dirt and impurities, brightens skin, oil-free",
+    "price": 149,
+    "category": "Beauty",
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1556228852-80c7ca61f4ca?w=500&h=500&fit=crop",
+    "stock": 289,
+    "ratingCount": 5432,
+    "attributes": {
+      "color": "white",
+      "brand": "Garnier",
+      "usage": ["skincare", "daily"],
+      "material": "gel"
+    },
+    "tags": ["facewash", "skincare", "beauty", "garnier", "vitamin c", "brightening"]
+  },
+  {
+    "id": 255,
+    "name": "Happilo Premium Almonds 500g",
+    "description": "California almonds, 100% natural, rich in protein and fiber, healthy snack",
+    "price": 599,
+    "category": "Health",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1508061253366-f7da158b6d46?w=500&h=500&fit=crop",
+    "stock": 178,
+    "ratingCount": 3421,
+    "attributes": {
+      "color": "brown",
+      "brand": "Happilo",
+      "usage": ["food", "snack"],
+      "material": "nuts"
+    },
+    "tags": ["almonds", "nuts", "health", "snack", "protein", "natural"]
+  },
+  {
+    "id": 256,
+    "name": "Paper Boat Aam Panna 1L Pack of 6",
+    "description": "Raw mango drink with authentic taste, no preservatives, made with real ingredients",
+    "price": 449,
+    "category": "Health",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1598662779094-21e2e098943c?w=500&h=500&fit=crop",
+    "stock": 234,
+    "ratingCount": 4567,
+    "attributes": {
+      "color": "yellow",
+      "brand": "Paper Boat",
+      "usage": ["drink", "beverage"],
+      "material": "liquid"
+    },
+    "tags": ["juice", "drink", "health", "mango", "beverage", "natural"]
+  },
+  {
+    "id": 257,
+    "name": "Staples Office Chair with Arms",
+    "description": "Ergonomic office chair with breathable mesh back, adjustable height, 360-degree swivel",
+    "price": 4999,
+    "category": "Office",
+    "rating": 4.2,
+    "image": "https://images.unsplash.com/photo-1580480055273-228ff5388ef8?w=500&h=500&fit=crop",
+    "stock": 28,
+    "ratingCount": 876,
+    "attributes": {
+      "color": "black",
+      "brand": "Staples",
+      "usage": ["office", "seating"],
+      "material": "mesh-plastic"
+    },
+    "tags": ["office chair", "furniture", "office", "ergonomic", "seating", "work"]
+  },
+  {
+    "id": 258,
+    "name": "Zebronics Zeb-Transformer Wired Keyboard & Mouse",
+    "description": "USB keyboard and mouse combo, spill-resistant design, plug and play, durable keys",
+    "price": 499,
+    "category": "Electronics",
+    "rating": 4.0,
+    "image": "https://images.unsplash.com/photo-1618384887929-16ec33fab9ef?w=500&h=500&fit=crop",
+    "stock": 156,
+    "ratingCount": 3421,
+    "attributes": {
+      "color": "black",
+      "brand": "Zebronics",
+      "usage": ["office", "computer"],
+      "material": "plastic"
+    },
+    "tags": ["keyboard", "mouse", "combo", "office", "electronics", "wired", "affordable"]
+  },
+  {
+    "id": 259,
+    "name": "Syska LED Bulb 9W B22 Pack of 4",
+    "description": "Energy efficient LED bulbs, cool daylight, long life 15000 hours, instant on",
+    "price": 399,
+    "category": "Home & Kitchen",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1550342085-88b8ff96ae6e?w=500&h=500&fit=crop",
+    "stock": 289,
+    "ratingCount": 5678,
+    "attributes": {
+      "color": "white",
+      "brand": "Syska",
+      "usage": ["lighting", "home"],
+      "material": "plastic-metal"
+    },
+    "tags": ["led bulb", "light", "home", "energy saving", "syska", "affordable"]
+  },
+  {
+    "id": 260,
+    "name": "Tupperware Plastic Container Set 4 Pieces",
+    "description": "Airtight food storage containers, BPA free, microwave safe, dishwasher safe, leak proof",
+    "price": 799,
+    "category": "Home & Kitchen",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1584308972272-9e4e7685e80f?w=500&h=500&fit=crop",
+    "stock": 167,
+    "ratingCount": 4321,
+    "attributes": {
+      "color": "clear",
+      "brand": "Tupperware",
+      "usage": ["storage", "kitchen"],
+      "material": "plastic"
+    },
+    "tags": ["container", "storage", "kitchen", "home", "tupperware", "food storage"]
+  },
+  {
+    "id": 261,
+    "name": "OnePlus Nord CE 3 Lite 5G",
+    "description": "8GB RAM, 128GB Storage, Snapdragon 695, 108MP camera, 5000mAh battery with 67W SUPERVOOC",
+    "price": 19999,
+    "category": "Electronics",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1598327105666-5b89351aff97?w=500&h=500&fit=crop",
+    "stock": 42,
+    "ratingCount": 3421,
+    "attributes": {
+      "color": "blue",
+      "brand": "OnePlus",
+      "usage": ["daily", "communication"],
+      "material": "glass-metal"
+    },
+    "tags": ["smartphone", "5g", "oneplus", "electronics", "camera", "fast charging"]
+  },
+  {
+    "id": 262,
+    "name": "JBL Flip 5 Bluetooth Speaker",
+    "description": "Portable waterproof speaker, 12 hours playtime, powerful bass, IPX7 rated, PartyBoost feature",
+    "price": 8999,
+    "category": "Electronics",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1545454675-3531b543be5d?w=500&h=500&fit=crop",
+    "stock": 58,
+    "ratingCount": 2341,
+    "attributes": {
+      "color": "black",
+      "brand": "JBL",
+      "usage": ["music", "outdoor"],
+      "material": "plastic-rubber"
+    },
+    "tags": ["bluetooth speaker", "jbl", "waterproof", "portable", "bass", "premium"]
+  },
+  {
+    "id": 263,
+    "name": "Sony WH-CH510 Wireless Headphones",
+    "description": "On-ear wireless headphones, 35 hours battery, quick charge, voice assistant, lightweight",
+    "price": 2490,
+    "category": "Electronics",
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=500&h=500&fit=crop",
+    "stock": 73,
+    "ratingCount": 4567,
+    "attributes": {
+      "color": "black",
+      "brand": "Sony",
+      "usage": ["music", "daily"],
+      "material": "plastic"
+    },
+    "tags": ["headphones", "wireless", "sony", "electronics", "lightweight", "bestseller"]
+  },
+  {
+    "id": 264,
+    "name": "Seagate Backup Plus Slim 2TB External HDD",
+    "description": "Portable external hard drive, USB 3.0, automatic backup, slim design, compatible with PC/Mac",
+    "price": 5999,
+    "category": "Electronics",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1531492746076-161ca9bcad58?w=500&h=500&fit=crop",
+    "stock": 67,
+    "ratingCount": 5432,
+    "attributes": {
+      "color": "black",
+      "brand": "Seagate",
+      "usage": ["storage", "backup"],
+      "material": "metal-plastic"
+    },
+    "tags": ["hard drive", "external hdd", "storage", "electronics", "backup", "2tb"]
+  },
+  {
+    "id": 265,
+    "name": "Canon EOS 1500D DSLR Camera Body",
+    "description": "24.1MP APS-C CMOS sensor, DIGIC 4+ processor, Full HD video, WiFi connectivity",
+    "price": 29999,
+    "category": "Electronics",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?w=500&h=500&fit=crop",
+    "stock": 23,
+    "ratingCount": 1876,
+    "attributes": {
+      "color": "black",
+      "brand": "Canon",
+      "usage": ["photography", "professional"],
+      "material": "plastic-metal"
+    },
+    "tags": ["dslr", "camera", "photography", "canon", "electronics", "professional"]
+  },
+  {
+    "id": 266,
+    "name": "Peter England Men's Formal Trousers",
+    "description": "Slim fit formal pants, wrinkle-resistant fabric, flat front design, side pockets",
+    "price": 1399,
+    "category": "Clothing",
+    "rating": 4.2,
+    "image": "https://images.unsplash.com/photo-1473966968600-fa801b869a1a?w=500&h=500&fit=crop",
+    "stock": 89,
+    "ratingCount": 2134,
+    "attributes": {
+      "color": "black",
+      "brand": "Peter England",
+      "usage": ["formal", "office"],
+      "material": "polyester-viscose"
+    },
+    "tags": ["trousers", "formal", "pants", "clothing", "mens", "office"]
+  },
+  {
+    "id": 267,
+    "name": "UCB United Colors of Benetton T-Shirt",
+    "description": "Regular fit casual t-shirt, 100% cotton, crew neck, short sleeves, printed design",
+    "price": 899,
+    "category": "Clothing",
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=500&h=500&fit=crop",
+    "stock": 134,
+    "ratingCount": 3456,
+    "attributes": {
+      "color": "white",
+      "brand": "UCB",
+      "usage": ["casual", "daily"],
+      "material": "cotton"
+    },
+    "tags": ["tshirt", "casual", "clothing", "mens", "cotton", "fashion"]
+  },
+  {
+    "id": 268,
+    "name": "Adidas Men's Trackpants",
+    "description": "Regular fit sports trackpants with tapered fit, side pockets, ankle zips, breathable fabric",
+    "price": 1799,
+    "category": "Clothing",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1517438476312-10d79c077509?w=500&h=500&fit=crop",
+    "stock": 98,
+    "ratingCount": 2987,
+    "attributes": {
+      "color": "black",
+      "brand": "Adidas",
+      "usage": ["sports", "casual"],
+      "material": "polyester"
+    },
+    "tags": ["trackpants", "sports", "adidas", "clothing", "mens", "athletic"]
+  },
+  {
+    "id": 269,
+    "name": "Zivame Women's Cotton Bra",
+    "description": "Non-wired padded bra, 100% cotton, breathable, comfortable all-day wear, machine washable",
+    "price": 599,
+    "category": "Clothing",
+    "rating": 4.2,
+    "image": "https://images.unsplash.com/photo-1556816723-1ce827b9cfbb?w=500&h=500&fit=crop",
+    "stock": 156,
+    "ratingCount": 4521,
+    "attributes": {
+      "color": "black",
+      "brand": "Zivame",
+      "usage": ["daily", "innerwear"],
+      "material": "cotton"
+    },
+    "tags": ["bra", "innerwear", "clothing", "womens", "cotton", "comfort"]
+  },
+  {
+    "id": 270,
+    "name": "Nike Revolution 6 Running Shoes",
+    "description": "Lightweight running shoes with cushioned foam, breathable mesh, durable rubber sole",
+    "price": 3995,
+    "category": "Sports",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&h=500&fit=crop",
+    "stock": 87,
+    "ratingCount": 3421,
+    "attributes": {
+      "color": "black",
+      "brand": "Nike",
+      "usage": ["running", "sports"],
+      "material": "synthetic"
+    },
+    "tags": ["running shoes", "nike", "sports", "fitness", "athletic", "bestseller"]
+  },
+  {
+    "id": 271,
+    "name": "Boldfit Gym Gloves for Weight Lifting",
+    "description": "Workout gloves with wrist support, breathable material, anti-slip palm, washable",
+    "price": 399,
+    "category": "Sports",
+    "rating": 4.2,
+    "image": "https://images.unsplash.com/photo-1599058917212-d750089bc07e?w=500&h=500&fit=crop",
+    "stock": 245,
+    "ratingCount": 5678,
+    "attributes": {
+      "color": "black",
+      "brand": "Boldfit",
+      "usage": ["gym", "fitness"],
+      "material": "synthetic-neoprene"
+    },
+    "tags": ["gym gloves", "workout", "fitness", "sports", "weight lifting", "affordable"]
+  },
+  {
+    "id": 272,
+    "name": "Nivia Storm Football Shoes",
+    "description": "Turf football shoes with rubber studs, synthetic upper, cushioned insole, lace-up closure",
+    "price": 1299,
+    "category": "Sports",
+    "rating": 4.1,
+    "image": "https://images.unsplash.com/photo-1511556532299-8f662fc26c06?w=500&h=500&fit=crop",
+    "stock": 76,
+    "ratingCount": 1432,
+    "attributes": {
+      "color": "orange",
+      "brand": "Nivia",
+      "usage": ["football", "sports"],
+      "material": "synthetic"
+    },
+    "tags": ["football shoes", "sports", "nivia", "turf", "soccer", "affordable"]
+  },
+  {
+    "id": 273,
+    "name": "Prestige Omega Deluxe Granite Kadai 240mm",
+    "description": "Non-stick kadai with granite finish, induction compatible, glass lid, easy to clean",
+    "price": 1299,
+    "category": "Home & Kitchen",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1556909172-54557c7e4fb7?w=500&h=500&fit=crop",
+    "stock": 92,
+    "ratingCount": 4321,
+    "attributes": {
+      "color": "black",
+      "brand": "Prestige",
+      "usage": ["cooking", "kitchen"],
+      "material": "aluminium"
+    },
+    "tags": ["kadai", "cookware", "nonstick", "kitchen", "home", "induction"]
+  },
+  {
+    "id": 274,
+    "name": "Philips Daily Collection HD2582 Pop Up Toaster",
+    "description": "2-slice pop-up toaster with 7 browning settings, auto shut-off, removable crumb tray",
+    "price": 1795,
+    "category": "Home & Kitchen",
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1602041170937-2ee7c7484993?w=500&h=500&fit=crop",
+    "stock": 58,
+    "ratingCount": 2341,
+    "attributes": {
+      "color": "white",
+      "brand": "Philips",
+      "usage": ["kitchen", "breakfast"],
+      "material": "plastic-metal"
+    },
+    "tags": ["toaster", "kitchen", "appliance", "home", "philips", "breakfast"]
+  },
+  {
+    "id": 275,
+    "name": "Cello Opalware Dinner Set 32 Pieces",
+    "description": "Microwave safe dinner set, break-resistant opalware, includes plates, bowls, serving dishes",
+    "price": 2499,
+    "category": "Home & Kitchen",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1578500494198-246f612d3b3d?w=500&h=500&fit=crop",
+    "stock": 43,
+    "ratingCount": 3456,
+    "attributes": {
+      "color": "white",
+      "brand": "Cello",
+      "usage": ["dining", "kitchen"],
+      "material": "opalware"
+    },
+    "tags": ["dinner set", "crockery", "kitchen", "home", "opalware", "dining"]
+  },
+  {
+    "id": 276,
+    "name": "Butterfly Smart Glass 2 Burner Gas Stove",
+    "description": "Toughened glass top, brass burners, auto ignition, ergonomic knobs, spill-proof design",
+    "price": 3299,
+    "category": "Home & Kitchen",
+    "rating": 4.2,
+    "image": "https://images.unsplash.com/photo-1585515320310-259814833e62?w=500&h=500&fit=crop",
+    "stock": 34,
+    "ratingCount": 2876,
+    "attributes": {
+      "color": "black",
+      "brand": "Butterfly",
+      "usage": ["cooking", "kitchen"],
+      "material": "glass-metal"
+    },
+    "tags": ["gas stove", "kitchen", "appliance", "home", "cooking", "2 burner"]
+  },
+  {
+    "id": 277,
+    "name": "Eureka Forbes Aquaguard Aura Water Purifier",
+    "description": "7L storage, RO+UV+MTDS purification, mineral guard technology, suitable for all water sources",
+    "price": 12999,
+    "category": "Home & Kitchen",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=500&h=500&fit=crop",
+    "stock": 28,
+    "ratingCount": 4567,
+    "attributes": {
+      "color": "white",
+      "brand": "Eureka Forbes",
+      "usage": ["water purification", "home"],
+      "material": "plastic"
+    },
+    "tags": ["water purifier", "ro", "home", "kitchen", "aquaguard", "health"]
+  },
+  {
+    "id": 278,
+    "name": "Classmate Pulse Spiral Notebook A4 Size",
+    "description": "Single subject notebook, 240 pages, microperforated sheets, hard cover, spiral binding",
+    "price": 149,
+    "category": "Office",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1517842536606-d6af7f9a2b50?w=500&h=500&fit=crop",
+    "stock": 345,
+    "ratingCount": 6789,
+    "attributes": {
+      "color": "blue",
+      "brand": "Classmate",
+      "usage": ["study", "office"],
+      "material": "paper"
+    },
+    "tags": ["notebook", "spiral", "stationery", "office", "study", "a4"]
+  },
+  {
+    "id": 279,
+    "name": "Parker Jotter Ballpoint Pen",
+    "description": "Premium ballpoint pen with stainless steel body, blue ink, refillable, gift boxed",
+    "price": 450,
+    "category": "Office",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1565022536102-b5b18c4a4d57?w=500&h=500&fit=crop",
+    "stock": 167,
+    "ratingCount": 1876,
+    "attributes": {
+      "color": "silver",
+      "brand": "Parker",
+      "usage": ["writing", "office"],
+      "material": "metal"
+    },
+    "tags": ["pen", "parker", "premium", "office", "stationery", "gift"]
+  },
+  {
+    "id": 280,
+    "name": "Scotch Magic Tape 2 Rolls",
+    "description": "Invisible matte finish tape, 19mm x 32m, photo-safe, writable surface, ideal for gift wrapping",
+    "price": 199,
+    "category": "Office",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1611532736579-6b16e2b50449?w=500&h=500&fit=crop",
+    "stock": 289,
+    "ratingCount": 4321,
+    "attributes": {
+      "color": "clear",
+      "brand": "Scotch",
+      "usage": ["office", "crafts"],
+      "material": "adhesive"
+    },
+    "tags": ["tape", "scotch", "office", "stationery", "magic tape", "adhesive"]
+  },
+  {
+    "id": 281,
+    "name": "Faber-Castell Grip 2001 Pencil Set",
+    "description": "Pack of 10 graphite pencils HB grade, triangular grip, break-resistant lead, eraser cap",
+    "price": 150,
+    "category": "Office",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1587850232168-e5cec87bd44f?w=500&h=500&fit=crop",
+    "stock": 456,
+    "ratingCount": 8765,
+    "attributes": {
+      "color": "green",
+      "brand": "Faber-Castell",
+      "usage": ["writing", "drawing"],
+      "material": "wood-graphite"
+    },
+    "tags": ["pencil", "stationery", "office", "study", "faber castell", "hb"]
+  },
+  {
+    "id": 282,
+    "name": "Fossil Gen 6 Smartwatch",
+    "description": "Wear OS smartwatch, 1.28 inch AMOLED display, heart rate monitor, GPS, water resistant",
+    "price": 21995,
+    "category": "Electronics",
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1617625802912-cdf12edaa601?w=500&h=500&fit=crop",
+    "stock": 18,
+    "ratingCount": 876,
+    "attributes": {
+      "color": "black",
+      "brand": "Fossil",
+      "usage": ["fitness", "daily"],
+      "material": "stainless steel"
+    },
+    "tags": ["smartwatch", "fossil", "wear os", "electronics", "fitness", "premium"]
+  },
+  {
+    "id": 283,
+    "name": "Sandisk Ultra 128GB USB 3.0 Pen Drive",
+    "description": "High-speed USB flash drive, 130MB/s read speed, backwards compatible, compact design",
+    "price": 899,
+    "category": "Electronics",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1588636142475-2c99c8d0c75c?w=500&h=500&fit=crop",
+    "stock": 234,
+    "ratingCount": 9876,
+    "attributes": {
+      "color": "black",
+      "brand": "Sandisk",
+      "usage": ["storage", "data transfer"],
+      "material": "plastic-metal"
+    },
+    "tags": ["pen drive", "usb", "flash drive", "electronics", "storage", "sandisk"]
+  },
+  {
+    "id": 284,
+    "name": "Titan Raga Analog Women's Watch",
+    "description": "Stainless steel case, leather strap, mineral crystal glass, water resistant to 30m",
+    "price": 5995,
+    "category": "Accessories",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1534008897995-27a23e1c1e8d?w=500&h=500&fit=crop",
+    "stock": 45,
+    "ratingCount": 1432,
+    "attributes": {
+      "color": "gold",
+      "brand": "Titan",
+      "usage": ["daily", "fashion"],
+      "material": "metal-leather"
+    },
+    "tags": ["watch", "womens", "titan", "accessories", "analog", "fashion"]
+  },
+  {
+    "id": 285,
+    "name": "Skybags Brat Black 46 Ltrs Backpack",
+    "description": "Spacious laptop backpack with rain cover, padded straps, multiple compartments, durable",
+    "price": 1049,
+    "category": "Accessories",
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1622260614153-03223fb72052?w=500&h=500&fit=crop",
+    "stock": 134,
+    "ratingCount": 5432,
+    "attributes": {
+      "color": "black",
+      "brand": "Skybags",
+      "usage": ["travel", "daily"],
+      "material": "polyester"
+    },
+    "tags": ["backpack", "bag", "skybags", "accessories", "laptop", "travel"]
+  },
+  {
+    "id": 286,
+    "name": "Levi's Men's Leather Belt",
+    "description": "Genuine leather belt with metal buckle, 35mm width, casual and formal wear, durable",
+    "price": 849,
+    "category": "Accessories",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1624222247344-550fb60583b8?w=500&h=500&fit=crop",
+    "stock": 156,
+    "ratingCount": 2987,
+    "attributes": {
+      "color": "brown",
+      "brand": "Levi's",
+      "usage": ["daily", "formal"],
+      "material": "leather"
+    },
+    "tags": ["belt", "leather", "accessories", "mens", "levis", "fashion"]
+  },
+  {
+    "id": 287,
+    "name": "Polaroid Polarized Aviator Sunglasses",
+    "description": "UV400 protection, polarized lenses, metal frame, scratch-resistant, includes case",
+    "price": 2999,
+    "category": "Accessories",
+    "rating": 4.2,
+    "image": "https://images.unsplash.com/photo-1577803645773-f96470509666?w=500&h=500&fit=crop",
+    "stock": 87,
+    "ratingCount": 1234,
+    "attributes": {
+      "color": "gold",
+      "brand": "Polaroid",
+      "usage": ["outdoor", "fashion"],
+      "material": "metal"
+    },
+    "tags": ["sunglasses", "polarized", "aviator", "accessories", "uv protection", "polaroid"]
+  },
+  {
+    "id": 288,
+    "name": "American Tourister Polyester 49 cms Duffle",
+    "description": "Spacious duffle bag with shoulder strap, multiple pockets, water-resistant, lightweight",
+    "price": 1399,
+    "category": "Accessories",
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1553062407-98eeb64c6a62?w=500&h=500&fit=crop",
+    "stock": 98,
+    "ratingCount": 3421,
+    "attributes": {
+      "color": "navy",
+      "brand": "American Tourister",
+      "usage": ["travel", "sports"],
+      "material": "polyester"
+    },
+    "tags": ["duffle bag", "travel", "bag", "accessories", "american tourister", "gym"]
+  },
+  {
+    "id": 289,
+    "name": "Boldfit Shaker Bottle 700ml",
+    "description": "Protein shaker with steel ball, leak-proof lid, BPA free, measurement markings, easy to clean",
+    "price": 299,
+    "category": "Sports",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1622484211550-d39ce87e1b37?w=500&h=500&fit=crop",
+    "stock": 289,
+    "ratingCount": 7654,
+    "attributes": {
+      "color": "black",
+      "brand": "Boldfit",
+      "usage": ["gym", "fitness"],
+      "material": "plastic"
+    },
+    "tags": ["shaker bottle", "protein", "gym", "sports", "fitness", "boldfit"]
+  },
+  {
+    "id": 290,
+    "name": "Vector X Vinyl Dumbbell Set 5kg",
+    "description": "Pair of vinyl coated dumbbells, ergonomic grip, home workout, fixed weight",
+    "price": 899,
+    "category": "Sports",
+    "rating": 4.2,
+    "image": "https://images.unsplash.com/photo-1517963879433-6ad2b056d712?w=500&h=500&fit=crop",
+    "stock": 76,
+    "ratingCount": 1876,
+    "attributes": {
+      "color": "black",
+      "brand": "Vector X",
+      "usage": ["gym", "fitness"],
+      "material": "vinyl-iron"
+    },
+    "tags": ["dumbbells", "weights", "gym", "sports", "fitness", "workout"]
+  },
+  {
+    "id": 291,
+    "name": "Strauss Skipping Rope with Counter",
+    "description": "Adjustable jump rope with digital counter, comfortable handles, ball bearings, fitness tool",
+    "price": 349,
+    "category": "Sports",
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1591940742638-192d19a34f9e?w=500&h=500&fit=crop",
+    "stock": 234,
+    "ratingCount": 4321,
+    "attributes": {
+      "color": "blue",
+      "brand": "Strauss",
+      "usage": ["cardio", "fitness"],
+      "material": "pvc-plastic"
+    },
+    "tags": ["skipping rope", "jump rope", "cardio", "sports", "fitness", "counter"]
+  },
+  {
+    "id": 292,
+    "name": "Dr. Trust Infrared Thermometer",
+    "description": "Non-contact forehead thermometer, 1-second reading, fever alarm, memory function",
+    "price": 699,
+    "category": "Health",
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1584515933487-779824d29309?w=500&h=500&fit=crop",
+    "stock": 123,
+    "ratingCount": 5678,
+    "attributes": {
+      "color": "white",
+      "brand": "Dr. Trust",
+      "usage": ["health", "medical"],
+      "material": "plastic"
+    },
+    "tags": ["thermometer", "infrared", "health", "medical", "fever", "contactless"]
+  },
+  {
+    "id": 293,
+    "name": "Horlicks Health Drink 1kg Jar",
+    "description": "Nutritional supplement with 23 vital nutrients, supports immunity and growth, malted flavor",
+    "price": 399,
+    "category": "Health",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1616671276441-2f2c277b8bf6?w=500&h=500&fit=crop",
+    "stock": 234,
+    "ratingCount": 8976,
+    "attributes": {
+      "color": "brown",
+      "brand": "Horlicks",
+      "usage": ["nutrition", "daily"],
+      "material": "powder"
+    },
+    "tags": ["horlicks", "health drink", "nutrition", "health", "supplement", "immunity"]
+  },
+  {
+    "id": 294,
+    "name": "Dettol Hand Wash Original 900ml",
+    "description": "Antibacterial handwash, kills 99.9% germs, gentle on skin, trusted protection, pump dispenser",
+    "price": 169,
+    "category": "Health",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1584736286279-4caae5f50ded?w=500&h=500&fit=crop",
+    "stock": 345,
+    "ratingCount": 12341,
+    "attributes": {
+      "color": "green",
+      "brand": "Dettol",
+      "usage": ["hygiene", "daily"],
+      "material": "liquid"
+    },
+    "tags": ["hand wash", "dettol", "hygiene", "health", "antibacterial", "bestseller"]
+  },
+  {
+    "id": 295,
+    "name": "Dabur Honey Squeezy 400g",
+    "description": "100% pure honey, no added sugar, rich in nutrients, easy squeeze bottle, natural sweetener",
+    "price": 249,
+    "category": "Health",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1587049352846-4a222e784670?w=500&h=500&fit=crop",
+    "stock": 289,
+    "ratingCount": 6789,
+    "attributes": {
+      "color": "amber",
+      "brand": "Dabur",
+      "usage": ["food", "health"],
+      "material": "honey"
+    },
+    "tags": ["honey", "dabur", "natural", "health", "sweetener", "pure"]
+  },
+  {
+    "id": 296,
+    "name": "Biotique Bio Coconut Whitening Cream 50g",
+    "description": "Ayurvedic skin lightening cream, coconut oil enriched, suitable for all skin types, SPF 30",
+    "price": 199,
+    "category": "Beauty",
+    "rating": 4.2,
+    "image": "https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=500&h=500&fit=crop",
+    "stock": 178,
+    "ratingCount": 4321,
+    "attributes": {
+      "color": "white",
+      "brand": "Biotique",
+      "usage": ["skincare", "daily"],
+      "material": "cream"
+    },
+    "tags": ["face cream", "whitening", "beauty", "skincare", "biotique", "ayurvedic"]
+  },
+  {
+    "id": 297,
+    "name": "Maybelline Fit Me Foundation",
+    "description": "Liquid foundation with SPF 18, lightweight coverage, non-comedogenic, matches skin tone",
+    "price": 499,
+    "category": "Beauty",
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1612198188060-c7c2a3b66eae?w=500&h=500&fit=crop",
+    "stock": 134,
+    "ratingCount": 5432,
+    "attributes": {
+      "color": "beige",
+      "brand": "Maybelline",
+      "usage": ["makeup", "daily"],
+      "material": "cosmetic"
+    },
+    "tags": ["foundation", "makeup", "beauty", "maybelline", "cosmetics", "spf"]
+  },
+  {
+    "id": 298,
+    "name": "L'Oreal Paris Total Repair 5 Shampoo 640ml",
+    "description": "Repairing shampoo for damaged hair, ceramide technology, restores 5 signs of damage",
+    "price": 549,
+    "category": "Beauty",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1613748971072-4e7b4cb75d7b?w=500&h=500&fit=crop",
+    "stock": 198,
+    "ratingCount": 7654,
+    "attributes": {
+      "color": "red",
+      "brand": "L'Oreal",
+      "usage": ["hair care", "daily"],
+      "material": "liquid"
+    },
+    "tags": ["shampoo", "hair care", "beauty", "loreal", "repair", "damaged hair"]
+  },
+  {
+    "id": 299,
+    "name": "Colorbar Perfect Match Compact Powder",
+    "description": "Long-lasting compact with SPF 20, oil-free formula, smooth finish, includes mirror and puff",
+    "price": 425,
+    "category": "Beauty",
+    "rating": 4.2,
+    "image": "https://images.unsplash.com/photo-1631214523709-4e4d4b8e8a19?w=500&h=500&fit=crop",
+    "stock": 167,
+    "ratingCount": 3421,
+    "attributes": {
+      "color": "beige",
+      "brand": "Colorbar",
+      "usage": ["makeup", "daily"],
+      "material": "powder"
+    },
+    "tags": ["compact", "powder", "makeup", "beauty", "colorbar", "spf"]
+  },
+  {
+    "id": 300,
+    "name": "The Body Shop Tea Tree Oil 10ml",
+    "description": "100% pure tea tree oil, natural antibacterial, treats acne and blemishes, community trade",
+    "price": 795,
+    "category": "Beauty",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1608248597279-f99d160bfcbc?w=500&h=500&fit=crop",
+    "stock": 89,
+    "ratingCount": 2876,
+    "attributes": {
+      "color": "clear",
+      "brand": "The Body Shop",
+      "usage": ["skincare", "treatment"],
+      "material": "oil"
+    },
+    "tags": ["tea tree oil", "essential oil", "beauty", "skincare", "acne", "natural"]
+  },
+  {
+    "id": 301,
+    "name": "MI Power Bank 3i 20000mAh",
+    "description": "High-capacity portable charger, 18W fast charging, dual USB output, LED indicators",
+    "price": 1999,
+    "category": "Electronics",
+    "rating": 4.4,
+    "image": "https://images.unsplash.com/photo-1609091839311-d5365f9ff1c5?w=500&h=500&fit=crop",
+    "stock": 98,
+    "ratingCount": 8765,
+    "attributes": {
+      "color": "black",
+      "brand": "MI",
+      "usage": ["charging", "travel"],
+      "material": "plastic"
+    },
+    "tags": ["power bank", "charger", "electronics", "mi", "portable", "fast charging"]
+  },
+  {
+    "id": 302,
+    "name": "TP-Link Archer C50 AC1200 Dual Band Router",
+    "description": "Wireless router with 4 antennas, 1200Mbps speed, parental controls, guest network",
+    "price": 1499,
+    "category": "Electronics",
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1606904825846-647eb07f5be2?w=500&h=500&fit=crop",
+    "stock": 67,
+    "ratingCount": 3421,
+    "attributes": {
+      "color": "white",
+      "brand": "TP-Link",
+      "usage": ["networking", "home"],
+      "material": "plastic"
+    },
+    "tags": ["router", "wifi", "networking", "electronics", "tp-link", "dual band"]
+  },
+  {
+    "id": 303,
+    "name": "Realme Buds 2 Wired Earphones",
+    "description": "In-ear wired earphones with 11.2mm driver, magnetic buds, inline remote with mic, 3.5mm jack",
+    "price": 599,
+    "category": "Electronics",
+    "rating": 4.2,
+    "image": "https://images.unsplash.com/photo-1484704849700-f032a568e944?w=500&h=500&fit=crop",
+    "stock": 234,
+    "ratingCount": 12341,
+    "attributes": {
+      "color": "black",
+      "brand": "Realme",
+      "usage": ["music", "calls"],
+      "material": "plastic"
+    },
+    "tags": ["earphones", "wired", "realme", "electronics", "music", "affordable"]
+  },
+  {
+    "id": 304,
+    "name": "Ant Esports MK1200 Mechanical Gaming Keyboard",
+    "description": "RGB backlit mechanical keyboard, blue switches, anti-ghosting, braided cable, gaming grade",
+    "price": 2499,
+    "category": "Electronics",
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1595225476474-87563907a212?w=500&h=500&fit=crop",
+    "stock": 54,
+    "ratingCount": 1876,
+    "attributes": {
+      "color": "black",
+      "brand": "Ant Esports",
+      "usage": ["gaming", "work"],
+      "material": "metal-plastic"
+    },
+    "tags": ["keyboard", "mechanical", "gaming", "rgb", "electronics", "ant esports"]
+  },
+  {
+    "id": 305,
+    "name": "VIP Alfa Polyester 67 cms Check-in Luggage",
+    "description": "Large soft-sided suitcase with 4 wheels, expandable, TSA lock, durable polyester",
+    "price": 2799,
+    "category": "Accessories",
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1587273118398-10555c5d8586?w=500&h=500&fit=crop",
+    "stock": 45,
+    "ratingCount": 2341,
+    "attributes": {
+      "color": "blue",
+      "brand": "VIP",
+      "usage": ["travel", "luggage"],
+      "material": "polyester"
+    },
+    "tags": ["luggage", "suitcase", "travel", "vip", "check-in", "trolley"]
+  },
+  {
+    "id": 306,
+    "name": "Noise ColorFit Pro 4 Smart Watch",
+    "description": "1.72 inch display, Bluetooth calling, 100+ sports modes, SpO2, heart rate monitor",
+    "price": 2999,
+    "category": "Electronics",
+    "rating": 4.1,
+    "image": "https://images.unsplash.com/photo-1617625802912-cdf12edaa601?w=500&h=500&fit=crop",
+    "stock": 112,
+    "ratingCount": 6789,
+    "attributes": {
+      "color": "black",
+      "brand": "Noise",
+      "usage": ["fitness", "daily"],
+      "material": "silicone"
+    },
+    "tags": ["smartwatch", "fitness", "noise", "electronics", "bluetooth calling", "affordable"]
+  },
+  {
+    "id": 307,
+    "name": "Colgate 360 Charcoal Gold Toothbrush Pack of 3",
+    "description": "Soft bristles with charcoal infused, tongue cleaner, ergonomic handle, cleans teeth and gums",
+    "price": 189,
+    "category": "Health",
+    "rating": 4.5,
+    "image": "https://images.unsplash.com/photo-1607613009820-a29f7bb81c04?w=500&h=500&fit=crop",
+    "stock": 456,
+    "ratingCount": 8976,
+    "attributes": {
+      "color": "black",
+      "brand": "Colgate",
+      "usage": ["dental", "daily"],
+      "material": "plastic-nylon"
+    },
+    "tags": ["toothbrush", "dental", "health", "colgate", "charcoal", "oral care"]
+  },
+  {
+    "id": 308,
+    "name": "Hawkins Contura Hard Anodised Pressure Cooker 5L",
+    "description": "Inner lid pressure cooker, stay-cool handles, induction compatible, 5 liter capacity",
+    "price": 2850,
+    "category": "Home & Kitchen",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1585515320310-259814833e62?w=500&h=500&fit=crop",
+    "stock": 67,
+    "ratingCount": 5432,
+    "attributes": {
+      "color": "black",
+      "brand": "Hawkins",
+      "usage": ["cooking", "kitchen"],
+      "material": "aluminium"
+    },
+    "tags": ["pressure cooker", "hawkins", "kitchen", "home", "cooking", "induction"]
+  },
+  {
+    "id": 309,
+    "name": "Usha Air King 400mm Exhaust Fan",
+    "description": "High-speed exhaust fan for kitchen and bathroom, rust-proof body, low noise, energy efficient",
+    "price": 1299,
+    "category": "Home & Kitchen",
+    "rating": 4.2,
+    "image": "https://images.unsplash.com/photo-1616484585584-9f5b0fa61e49?w=500&h=500&fit=crop",
+    "stock": 78,
+    "ratingCount": 2987,
+    "attributes": {
+      "color": "white",
+      "brand": "Usha",
+      "usage": ["ventilation", "home"],
+      "material": "plastic-metal"
+    },
+    "tags": ["exhaust fan", "kitchen", "bathroom", "home", "usha", "ventilation"]
+  },
+  {
+    "id": 310,
+    "name": "Pigeon by Stovekraft Egnite Plus Glass Top Gas Stove",
+    "description": "3 burner gas stove with toughened glass top, brass burners, manual ignition, spill-proof",
+    "price": 4599,
+    "category": "Home & Kitchen",
+    "rating": 4.3,
+    "image": "https://images.unsplash.com/photo-1571175351734-8c7e32c36b1e?w=500&h=500&fit=crop",
+    "stock": 32,
+    "ratingCount": 3421,
+    "attributes": {
+      "color": "black",
+      "brand": "Pigeon",
+      "usage": ["cooking", "kitchen"],
+      "material": "glass-metal"
+    },
+    "tags": ["gas stove", "kitchen", "pigeon", "home", "3 burner", "glass top"]
   }
 ]
