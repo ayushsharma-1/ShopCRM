@@ -1,6 +1,6 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useRouter } from 'next/navigation';
 import { FaPlus, FaEdit, FaTrash, FaCheck, FaMapMarkerAlt } from 'react-icons/fa';
@@ -11,7 +11,7 @@ import Modal from '@/components/common/Modal';
 export default function AddressesPage() {
   const dispatch = useDispatch();
   const router = useRouter();
-  const { user } = useSelector((state) => state.auth);
+  const { isAuthenticated, user } = useSelector((state) => state.auth);
   const { addresses } = useSelector((state) => state.addresses);
   const [showModal, setShowModal] = useState(false);
   const [editingAddress, setEditingAddress] = useState(null);
@@ -26,11 +26,27 @@ export default function AddressesPage() {
     country: '',
   });
   const [errors, setErrors] = useState({});
+  const [isMounted, setIsMounted] = useState(false);
 
-  // Redirect if not authenticated
-  if (!user) {
-    router.push('/login');
-    return null;
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isMounted) return;
+    
+    if (!isAuthenticated) {
+      toast.warning('Please login to continue');
+      router.push('/login');
+    }
+  }, [isAuthenticated, isMounted, router]);
+
+  if (!isMounted || !isAuthenticated) {
+    return (
+      <div className="min-h-screen bg-neutral-50 flex items-center justify-center">
+        <div className="text-neutral-500">Loading...</div>
+      </div>
+    );
   }
 
   const handleChange = (e) => {

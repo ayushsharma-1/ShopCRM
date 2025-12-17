@@ -23,6 +23,8 @@ export default function ProductDetailPage() {
   const params = useParams();
   const router = useRouter();
   const dispatch = useDispatch();
+  const { isAuthenticated, user } = useSelector((state) => state.auth);
+  const { addresses } = useSelector((state) => state.addresses);
   const [product, setProduct] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
   const [similarProducts, setSimilarProducts] = useState([]);
@@ -41,7 +43,6 @@ export default function ProductDetailPage() {
   const [actionMode, setActionMode] = useState('notify');
   const [selectedAddressId, setSelectedAddressId] = useState(null);
   const [userConsent, setUserConsent] = useState(false);
-  const { addresses } = useSelector((state) => state.addresses);
 
   useEffect(() => {
     setTimeout(() => {
@@ -368,6 +369,18 @@ export default function ProductDetailPage() {
       {/* Price Alert Modal */}
       <Modal isOpen={priceAlertOpen} onClose={() => setPriceAlertOpen(false)} title="Set Price Alert">
         <div className="space-y-5">
+          {!isAuthenticated && (
+            <div className="p-4 bg-amber-50 border border-amber-200 rounded-xl text-sm text-amber-800">
+              <strong>Login required to enable smart alerts</strong>
+              <button 
+                onClick={() => router.push('/login')} 
+                className="ml-2 underline font-medium hover:text-amber-900"
+              >
+                Sign in now
+              </button>
+            </div>
+          )}
+          
           <p className="text-sm text-neutral-600">
             Get notified when <strong>{product.name}</strong> drops below your target price.
           </p>
@@ -440,18 +453,25 @@ export default function ProductDetailPage() {
                 </div>
               </label>
 
-              <label className="flex items-center gap-3 p-3 border border-neutral-200 rounded-xl cursor-pointer hover:bg-neutral-50 transition-colors">
+              <label className={`flex items-center gap-3 p-3 border border-neutral-200 rounded-xl transition-colors ${
+                !isAuthenticated || addresses.length === 0 
+                  ? 'opacity-50 cursor-not-allowed' 
+                  : 'cursor-pointer hover:bg-neutral-50'
+              }`}>
                 <input
                   type="radio"
                   name="actionMode"
                   value="auto_order"
                   checked={actionMode === 'auto_order'}
                   onChange={(e) => setActionMode(e.target.value)}
+                  disabled={!isAuthenticated || addresses.length === 0}
                   className="w-4 h-4"
                 />
                 <div>
                   <div className="font-medium text-neutral-900 text-sm">Auto Order</div>
-                  <div className="text-xs text-neutral-600">Place order automatically</div>
+                  <div className="text-xs text-neutral-600">
+                    {!isAuthenticated ? 'Login required' : addresses.length === 0 ? 'Saved address required' : 'Place order automatically'}
+                  </div>
                 </div>
               </label>
             </div>
@@ -513,7 +533,8 @@ export default function ProductDetailPage() {
             </button>
             <button
               onClick={handleSavePriceAlert}
-              className="flex-1 px-4 py-2.5 bg-neutral-900 text-white rounded-xl hover:bg-neutral-800 transition-all duration-150 text-sm font-medium active:scale-95"
+              disabled={!isAuthenticated}
+              className="flex-1 px-4 py-2.5 bg-neutral-900 text-white rounded-xl hover:bg-neutral-800 transition-all duration-150 text-sm font-medium active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-neutral-900"
             >
               Save Alert
             </button>
@@ -524,6 +545,18 @@ export default function ProductDetailPage() {
       {/* Auto-Restock Modal */}
       <Modal isOpen={restockAlertOpen} onClose={() => setRestockAlertOpen(false)} title="Auto-Restock">
         <div className="space-y-5">
+          {!isAuthenticated && (
+            <div className="p-4 bg-amber-50 border border-amber-200 rounded-xl text-sm text-amber-800">
+              <strong>Login required to enable smart alerts</strong>
+              <button 
+                onClick={() => router.push('/login')} 
+                className="ml-2 underline font-medium hover:text-amber-900"
+              >
+                Sign in now
+              </button>
+            </div>
+          )}
+          
           <p className="text-sm text-neutral-600">
             Automatically add <strong>{product.name}</strong> to your cart when it's out of stock.
           </p>
@@ -591,18 +624,25 @@ export default function ProductDetailPage() {
                 </div>
               </label>
 
-              <label className="flex items-center gap-3 p-3 border border-neutral-200 rounded-xl cursor-pointer hover:bg-neutral-50 transition-colors">
+              <label className={`flex items-center gap-3 p-3 border border-neutral-200 rounded-xl transition-colors ${
+                !isAuthenticated || addresses.length === 0 
+                  ? 'opacity-50 cursor-not-allowed' 
+                  : 'cursor-pointer hover:bg-neutral-50'
+              }`}>
                 <input
                   type="radio"
                   name="actionModeRestock"
                   value="auto_order"
                   checked={actionMode === 'auto_order'}
                   onChange={(e) => setActionMode(e.target.value)}
+                  disabled={!isAuthenticated || addresses.length === 0}
                   className="w-4 h-4"
                 />
                 <div>
                   <div className="font-medium text-neutral-900 text-sm">Auto Order</div>
-                  <div className="text-xs text-neutral-600">Place order automatically</div>
+                  <div className="text-xs text-neutral-600">
+                    {!isAuthenticated ? 'Login required' : addresses.length === 0 ? 'Saved address required' : 'Place order automatically'}
+                  </div>
                 </div>
               </label>
             </div>
@@ -664,7 +704,8 @@ export default function ProductDetailPage() {
             </button>
             <button
               onClick={handleSaveRestockAlert}
-              className="flex-1 px-4 py-2.5 bg-neutral-900 text-white rounded-xl hover:bg-neutral-800 transition-all duration-150 text-sm font-medium active:scale-95"
+              disabled={!isAuthenticated}
+              className="flex-1 px-4 py-2.5 bg-neutral-900 text-white rounded-xl hover:bg-neutral-800 transition-all duration-150 text-sm font-medium active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-neutral-900"
             >
               Enable Auto-Restock
             </button>

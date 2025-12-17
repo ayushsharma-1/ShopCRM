@@ -1,9 +1,9 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { useRouter } from 'next/navigation';
-import { FaBell, FaSync, FaClock, FaTrash, FaToggleOn, FaToggleOff, FaCog } from 'react-icons/fa';
+import { FaBell, FaSync, FaClock, FaTrash, FaToggleOn, FaToggleOff, FaCog, FaMapMarkerAlt } from 'react-icons/fa';
 import { removeRule, toggleRule, updateRule } from '@/lib/redux/slices/agentsSlice';
 import { toast } from 'react-toastify';
 import Modal from '@/components/common/Modal';
@@ -13,18 +13,34 @@ import dealsData from '@/data/deals.json';
 export default function AgentDashboardPage() {
   const dispatch = useDispatch();
   const router = useRouter();
-  const { user } = useSelector((state) => state.auth);
+  const { isAuthenticated, user } = useSelector((state) => state.auth);
   const { rules } = useSelector((state) => state.agents);
   const { addresses } = useSelector((state) => state.addresses);
   const [editingRule, setEditingRule] = useState(null);
   const [actionMode, setActionMode] = useState('notify');
   const [selectedAddressId, setSelectedAddressId] = useState(null);
   const [userConsent, setUserConsent] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
-  // Redirect if not authenticated
-  if (!user) {
-    router.push('/login');
-    return null;
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isMounted) return;
+    
+    if (!isAuthenticated) {
+      toast.warning('Please login to continue');
+      router.push('/login');
+    }
+  }, [isAuthenticated, isMounted, router]);
+
+  if (!isMounted || !isAuthenticated) {
+    return (
+      <div className="min-h-screen bg-neutral-50 flex items-center justify-center">
+        <div className="text-neutral-500">Loading...</div>
+      </div>
+    );
   }
 
   const allProducts = [...productsData, ...dealsData];
@@ -196,7 +212,7 @@ export default function AgentDashboardPage() {
                       </div>
 
                       {/* Action Mode & Last Triggered */}
-                      <div className="flex items-center gap-6 text-sm text-neutral-600 mb-4">
+                      <div className="flex items-center gap-6 text-sm text-neutral-600 mb-2">
                         <div className="flex items-center gap-2">
                           <FaCog className="text-xs" />
                           <span>{getActionModeLabel(rule.actionMode || 'notify')}</span>
@@ -206,6 +222,19 @@ export default function AgentDashboardPage() {
                           <span>{getLastTriggeredText(rule.id)}</span>
                         </div>
                       </div>
+
+                      {/* Address Info (for auto_order) */}
+                      {rule.actionMode === 'auto_order' && rule.addressId && (
+                        <div className="text-xs text-neutral-500 mb-4 flex items-center gap-2">
+                          <FaMapMarkerAlt className="text-neutral-400" />
+                          <span>
+                            {(() => {
+                              const addr = addresses.find(a => a.id === rule.addressId);
+                              return addr ? `${addr.city}, ${addr.state} ${addr.zipCode}` : 'Address not found';
+                            })()}
+                          </span>
+                        </div>
+                      )}
 
                       {/* Actions */}
                       <div className="flex items-center gap-2">

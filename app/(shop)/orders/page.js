@@ -12,16 +12,23 @@ export default function OrdersPage() {
   const { isAuthenticated, user } = useSelector((state) => state.auth);
   const [orders, setOrders] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isMounted) return;
+    
     if (!isAuthenticated) {
-      toast.warning('Please login to view orders');
+      toast.warning('Please login to continue');
       router.push('/login');
       return;
     }
 
     fetchOrders();
-  }, [isAuthenticated, user]);
+  }, [isAuthenticated, user, isMounted]);
 
   const fetchOrders = async () => {
     if (!user?.email) return;
@@ -44,8 +51,12 @@ export default function OrdersPage() {
     }
   };
 
-  if (!isAuthenticated) {
-    return null;
+  if (!isMounted || !isAuthenticated) {
+    return (
+      <div className="min-h-screen bg-neutral-50 flex items-center justify-center">
+        <div className="text-neutral-500">Loading...</div>
+      </div>
+    );
   }
 
   return (
