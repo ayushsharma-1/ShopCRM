@@ -3,18 +3,17 @@
 import { useEffect, useState, Suspense } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useSearchParams } from 'next/navigation';
-import { setProducts, applyFilters, setFilters } from '@/lib/redux/slices/productsSlice';
+import { fetchProducts, applyFilters, setFilters } from '@/lib/redux/slices/productsSlice';
 import ProductsHeader from '@/components/products/ProductsHeader';
 import ProductFilters from '@/components/products/ProductFilters';
 import ProductGrid from '@/components/products/ProductGrid';
 import LoadMoreButton from '@/components/products/LoadMoreButton';
-import productsData from '@/data/products.json';
 import { motion, AnimatePresence } from 'framer-motion';
 
 function ProductsContent() {
   const dispatch = useDispatch();
   const searchParams = useSearchParams();
-  const { filteredProducts, currentPage, itemsPerPage } = useSelector((state) => state.products);
+  const { filteredProducts, currentPage, itemsPerPage, isLoading: productsLoading, dataSource } = useSelector((state) => state.products);
   const [isLoading, setIsLoading] = useState(true);
   const [displayedProducts, setDisplayedProducts] = useState([]);
   const [showFilters, setShowFilters] = useState(false);
@@ -27,9 +26,9 @@ function ProductsContent() {
     const maxPrice = searchParams.get('maxPrice');
     const onSale = searchParams.get('onSale');
 
-    // Simulate loading
-    const loadTimer = setTimeout(() => {
-      dispatch(setProducts(productsData));
+    // Fetch products from API (MongoDB with JSON fallback)
+    const loadTimer = setTimeout(async () => {
+      await dispatch(fetchProducts('products'));
       
       // Apply filters from URL parameters
       if (category || minPrice || maxPrice || onSale) {
@@ -43,7 +42,7 @@ function ProductsContent() {
       
       dispatch(applyFilters());
       setIsLoading(false);
-    }, 600);
+    }, 400);
 
     return () => clearTimeout(loadTimer);
   }, [dispatch, searchParams]);

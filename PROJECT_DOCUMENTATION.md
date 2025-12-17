@@ -12,6 +12,11 @@ E-commerce platform built with Next.js 16 featuring AI-powered product search an
 - **React 19.2.1** - UI library
 - **Tailwind CSS 4** - Styling
 
+### Database
+- **MongoDB Atlas** - Cloud database (source of truth)
+- **MongoDB Node.js Driver** - Native database driver
+- **JSON Files** - Seed sources + fallback data
+
 ### State Management
 - **Redux Toolkit 2.0.1** - Global state management
 - **React Redux 9.2.0** - React bindings for Redux
@@ -31,6 +36,14 @@ E-commerce platform built with Next.js 16 featuring AI-powered product search an
 ```
 Shop-CRM/
 ├── app/                          # Next.js App Router
+│   ├── (admin)/                  # Admin panel routes (role-based)
+│   │   └── admin/
+│   │       ├── layout.js        # Admin sidebar layout
+│   │       ├── page.js          # Admin dashboard
+│   │       └── products/
+│   │           ├── page.js      # Products list with offers
+│   │           ├── new/         # Create product
+│   │           └── [id]/        # Edit product
 │   ├── (auth)/                   # Authentication routes
 │   │   ├── login/
 │   │   └── register/
@@ -44,11 +57,21 @@ Shop-CRM/
 │   │   └── products/            # Product pages
 │   │       ├── [id]/            # Product details
 │   │       └── page.js          # Products listing
+│   ├── api/
+│   │   ├── admin/
+│   │   │   └── products/        # Admin CRUD API
+│   │   │       └── route.js     # GET/POST/PUT/DELETE with role verification
+│   │   ├── auth/                # Auth API routes
+│   │   ├── cart/                # Cart API
+│   │   └── products/            # Public products API
 │   ├── globals.css              # Global styles
 │   ├── layout.js                # Root layout
 │   └── page.js                  # Homepage
 │
 ├── components/                   # React components
+│   ├── admin/                   # Admin panel components
+│   │   ├── OfferModal.js        # Single product discount modal
+│   │   └── BulkOfferModal.js    # Bulk product discount modal
 │   ├── agents/                  # Agent automation components
 │   │   ├── AgentModal.js        # Actionable events display
 │   │   └── AgentRunner.js       # Periodic rule evaluation
@@ -104,14 +127,16 @@ Shop-CRM/
 │   │   └── productAssistant.js # Shopping assistant AI
 │   ├── redux/                  # Redux store
 │   │   ├── slices/
-│   │   │   ├── addressSlice.js  # Saved addresses state
-│   │   │   ├── agentsSlice.js   # Agent rules state
-│   │   │   ├── authSlice.js     # Authentication state
-│   │   │   ├── cartSlice.js     # Shopping cart state
-│   │   │   ├── checkoutSlice.js # Checkout state
-│   │   │   └── productsSlice.js # Products + filters state
+│   │   │   ├── addressSlice.js      # Saved addresses state
+│   │   │   ├── adminProductsSlice.js # Admin products state (includes inactive)
+│   │   │   ├── agentsSlice.js       # Agent rules state
+│   │   │   ├── authSlice.js         # Authentication state
+│   │   │   ├── cartSlice.js         # Shopping cart state
+│   │   │   ├── checkoutSlice.js     # Checkout state
+│   │   │   └── productsSlice.js     # Products + filters state
 │   │   ├── middleware/
-│   │   │   └── localStorageMiddleware.js # Persist cart, auth, agents, addresses
+│   │   │   ├── localStorageMiddleware.js # Persist cart, auth to localStorage
+│   │   │   └── cartSyncMiddleware.js     # Auto-sync cart to MongoDB
 │   │   └── store.js            # Redux store config
 │   └── utils/                  # Helper functions
 │       ├── cartUtils.js
@@ -159,20 +184,31 @@ Shop-CRM/
   - Action buttons for navigation
 
 ### 3. **Authentication System**
-- **Location**: `lib/redux/slices/authSlice.js`, `components/auth/`
+- **Location**: `lib/redux/slices/authSlice.js`, `components/auth/`, `/api/auth/*`
 - **Features**:
-  - Login/Register forms
-  - Redux-based state
+  - MongoDB-backed user authentication
+  - Login/Register via API routes
+  - User data persisted in MongoDB `users` collection
+  - Cart auto-loads on login
   - Protected routes via middleware
-  - Demo credentials: `demo@example.com` / `demo123`
+- **Demo Users** (seeded in MongoDB):
+  - `admin@shop.com` / `admin123` - adminCRM (role: 'admin')
+  - `dev@shop.com` / `dev123` - devCRM (role: 'user')
+  - `test@shop.com` / `test123` - testCRM (role: 'user')
 
 ### 4. **Shopping Cart**
-- **Location**: `lib/redux/slices/cartSlice.js`, `components/cart/`
+- **Location**: `lib/redux/slices/cartSlice.js`, `components/cart/`, `/api/cart`
 - **Features**:
+  - **MongoDB-backed for logged-in users** (persists across devices)
+  - **localStorage for guest users** (temporary)
+  - Auto-sync middleware (500ms debounce)
+  - Loads from MongoDB on login
   - Add/remove/update quantities
-  - Persistent state (Redux)
   - Real-time total calculation
   - Empty cart detection
+- **Storage**: 
+  - Authenticated: MongoDB `carts` collection (user-specific)
+  - Guest: Redux + localStorage only
 
 ### 5. **Product Catalog**
 - **Data**: 210 products + 24 deals
@@ -252,38 +288,85 @@ Shop-CRM/
 - **Fields**: Full name, email, phone, street, city, state, ZIP, country
 - **Storage**: Redux + localStorage persistence
 
-### 11. **UI/UX Enhancements**
+### 11. **Admin Panel (Product Management)**
+- **Location**: `app/(admin)/admin/`, `components/admin/`, `/api/admin/products`
+- **Access Control**:
+  - Role-based authentication (`user.role === 'admin'`)
+  - Client-side guard in layout
+  - API-level verification via `x-user-id` header
+  - Only `admin@shop.com` has admin access
+- **Features**:
+  - **Dashboard**: Overview stats (total, active, out of stock, deals)
+  - **Product List**: Table view with search, filters, pagination (20/page)
+  - **CRUD Operations**: Create, edit, deactivate products
+  - **Bulk Selection**: Multi-select with checkboxes
+  - **Offer Management**:
+    - Single product discounts via tag icon
+    - Bulk discounts for selected products
+    - Real-time price preview
+    - Deal settings (isDeal, dealExpiry)
+  - **Product Fields**: ID, name, description, price, discount, category, stock, images, specifications, isActive
+- **Design**: Minimal grayscale (neutral-50 to neutral-900), sidebar navigation, no gradients
+- **API**: `/api/admin/products` (GET/POST/PUT/DELETE) with role verification
+- **Redux**: `adminProductsSlice` - separate from storefront products, includes inactive items
+
+### 12. **UI/UX Enhancements**
 - **Animations**: Framer Motion for smooth transitions
 - **Toasts**: React Toastify for notifications
 - **Scroll to Top**: Auto-scroll on route change
 - **Responsive**: Mobile-first design
 - **Loading States**: Spinners and skeletons
 - **Error Handling**: User-friendly messages
-- **Dropdown Menu**: User menu with agent/address links
+- **Dropdown Menu**: User menu with agent/address/admin links
 - **Modal System**: Reusable modals for forms and confirmations
+- **Admin Sidebar**: Fixed sidebar with navigation, user info footer
+- **Offer Modals**: OfferModal (single), BulkOfferModal (multiple)
 
 ---
 
 ## Key Modules
 
-### AI Configuration
-```javascript
-// .env.local
-NEXT_PUBLIC_GROQ_API_KEY=your_groq_api_key_here
-```
+### Database Configuration
+**MongoDB Atlas** - Primary data source
+- Connection: Cached, pooled (2-10 connections)
+- Collections: users, products, deals, reviews, addresses, agents, orders
+- Seeding: Automatic on first boot from JSON files
+- Fallback: JSON files used if MongoDB unavailable
 
-### Redux Slices
-- **authSlice**: User authentication, token management
-- **cartSlice**: Cart items, quantities, totals
+**Collections:**
+- `users` - Authentication with role field ('admin' | 'user'), 3 demo users seeded
+- `products` - 210 items with indexed fields (seeded from JSON), editable via admin panel
+- `deals` - 24 deals with expiration dates (seeded from JSON)
+- `reviews` - 163 product reviews (seeded from JSON)
+- `addresses` - User delivery addresses (user-specific)
+- `agents` - Agent automation rules (user-specific)
+- `orders` - Order history including auto-orders (user-specific)
+- `carts` - Shopping carts (user-specific, auto-synced)
+
+### API Routes
+- `/api/auth/login` - User authentication (MongoDB, returns role field)
+- `/api/auth/register` - User registration (MongoDB)
+- `/api/products?type=products|deals` - Products/deals (MongoDB → JSON fallback)
+- `/api/reviews?productId=X` - Product reviews (MongoDB → JSON fallback)
+- `/api/cart` - GET/POST/DELETE cart (MongoDB, user-specific)
+- `/api/addresses` - GET/POST/PUT/DELETE addresses (MongoDB, user-specific)
+- `/api/agents` - GET/POST/PUT/DELETE agent rules (MongoDB, user-specific)
+- `/api/orders` - GET/POST/PUT orders (MongoDB, user-specific)
+- `/api/admin/products` - Admin CRUD (GET/POST/PUT/DELETE with role verification, admin-only)
+
+### Redux Slices with role field, MongoDB user IDs, login/logout, role migration for existing users
+- **cartSlice**: Cart items, quantities, totals, MongoDB sync thunks (loadCartFromDB, saveCartToDB)
 - **checkoutSlice**: Multi-step checkout state
-- **productsSlice**: Products, filters, AI filters, sorting, pagination
-- **agentsSlice**: Agent rules, trigger timestamps, active states
-- **addressSlice**: Saved addresses, default address management
+- **productsSlice**: Products from MongoDB/JSON, filters, AI filters, sorting, fetchProducts thunk
+- **adminProductsSlice**: Admin product management (fetchAllProducts, createProduct, updateProduct, deleteProduct), includes inactive products, separate from storefront
+- **productsSlice**: Products from MongoDB/JSON, filters, AI filters, sorting, fetchProducts thunk
+- **agentsSlice**: Agent rules (localStorage → needs MongoDB migration)
+- **addressSlice**: Saved addresses (localStorage → needs MongoDB migration)
 
-### Data Files
-- **products.json**: 210 products with prices ₹10-₹10,000
-- **deals.json**: 24 deals with string IDs and deal metadata
-- **reviews.json**: Product reviews with ratings
+### Data Files (Seed Sources)
+- **products.json**: 210 products - seeds MongoDB on first boot
+- **deals.json**: 24 deals - seeds MongoDB on first boot
+- **reviews.json**: Product reviews - seeds MongoDB on first boot
 
 ### AI Implementation
 - **Model**: llama-3.3-70b-versatile (Groq)
@@ -308,6 +391,12 @@ NEXT_PUBLIC_GROQ_API_KEY=your_groq_api_key_here
 - `/cart` - Shopping cart
 - `/checkout` - Checkout process
 - `/order-confirmation` - Order success
+
+### Admin Routes (requires admin role)
+- `/admin` - Admin dashboard with stats
+- `/admin/products` - Product list with bulk selection and offers
+- `/admin/products/new` - Create new product
+- `/admin/products/[id]` - Edit existing product
 - `/agent-dashboard` - Agent automation & alerts management
 - `/addresses` - Saved addresses management
 
@@ -317,6 +406,8 @@ NEXT_PUBLIC_GROQ_API_KEY=your_groq_api_key_here
 
 **Required:**
 - `NEXT_PUBLIC_GROQ_API_KEY` - Groq API key for AI features (get from https://console.groq.com/keys)
+- `MONGODB_URI` - MongoDB Atlas connection string
+- `MONGODB_DB_NAME` - Database name (ShopCRM)
 
 ---
 
@@ -347,14 +438,100 @@ NEXT_PUBLIC_GROQ_API_KEY=your_groq_api_key_here
 
 ## Performance Optimizations
 
-1. **Debounced Search**: 400ms delay for AI parsing
-2. **Agent Evaluation**: 500ms debounce, 5-minute intervals
-3. **Lazy Loading**: Images with Next.js Image component
-4. **Pagination**: 12 items per page
-5. **Minimal AI Context**: Only essential product data
-6. **Client Components**: Strategic use of 'use client'
-7. **Scroll Optimization**: Auto-scroll to top on navigation
-8. **LocalStorage Caching**: Cart, auth, agents, addresses persisted
+1. **MongoDB Connection Pooling**: Min 2, max 10 connections, cached across hot reloads
+2. **Database Indexing**: Optimized queries on products, users, agents, addresses
+3. **Debounced Search**: 400ms delay for AI parsing
+4. **Agent Evaluation**: 500ms debounce, 5-minute intervals
+5. **Lazy Loading**: Images with Next.js Image component
+6. **Pagination**: 12 items per page
+7. **Minimal AI Context**: Only essential product data
+8. **Client Components**: Strategic use of 'use client'
+9. **Scroll Optimization**: Auto-scroll to top on navigation
+10. **LocalStorage Caching**: Auth persisted, cart for guests only (logged-in users use MongoDB)
+11. **Cart Auto-Sync**: 500ms debounced sync to MongoDB for authenticated users
+12. **Automatic Seeding**: Idempotent, seeds users, products, deals, reviews on first boot
+13. **JSON Fallback**: Seamless degradation if MongoDB unavailable
+
+--- and role field
+   - 3 demo users seeded automatically on first boot (1 admin, 2 users)
+   - Auto-migration updates existing users with role field
+   - Returns role in login response for access control
+   - Loads user cart on successful login
+
+2. **Admin Product Management**
+   - Full CRUD via `/api/admin/products`
+   - Role-based access control (admin only)
+   - Create, edit, deactivate products
+   - Offer management (single and bulk discounts)
+   - Real-time finalPrice calculation
+   - Dashboard with stats (total, active, out of stock, deals)
+   - Search, filter, pagination (20 items/page)
+   - File: `app/(admin)/admin/products/`
+
+5. **Agent Automation Rules**
+   - Full CRUD via `/api/agents`
+   - User-specific rules with product monitoring
+   - Supports notify, add_to_cart, auto_order modes
+
+6  - 3 demo users seeded automatically on first boot
+   - Loads user cart on successful login
+
+2. **Shopping Cart**
+   - Stored in MongoDB `carts` collection (one per user)
+   - Auto-syncs on changes via `cartSyncMiddleware` (500ms debounce)
+7  - Loaded from MongoDB on login
+   - Guest users: localStorage fallback
+   - API: GET/POST/DELETE `/api/cart?userId=X`
+
+3. **User Addresses**
+   - Full CRUD via `/api/addresses`
+   - Stored per user with default address support
+   - Validation: letters-only names/cities, alphanumeric ZIP, etc.
+
+4. **Agent Automation Rules**
+   - Full CRUD via `/api/agents`
+   - User-specific rules with product monitoring
+   - Supports notify, add_to_cart, auto_order modes
+
+5. **Orders**
+   - Created via `/api/orders`
+   - Supports manual and auto-orders from agents
+   - User-specific order history
+
+6. **Products List Page**
+   - Uses `/api/products` to load from MongoDB
+   - Fallback to JSON if database unavailable
+   - File: `app/(shop)/products/page.js`
+
+### ⚠️ Partially Static (Still using JSON imports)
+
+1. **Homepage Components**
+   - `FeaturedDealsSection.js` - Direct JSON import
+   - `PromoBanner.js` - Direct JSON import
+   - **TODO**: Convert to use `/api/products?type=deals`
+7/11 features (64%)
+- **Static**: 4/11 features (36%)
+- **Seeded Collections**: users (3 with roles), products (210), deals (24), reviews (163)
+- **User-Specific Collections**: carts, addresses, agents, orders
+- **Admin Features**: Full product management, offer system, role-based acces
+
+3. **Deal Detail Page**
+   - `deals/[id]/page.js` - Direct JSON import
+   - **TODO**: Fetch via API instead
+
+4. **Agent Dashboard**
+   - Product display uses static JSON
+   - **TODO**: Use API for product information
+
+5. **Review Utilities**
+   - `lib/utils/reviewUtils.js` - Direct JSON imports
+   - **TODO**: Fetch via `/api/reviews`
+
+### Summary
+- **Dynamic**: 6/11 features (55%)
+- **Static**: 5/11 features (45%)
+- **Seeded Collections**: users (3), products (210), deals (24), reviews (163)
+- **User-Specific Collections**: carts, addresses, agents, orders
 
 ---
 
@@ -385,22 +562,35 @@ NEXT_PUBLIC_GROQ_API_KEY=your_groq_api_key_here
 2. Periodic evaluation every 5 minutes
 3. Debounced on cart/products state changes (500ms)
 4. Rule engine checks active, non-snoozed rules
-5. Events stored and displayed in header bell icon
-6. User confirms/snoozes/dismisses in AgentModal
-7. Actions executed only on user confirmation
+5. Events stored and displayed in  with role-based access
+- **COMPLETED**: Admin panel with full CRUD and offer management
+- **COMPLETED**: Role-based authentication and API security
+- **TODO**: Migrate remaining static components (homepage, detail pages) to use API
+- **TODO**: Order history and tracking UI
+- **TODO**: MongoDB Change Streams for real-time updates
+- **TODO**: Atlas Search for full-text product search
+- **TODO**: Aggregation pipelines for analytics dashboard
+- **TODO**: Password hashing (bcrypt) and JWT authentication
+- **TODO**: Backend API migration for production
 
-### Address Validation Rules
-- **Full Name**: Letters & spaces, min 2 chars
-- **Email**: Standard email format
-- **Phone**: Numbers + - ( ) spaces, 10-20 chars
-- **Street**: Min 5 chars, any characters
-- **City/State/Country**: Letters, spaces, hyphens only
-- **ZIP Code**: Alphanumeric + hyphens, 4-10 chars
+### Admin Features (Completed)
+- ✅ Dashboard with overview stats
+- ✅ Product list with search/filters/pagination
+- ✅ Create/Edit product forms with validation
+- ✅ Bulk selection and operations
+- ✅ Single product offer modal (discount, deal settings)
+- ✅ Bulk offer modal (apply to multiple products)
+- ✅ Product activation/deactivation
+- ✅ Real-time price calculations
+- ✅ Image upload support (Unsplash configured)
+- ✅ Sidebar navigation with role guard
+- **TODO**: Bulk delete products
+- **TODO**: Product import/export (CSV)
+- **TODO**: Image upload to cloud storage
+- **TODO**: Order management dashboard
+- **TODO**: Analytics and reporting
 
----
-
-## Future Enhancements
-
+### Features
 - User profiles with order history
 - Wishlist functionality
 - Product comparisons
@@ -410,5 +600,24 @@ NEXT_PUBLIC_GROQ_API_KEY=your_groq_api_key_here
 - Email/SMS notifications for agent triggers
 - Product recommendations based on browsing history
 - Machine learning for predictive restocking
-- Backend API for rule persistence
+- Analytics dashboard for rule performance
+- Multi-admin support with granular permissions
+- **TODO**: Migrate remaining static components (homepage, detail pages) to use API
+- **TODO**: Order history and tracking UI
+- **TODO**: MongoDB Change Streams for real-time updates
+- **TODO**: Atlas Search for full-text product search
+- **TODO**: Aggregation pipelines for analytics dashboard
+- **TODO**: Password hashing (bcrypt) and JWT authentication
+- **TODO**: Backend API migration for production
+
+### Features
+- User profiles with order history
+- Wishlist functionality
+- Product comparisons
+- Advanced filtering (multi-select)
+- Real-time inventory updates via WebSocket
+- Payment gateway integration
+- Email/SMS notifications for agent triggers
+- Product recommendations based on browsing history
+- Machine learning for predictive restocking
 - Analytics dashboard for rule performance

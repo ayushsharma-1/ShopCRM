@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Providers from "@/components/Providers";
+import { seedDatabase } from "@/lib/db/seed";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -16,6 +17,13 @@ export const metadata = {
   title: "ShopCRM - Your Online Shopping Destination",
   description: "Discover amazing products at great prices. Shop electronics, clothing, home goods, and more.",
 };
+
+// Initialize database seeding on server-side
+if (typeof window === 'undefined') {
+  seedDatabase().catch(err => {
+    console.error('[App] Database seeding failed:', err);
+  });
+}
 
 export default function RootLayout({ children }) {
   return (

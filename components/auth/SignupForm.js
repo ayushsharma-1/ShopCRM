@@ -67,16 +67,40 @@ export default function SignupForm() {
 
     setIsLoading(true);
 
-    setTimeout(() => {
-      dispatch(loginSuccess({
-        email: formData.email,
-        name: formData.name,
-        id: Math.random().toString(36).substr(2, 9)
-      }));
-      toast.success('Account created successfully!');
-      router.push('/products');
+    try {
+      // Call MongoDB register API
+      const response = await fetch('/api/auth/register', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: formData.name,
+          email: formData.email,
+          password: formData.password
+        })
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        dispatch(loginSuccess({
+          userId: data.user.userId,
+          email: data.user.email,
+          name: data.user.name
+        }));
+        toast.success('Account created successfully!');
+        router.push('/products');
+      } else {
+        toast.error(data.error || 'Registration failed');
+        if (data.error.includes('already exists')) {
+          setErrors({ email: 'Email already registered' });
+        }
+      }
+    } catch (error) {
+      console.error('[Signup] Error:', error);
+      toast.error('Registration failed. Please try again.');
+    } finally {
       setIsLoading(false);
-    }, 1000);
+    }
   };
 
   return (
