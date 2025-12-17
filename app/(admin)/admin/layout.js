@@ -51,7 +51,7 @@ export default function AdminLayout({ children }) {
     { name: 'Dashboard', href: '/admin', icon: FiHome },
     { name: 'Products', href: '/admin/products', icon: FiPackage },
     { name: 'Add Product', href: '/admin/products/new', icon: FiPlus },
-    { name: 'Orders', href: '/admin/orders', icon: FiShoppingBag, disabled: true },
+    { name: 'Orders', href: '/admin/orders', icon: FiShoppingBag },
     { name: 'Analytics', href: '/admin/analytics', icon: FiBarChart2, disabled: true },
   ];
 

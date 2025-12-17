@@ -38,7 +38,7 @@ export async function GET(request) {
   }
 }
 
-// POST: Create new order
+// POST: Create new order with stock update
 export async function POST(request) {
   try {
     const body = await request.json();
@@ -61,26 +61,85 @@ export async function POST(request) {
     }
 
     const db = await getDb();
-    const collection = db.collection(COLLECTIONS.ORDERS);
+    const ordersCollection = db.collection(COLLECTIONS.ORDERS);
+    const productsCollection = db.collection(COLLECTIONS.PRODUCTS);
 
-    const newOrder = {
-      userId,
-      items,
-      total,
-      addressId: addressId || null,
-      status: 'pending',
-      paymentMethod: paymentMethod || 'COD',
-      autoOrdered: autoOrdered || false,
-      agentRuleId: agentRuleId || null,
-      createdAt: new Date(),
-      updatedAt: new Date()
-    };
+    // Check stock availability for all items
+    const stockCheck = [];
+    for (const item of items) {
+      const product = await productsCollection.findOne({ id: item.id });
+      
+      if (!product) {
+        return NextResponse.json(
+          { error: `Product ${item.id} not found` },
+          { status: 404 }
+        );
+      }
 
-    const result = await collection.insertOne(newOrder);
+      if (product.stock < item.quantity) {
+        return NextResponse.json(
+          { 
+            error: `Insufficient stock for ${product.name}`,
+            insufficientStock: true,
+            productId: item.id,
+            available: product.stock,
+            requested: item.quantity
+          },
+          { status: 400 }
+        );
+      }
+
+      stockCheck.push({ productId: item.id, quantity: item.quantity, currentStock: product.stock });
+    }
+
+    // Atomic operation: Create order + Update stock
+    const session = db.client.startSession();
+    
+    try {
+      await session.withTransaction(async () => {
+        // Decrement stock for each item
+        for (const item of items) {
+          await productsCollection.updateOne(
+            { id: item.id },
+            { 
+              $inc: { stock: -item.quantity },
+              $set: { updatedAt: new Date() }
+            },
+            { session }
+          );
+        }
+
+        // Create order
+        const newOrder = {
+          userId,
+          items,
+          total,
+          addressId: addressId || null,
+          status: autoOrdered ? 'Auto-Ordered' : 'Completed',
+          paymentMethod: paymentMethod || 'COD',
+          autoOrdered: autoOrdered || false,
+          agentRuleId: agentRuleId || null,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        };
+
+        await ordersCollection.insertOne(newOrder, { session });
+      });
+    } finally {
+      await session.endSession();
+    }
+
+    // Fetch updated products
+    const updatedProducts = [];
+    for (const item of items) {
+      const updated = await productsCollection.findOne({ id: item.id });
+      updatedProducts.push(updated);
+    }
 
     return NextResponse.json({
       success: true,
-      order: { ...newOrder, _id: result.insertedId }
+      message: 'Order placed successfully',
+      updatedProducts
     });
 
   } catch (error) {

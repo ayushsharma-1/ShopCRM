@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useRouter } from 'next/navigation';
 import { prevStep, setProcessing, resetCheckout } from '@/lib/redux/slices/checkoutSlice';
 import { clearCart } from '@/lib/redux/slices/cartSlice';
+import { updateProductStock } from '@/lib/redux/slices/productsSlice';
 import { toast } from 'react-toastify';
 import { useState } from 'react';
 import OrderConfirmation from './OrderConfirmation';
@@ -15,6 +16,7 @@ export default function OrderSummary() {
   const dispatch = useDispatch();
   const router = useRouter();
   const { address, payment, isProcessing } = useSelector((state) => state.checkout);
+  const { user } = useSelector((state) => state.auth);
   const { items, totalAmount } = useSelector((state) => state.cart);
   const [orderPlaced, setOrderPlaced] = useState(false);
 
@@ -22,10 +24,45 @@ export default function OrderSummary() {
   const tax = totalAmount * 0.1;
   const finalTotal = totalAmount + shippingCost + tax;
 
-  const handlePlaceOrder = () => {
+  const handlePlaceOrder = async () => {
     dispatch(setProcessing(true));
     
-    setTimeout(() => {
+    try {
+      const response = await fetch('/api/orders', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          userId: user?.email,
+          items: items.map(item => ({
+            id: item.id,
+            name: item.name,
+            price: item.price,
+            quantity: item.quantity,
+            image: item.image
+          })),
+          total: finalTotal,
+          paymentMethod: payment.cardName || 'Card',
+          autoOrdered: false
+        })
+      });
+
+      const result = await response.json();
+
+      if (!response.ok) {
+        if (result.insufficientStock) {
+          toast.error(`Insufficient stock: ${result.error}`);
+        } else {
+          toast.error(result.error || 'Failed to place order');
+        }
+        dispatch(setProcessing(false));
+        return;
+      }
+
+      // Update product stock in Redux
+      if (result.updatedProducts) {
+        dispatch(updateProductStock(result.updatedProducts));
+      }
+
       setOrderPlaced(true);
       toast.success('🎉 Order placed successfully!');
       
@@ -33,9 +70,14 @@ export default function OrderSummary() {
         dispatch(clearCart());
         dispatch(resetCheckout());
         dispatch(setProcessing(false));
-        router.replace('/products');
-      }, 3000);
-    }, 2000);
+        router.replace('/orders');
+      }, 2500);
+
+    } catch (error) {
+      console.error('Order error:', error);
+      toast.error('Failed to place order');
+      dispatch(setProcessing(false));
+    }
   };
 
   if (orderPlaced || isProcessing) {
