@@ -51,9 +51,8 @@ Shop-CRM/
 │   │   ├── addresses/           # Saved addresses management
 │   │   ├── agent-dashboard/     # Agent automation dashboard
 │   │   ├── cart/                 # Shopping cart
-│   │   ├── checkout/             # Checkout process
+│   │   ├── checkout/             # Checkout process (includes order confirmation)
 │   │   ├── deals/[id]/          # Deal details
-│   │   ├── order-confirmation/   # Order success page
 │   │   └── products/            # Product pages
 │   │       ├── [id]/            # Product details
 │   │       └── page.js          # Products listing
@@ -385,12 +384,11 @@ Shop-CRM/
 - `/products/[id]` - Product detail
 - `/deals/[id]` - Deal detail
 - `/login` - Login page
-- `/register` - Register page
+- `/signup` - Signup page
 
 ### Protected Routes (requires auth)
 - `/cart` - Shopping cart
-- `/checkout` - Checkout process
-- `/order-confirmation` - Order success
+- `/checkout` - Checkout process (includes order confirmation)
 - `/agent-dashboard` - Agent automation & alerts management
 - `/addresses` - Saved addresses management
 

@@ -23,7 +23,7 @@ export default function AgentDashboardPage() {
 
   // Redirect if not authenticated
   if (!user) {
-    router.push('/auth/login');
+    router.push('/login');
     return null;
   }
 

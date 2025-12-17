@@ -29,7 +29,7 @@ export default function AddressesPage() {
 
   // Redirect if not authenticated
   if (!user) {
-    router.push('/auth/login');
+    router.push('/login');
     return null;
   }
 
