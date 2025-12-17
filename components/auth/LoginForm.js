@@ -11,7 +11,6 @@ import { loadCartFromDB } from '@/lib/redux/slices/cartSlice';
 import { toast } from 'react-toastify';
 
 const DEMO_USERS = [
-  { email: 'admin@shop.com', password: 'admin123', name: 'adminCRM' },
   { email: 'dev@shop.com', password: 'dev123', name: 'devCRM' },
   { email: 'test@shop.com', password: 'test123', name: 'testCRM' },
 ];

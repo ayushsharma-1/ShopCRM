@@ -2,7 +2,7 @@
 
 import Link from 'next/link';
 import { useState, useRef, useEffect } from 'react';
-import { FaUser, FaSignOutAlt, FaBell, FaMapMarkerAlt, FaChevronDown } from 'react-icons/fa';
+import { FaUser, FaSignOutAlt, FaBell, FaMapMarkerAlt, FaChevronDown, FaCog } from 'react-icons/fa';
 
 export default function UserMenu({ isAuthenticated, user, onLogout }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -37,6 +37,19 @@ export default function UserMenu({ isAuthenticated, user, onLogout }) {
           {/* Dropdown Menu */}
           {isOpen && (
             <div className="absolute right-0 mt-2 w-56 bg-white rounded-xl shadow-lg border border-neutral-200 py-2 z-50">
+              {user?.email === 'admin@shop.com' && (
+                <>
+                  <Link
+                    href="/admin"
+                    onClick={() => setIsOpen(false)}
+                    className="flex items-center gap-3 px-4 py-2.5 text-sm text-neutral-700 hover:bg-neutral-50 transition-colors duration-150"
+                  >
+                    <FaCog className="text-neutral-500" />
+                    Admin Panel
+                  </Link>
+                  <div className="border-t border-neutral-100 my-2" />
+                </>
+              )}
               <Link
                 href="/agent-dashboard"
                 onClick={() => setIsOpen(false)}
