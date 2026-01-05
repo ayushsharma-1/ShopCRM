@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { use, useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useRouter } from 'next/navigation';
 import { fetchAllProducts, updateProduct, deleteProduct } from '@/lib/redux/slices/adminProductsSlice';
@@ -18,7 +18,8 @@ export default function EditProductPage({ params }) {
   const { user } = useSelector((state) => state.auth);
   const { products, isSaving } = useSelector((state) => state.adminProducts);
   
-  const productId = parseInt(params.id);
+  const unwrappedParams = use(params);
+  const productId = parseInt(unwrappedParams.id);
   const product = products.find((p) => p.id === productId);
 
   const [formData, setFormData] = useState(null);
@@ -62,34 +63,34 @@ export default function EditProductPage({ params }) {
   };
 
   const handleImageChange = (index, value) => {
+    if (!formData?.images) return;
     const newImages = [...formData.images];
     newImages[index] = value;
     setFormData((prev) => ({ ...prev, images: newImages }));
   };
 
   const addImageField = () => {
-    if (formData.images.length < 5) {
-      setFormData((prev) => ({
-        ...prev,
-        images: [...prev.images, ''],
-      }));
-    }
+    if (!formData?.images || formData.images.length >= 5) return;
+    setFormData((prev) => ({
+      ...prev,
+      images: [...prev.images, ''],
+    }));
   };
 
   const removeImageField = (index) => {
-    if (formData.images.length > 1) {
-      const newImages = formData.images.filter((_, i) => i !== index);
-      setFormData((prev) => ({ ...prev, images: newImages }));
-    }
+    if (!formData?.images || formData.images.length <= 1) return;
+    const newImages = formData.images.filter((_, i) => i !== index);
+    setFormData((prev) => ({ ...prev, images: newImages }));
   };
 
   const validate = () => {
+    if (!formData) return false;
     const newErrors = {};
-    if (!formData.name.trim()) newErrors.name = 'Product name is required';
-    if (!formData.description.trim()) newErrors.description = 'Description is required';
+    if (!formData.name?.trim()) newErrors.name = 'Product name is required';
+    if (!formData.description?.trim()) newErrors.description = 'Description is required';
     if (!formData.price || formData.price <= 0) newErrors.price = 'Valid price is required';
     if (formData.stock === '' || formData.stock < 0) newErrors.stock = 'Valid stock quantity is required';
-    if (formData.images.filter(img => img.trim()).length === 0) {
+    if (!formData.images || formData.images.filter(img => img.trim()).length === 0) {
       newErrors.images = 'At least one image URL is required';
     }
     setErrors(newErrors);
@@ -277,7 +278,7 @@ export default function EditProductPage({ params }) {
               <p className="text-sm text-neutral-700">
                 Final Price:{' '}
                 <span className="font-medium">
-                  ₹{(formData.price * (1 - formData.discountPercentage / 100)).toFixed(2)}
+                  ₹{(parseFloat(formData.price) * (1 - parseFloat(formData.discountPercentage) / 100)).toFixed(2)}
                 </span>
               </p>
             </div>
@@ -309,7 +310,7 @@ export default function EditProductPage({ params }) {
         <div className="bg-white rounded-lg border border-neutral-200 p-6">
           <h2 className="text-lg font-medium text-neutral-900 mb-4">Media</h2>
           <div className="space-y-3">
-            {formData.images.map((img, index) => (
+            {formData?.images?.map((img, index) => (
               <div key={index} className="flex gap-2">
                 <input
                   type="url"
@@ -329,7 +330,7 @@ export default function EditProductPage({ params }) {
               </div>
             ))}
             {errors.images && <p className="text-xs text-red-500">{errors.images}</p>}
-            {formData.images.length < 5 && (
+            {formData?.images && formData.images.length < 5 && (
               <button
                 type="button"
                 onClick={addImageField}
@@ -339,7 +340,6 @@ export default function EditProductPage({ params }) {
               </button>
             )}
           </div>
-
           <div className="mt-4">
             <label className="block text-sm font-medium text-neutral-700 mb-1">
               Tags (comma-separated)
