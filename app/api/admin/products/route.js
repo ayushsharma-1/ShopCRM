@@ -21,7 +21,7 @@ async function verifyAdmin(request) {
 
     const db = await getDb();
     const user = await db.collection(COLLECTIONS.USERS).findOne({ 
-      email: userId // Using email as identifier
+      email: userId
     });
 
     console.log('[Admin API] Found user:', user ? { email: user.email, role: user.role } : 'null');

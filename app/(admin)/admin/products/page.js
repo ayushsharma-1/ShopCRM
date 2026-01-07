@@ -41,7 +41,8 @@ export default function AdminProductsPage() {
   const toggleSelectAll = () => {
     if (selectedProducts.length === paginatedProducts.length) {
       setSelectedProducts([]);
-    } else {
+    } 
+    else {
       setSelectedProducts(paginatedProducts.map(p => p.id));
     }
   };
