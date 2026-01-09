@@ -61,7 +61,7 @@ export default function CartItem({ item }) {
   const handleRemove = () => {
     setIsRemoving(true);
     setTimeout(() => {
-      dispatch(removeFromCart(item.id));
+      dispatch(removeFromCart({ cartItemKey: item.cartItemKey, id: item.id }));
       toast.info(`${item.name} removed from cart`);
     }, 200);
   };
@@ -72,7 +72,7 @@ export default function CartItem({ item }) {
       toast.warning(`Only ${item.stock} items available`);
       return;
     }
-    dispatch(updateQuantity({ id: item.id, quantity: newQuantity }));
+    dispatch(updateQuantity({ cartItemKey: item.cartItemKey, id: item.id, quantity: newQuantity }));
   };
 
   const subtotal = (item.price * item.quantity).toFixed(2);
@@ -101,6 +101,20 @@ export default function CartItem({ item }) {
               <p className="text-xs text-neutral-500 uppercase tracking-wide mt-0.5">
                 {item.category}
               </p>
+              {item.selectedOptions && Object.keys(item.selectedOptions).length > 0 && (
+                <div className="flex flex-wrap gap-1.5 mt-1.5">
+                  {Object.entries(item.selectedOptions).map(([key, value]) => (
+                    value && (
+                      <span 
+                        key={key}
+                        className="text-xs px-2 py-0.5 bg-neutral-100 text-neutral-600 rounded-md"
+                      >
+                        {key}: {value}
+                      </span>
+                    )
+                  ))}
+                </div>
+              )}
             </div>
             
             <button

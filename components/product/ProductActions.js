@@ -32,10 +32,20 @@ export default function ProductActions({ product }) {
   };
 
   const handleAddToCart = () => {
+    const cartItem = {
+      ...product,
+      selectedOptions: Object.keys(selectedOptions).length > 0 ? selectedOptions : undefined
+    };
+    
     for (let i = 0; i < quantity; i++) {
-      dispatch(addToCart(product));
+      dispatch(addToCart(cartItem));
     }
-    toast.success(`${quantity} × ${product.name} added to cart!`, {
+    
+    const optionsText = Object.keys(selectedOptions).length > 0
+      ? ` (${Object.entries(selectedOptions).map(([k, v]) => `${k}: ${v}`).join(', ')})`
+      : '';
+    
+    toast.success(`${quantity} × ${product.name}${optionsText} added to cart!`, {
       position: 'bottom-right',
       autoClose: 2000
     });
