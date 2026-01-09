@@ -9,7 +9,7 @@ export default function CartItemsList({ items }) {
       <AnimatePresence mode="popLayout">
         {items.map((item, index) => (
           <motion.div
-            key={item.id}
+            key={item.cartItemKey || item.id}
             layout
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}

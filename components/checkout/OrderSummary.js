@@ -114,7 +114,7 @@ export default function OrderSummary() {
       <CheckoutSection title={`Order Items (${items.length})`} delay={0.2}>
         <div className="space-y-3">
           {items.map((item) => (
-            <div key={item.id} className="flex items-center gap-3">
+            <div key={item.cartItemKey || item.id} className="flex items-center gap-3">
               <div className="w-14 h-14 rounded-lg overflow-hidden bg-neutral-50 shrink-0">
                 <img
                   src={item.image}
